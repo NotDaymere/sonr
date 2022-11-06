@@ -1,0 +1,109 @@
+@import "../../assets/scss/vars";
+
+.sonr {
+  padding: 113px 0 30px;
+
+  &-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 63px 35px 10px;
+  }
+
+  &-item {
+    font-family: $fontOffBT;
+    font-weight: 400;
+    font-size: 476px;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: #0a0909;
+  }
+
+  .s-one {
+    position: relative;
+    &:after {
+      display: block;
+      position: absolute;
+      background: url("../../assets/img/Sonr/earth.svg") center center no-repeat;
+      background-size: contain;
+      content: "";
+      width: 240px;
+      height: 196px;
+      top: -26px;
+      right: -46px;
+    }
+  }
+
+  .s-two {
+    position: relative;
+    z-index: 2;
+    &:after {
+      z-index: -1;
+      display: block;
+      position: absolute;
+      background: url("../../assets/img/Sonr/Ellipse.svg") center center no-repeat;
+      background-size: contain;
+      content: "";
+      width: 272px;
+      height: 315px;
+      top: -19px;
+      right: -21px;
+    }
+  }
+
+  .s-three {
+    position: relative;
+    &:after {
+      display: block;
+      position: absolute;
+      background: url("../../assets/img/Sonr/earth.svg") center center no-repeat;
+      background-size: contain;
+      content: "";
+      width: 228px;
+      height: 196px;
+      top: 50%;
+      transform: translate(-53%, -50%);
+      left: 50%;
+    }
+  }
+
+  &-angle {
+    position: absolute;
+    width: 44px;
+    height: 46px;
+    border: 8px solid $black;
+  }
+
+  .s-lt {
+    //top: -5%;
+    top: 0;
+    left: 0;
+    border-bottom: none;
+    border-right: none;
+  }
+
+  .s-rt {
+    //top: -5%;
+    top: 0;
+    right: 0;
+    border-bottom: none;
+    border-left: none;
+  }
+
+  .s-lb {
+    //bottom: 6%;
+    bottom: 0;
+    left: 0;
+    border-top: none;
+    border-right: none;
+  }
+
+  .s-rb {
+    //bottom: 6%;
+    bottom: 0;
+    right: 0;
+    border-top: none;
+    border-left: none;
+  }
+}

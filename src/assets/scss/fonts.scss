@@ -1,0 +1,25 @@
+@mixin fontFace($FontName, $FontPathName, $FontFileName, $FontWeight) {
+	@font-face {
+		font-family: "#{$FontName}";
+		font-weight: #{$FontWeight};
+		font-style: normal;
+		font-display: swap;
+
+		src: url("../fonts/#{$FontPathName}/#{$FontFileName}.eot");
+		src: url("../fonts/#{$FontPathName}/#{$FontFileName}.woff") format("woff"),
+			url("../fonts/#{$FontPathName}/#{$FontFileName}.ttf") format("truetype"),
+			url("../fonts/#{$FontPathName}/#{$FontFileName}.eot?#iefix") format("embedded-opentype");
+	}
+}
+//
+@include fontFace("BasisGrotesque", "BasisGrotesque", "BasisGrotesque-Medium", 500);
+//
+@include fontFace("BasisGrotesquePro", "BasisGrotesquePro", "BasisGrotesquePro-Bold", 700);
+//
+@include fontFace("Branch", "Branch", "Branch-Regular", 400);
+//
+@include fontFace("OffBitTrial", "OffBitTrial", "OffBitTrial-Bold", 700);
+@include fontFace("OffBitTrial", "OffBitTrial", "OffBitTrial-Regular", 400);
+//
+@include fontFace("PlusJakartaDisplay", "PlusJakartaDisplay", "PlusJakartaDisplay-Medium", 500);
+

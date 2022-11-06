@@ -1,0 +1,70 @@
+@import "vars";
+@import "normalize";
+@import "fonts";
+@import "typography";
+@import "forms";
+
+* {
+	box-sizing: border-box;
+
+	&:after,
+	&:before {
+		box-sizing: border-box;
+	}
+
+	&::-webkit-media-controls-panel {
+		display: none !important;
+		-webkit-appearance: none;
+	}
+
+	&::--webkit-media-controls-play-button {
+		display: none !important;
+		-webkit-appearance: none;
+	}
+
+	&::-webkit-media-controls-start-playback-button {
+		display: none !important;
+		-webkit-appearance: none;
+	}
+	&::-webkit-scrollbar {
+		width: 2px;
+		transition: opacity 0.3s ease;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $white;
+		outline: 1px solid $white;
+	}
+}
+
+html {
+	height: 100%;
+	min-height: 100%;
+	font-family: $font;
+	font-size: 18px;
+	line-height: 1.5;
+	font-weight: 400;
+	letter-spacing: 0;
+	color: #28272F;
+	background: #F6F6F6;
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100%;
+	font-size: 14px;
+	min-width: 320px;
+	scroll-behavior: smooth;
+}
+
+.App {
+	overflow: hidden;
+}
+
+.wr {
+	padding: 0 15px;
+	max-width: 1230px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+

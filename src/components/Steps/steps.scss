@@ -1,0 +1,141 @@
+@import "../../assets/scss/vars";
+
+.steps {
+  padding: 186px 0 125px;
+
+  .h1 {
+    max-width: 1053px;
+    margin: 0 auto 86px;
+    text-align: center;
+    position: relative;
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      background: url("../../assets/img/Steps/figure.svg") center center no-repeat;
+      background-size: contain;
+      width: 55px;
+      height: 39px;
+      top: -22%;
+      left: 50%;
+      margin-left: -30px;
+    }
+  }
+
+  &-block {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &-box {
+    transition: all .3s;
+    border-bottom: 2px solid rgba(#000, 0.2);
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0 60px;
+    &:nth-child(2n) {
+      .steps-img {
+        transform: rotate(-90deg) scale(0.2);
+        top: -45%;
+        right: 2%;
+      }
+    }
+    &:nth-child(3n) {
+      .steps-title {
+        max-width: 300px;
+        min-width: 280px;
+      }
+      .steps-img {
+        top: -85%;
+        right: 3%;
+      }
+      &:hover {
+        .steps-img {
+          transform: rotate(0deg) scale(1.1);
+        }
+      }
+    }
+    &:hover {
+      border-bottom: 2px solid rgba(#000, 1);
+      opacity: 1;
+      .steps-img {
+        opacity: 1;
+        transform: rotate(0deg) scale(1.27);
+      }
+    }
+  }
+
+  &-img {
+    width: 462px;
+    height: 552px;
+    border-radius: 407px;
+    mix-blend-mode: difference;
+    z-index: -1;
+    transition: all .4s;
+    position: absolute;
+    transform: rotate(90deg) scale(0.2);
+    opacity: 0;
+    top: 10%;
+    right: 10%;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-case {
+    opacity: 0.2;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &-number {
+    width: 100%;
+    max-width: 130px;
+    font-family: $fontBranch;
+    font-size: 120px;
+    line-height: 0.8;
+    text-transform: uppercase;
+    color: $black;
+  }
+
+  &-text {
+    width: 100%;
+    max-width: 385px;
+    margin-left: 235px;
+  }
+
+  &-title {
+    font-family: $fontBranch;
+    font-weight: 522;
+    font-size: 40px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #161517;
+    margin-bottom: 23px;
+    min-width: 380px;
+  }
+
+  &-description {
+    max-width: 314px;
+    font-family: $font;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.1;
+    color: #73717C;
+  }
+}

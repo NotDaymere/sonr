@@ -1,0 +1,225 @@
+@import "../../assets/scss/vars";
+
+.cards {
+  padding: 0 0 92px;
+  position: relative;
+  &:after {
+    z-index: -1;
+    position: absolute;
+    display: block;
+    content: "";
+    background: url("../../assets/img/Cards/line.svg") center center no-repeat;
+    background-size: contain;
+    width: 100vw;
+    height: 1000px;
+    top: 2%;
+    left: 0;
+  }
+
+  &-content {
+
+  }
+
+  &-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 300px;
+  }
+
+  &-box {
+    transition: all .3s;
+    width: 33.3%;
+    min-width: 482px;
+    min-height: 614px;
+    padding: 60px 43px 43px 59px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    &:hover {
+      transform: scale(1.1);
+      .cards-box-link {
+        opacity: 1;
+      }
+    }
+
+    &.c-one {
+      background: #C1C7FF;
+      order: 2;
+      justify-content: flex-start;
+      z-index: 3;
+      .cards-description {
+        max-width: 227px;
+      }
+      .cards-box-link {
+        right: 90px;
+        top: 55px;
+      }
+    }
+
+    &.c-two {
+      background: #EFCBF5;
+      order: 1;
+      z-index: 2;
+      transform: rotate(-9.13deg) translate(37px, 117px);
+      .cards-description {
+        max-width: 314px;
+      }
+      .cards-box-link {
+        right: 67px;
+        top: 31px;
+      }
+      &:hover {
+        transform: rotate(0) translate(37px, 117px) scale(1.1);
+        z-index: 5;
+      }
+    }
+
+    &.c-three {
+      background: #C9E5FF;
+      order: 3;
+      z-index: 2;
+      transform: rotate(7deg) translate(-24px, 136px);
+      .cards-box-link {
+        top: 95px;
+        left: 62px;
+      }
+      &:hover {
+        transform: rotate(0) translate(-24px, 136px) scale(1.1);
+        z-index: 5;
+      }
+    }
+  }
+
+  &-box-link {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    width: 116px;
+    height: 116px;
+    background: url("../../assets/img/Cards/arrow_2.svg") center center no-repeat;
+    background-size: contain;
+    transform: rotate(-15.76deg);
+    mix-blend-mode: difference;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    z-index: 4;
+  }
+
+  &-title {
+    font-family: $font;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.2;
+    color: #131313;
+    margin-bottom: 23px;
+  }
+
+  .h2 {
+    font-family: $fontBranch;
+    text-transform: uppercase;
+    margin-bottom: 29px;
+  }
+
+  &-description {
+    font-family: $font;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.2;
+    color: #73717C;
+  }
+
+  &-index {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 48px 10px;
+    margin-bottom: 85px;
+    margin-top: 60px;
+  }
+
+  &-list {
+    width: 45%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    padding-top: 8px;
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      background: #3A37FF;
+      width: 28px;
+      height: 2px;
+      border-radius: 2px;
+      top: 0;
+      left: 0;
+    }
+
+    &-item {
+      font-family: $font;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.2;
+      color: #73717C;
+      min-height: 18px;
+    }
+
+    &-title {
+      font-family: $font;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.2;
+
+      color: $blackLight;
+    }
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-link {
+    text-decoration: none;
+    border-bottom: 1px solid #C1C7FF;
+    font-family: $fontOffBT;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.07;
+    text-transform: uppercase;
+    color: $blackLight;
+    margin-right: 20px;
+    margin-left: 28px;
+    position: relative;
+    &:hover {
+      border-color: $blackLight;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      background: url("../../assets/img/Cards/arrow.svg") center center no-repeat;
+      background-size: contain;
+      width: 24px;
+      height: 24px;
+      right: -25px;
+      top: 50%;
+      margin-top: -15px;
+    }
+  }
+
+  .c-link {
+    cursor: pointer;
+    border-color: #F6F6F6;
+    &:hover {
+      border-color: $blackLight;
+    }
+  }
+}

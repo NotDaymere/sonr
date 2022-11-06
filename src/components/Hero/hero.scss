@@ -1,0 +1,159 @@
+@import "../../assets/scss/vars";
+
+.hero {
+  padding: 30px 0 94px;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    display: block;
+    background: url("../../assets/img/White.svg") center center no-repeat;
+    background-size: contain;
+    width: 65px;
+    height: 75px;
+    left: 24%;
+    bottom: 10%;
+  }
+
+  &-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  &-heading {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 920px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    gap: 104px;
+    span {
+      display: inline-block;
+      font-family: $fontOffBT;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.07;
+      text-transform: uppercase;
+      color: $blackLight;
+      &:last-child {
+        padding: 0;
+      }
+    }
+  }
+
+  h1 {
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+    padding-bottom: 22px;
+    position: relative;
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 115px;
+      background: url("../../assets/img/Hero/eye.svg") center center no-repeat;
+      background-size: contain;
+      right: -115px;
+      bottom: 34px;
+    }
+    &:before {
+      display: block;
+      position: absolute;
+      content: "";
+      background: #7265FF;
+      height: 3px;
+      width: 511px;
+      bottom: 20px;
+      right: 44px;
+    }
+  }
+
+  &-span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-build {
+    font-family: $fontBranch;
+    color: #7265FF;
+  }
+
+  &-earth {
+    width: 190px;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &-block {
+    padding-bottom: 53px;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 204px;
+  }
+
+  &-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+    width: 40%;
+  }
+
+  &-title {
+    font-family: $fontOffBT;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.07;
+    text-transform: uppercase;
+    color: $blackLight;
+  }
+
+  &-img {
+    width: 116px;
+    height: 116px;
+    border-radius: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 100%;
+    }
+  }
+
+  &-right {
+    max-width: 245px;
+    width: 100%;
+    font-family: $fontPlusJD;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.2;
+    color: $blackLight;
+  }
+
+  &-item {
+    margin-left: auto;
+    max-width: 123px;
+    font-family: $fontBasicGP;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.07;
+    text-transform: uppercase;
+    color: $blackLight;
+  }
+}

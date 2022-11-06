@@ -1,0 +1,46 @@
+button,
+.btn {
+	outline: 0 none;
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	transition: all 0.3s;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	text-decoration: none !important;
+	border: 1px solid $black;
+	line-height: 1.07;
+	padding: 22px 56px;
+	font-size: 20px;
+	min-width: 205px;
+	text-align: center;
+	background: $black;
+	font-weight: 400;
+	font-family: $fontOffBT;
+	border-radius: 0;
+	color: $white;
+	box-shadow: none;
+	&:hover {
+		background: $white;
+		color: $black;
+	}
+	&:active {
+		transform: translateY(0.2rem);
+	}
+
+	&.btn-white{
+		color: $black;
+		background: $white;
+		border: none;
+		&:hover {
+			background: $black;
+			color: $white;
+		}
+	}
+
+	&[disabled],
+	&[disabled="disabled"] {
+		cursor: not-allowed;
+	}
+}

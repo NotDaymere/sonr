@@ -1,4 +1,8 @@
 import "./steps.scss";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 //img
 import Mobile from "../../assets/img/Steps/mobile.svg";
 import Technology from "../../assets/img/Steps/technology.svg";
@@ -23,32 +27,65 @@ const dataSteps = [
 ]
 
 function Steps () {
+    const settings = {
+        arrows: false,
+        settings: 'unslick',
+        responsive: [
+            {
+                breakpoint: 19200,
+                settings:  'unslick'
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    dots: true,
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false
+                }
+            }
+        ]
+    };
+
     return (
         <div className="steps">
             <div className="wr">
                 <div className="steps-content">
-                    <div className="h1">The Chat App has <span> Leveled Up</span></div>
+                    <div className="h1"
+                         data-aos="fade-up"
+                         data-aos-duration="1000"
+                    >
+                        The Chat App has <span> Leveled Up</span>
+                    </div>
                     <div className="steps-block">
-                        {dataSteps.map((item, index) => (
-                            <div className="steps-box" key={index}>
-                                <div className="steps-img">
-                                    <img src={item.img} alt="#" />
-                                </div>
-                                <div className="steps-case">
-                                    <div className="steps-number">
-                                        0{index + 1}
+                        <Slider {...settings}>
+                            {dataSteps.map((item, index) => (
+                                <div className="steps-box"
+                                     key={index}
+                                     data-aos="fade-up"
+                                     data-aos-duration="1200"
+                                >
+                                    <div className="steps-img">
+                                        <img src={item.img} alt="#" />
                                     </div>
-                                    <div className="steps-text">
-                                        <div className="steps-title">
-                                            {item.title}
+                                    <div className="steps-case">
+                                        <div className="steps-number">
+                                            0{index + 1}
                                         </div>
-                                        <div className="steps-description">
-                                            {item.text}
+                                        <div className="steps-text">
+                                            <div className="steps-title">
+                                                {item.title}
+                                            </div>
+                                            <div className="steps-description">
+                                                {item.text}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </Slider>
                     </div>
                 </div>
             </div>

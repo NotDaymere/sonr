@@ -1,40 +1,64 @@
+import {useState, useMemo} from "react";
 import "./header.scss";
 
 //img
 import Logo from "../../assets/img/logo.svg";
 
 function Header () {
+    const [isOpenMenu, setIsOpenMenu] = useState(false);
+    const classOpenMenu = useMemo(() => isOpenMenu ? 'open' : '', [isOpenMenu]);
 
+    const onCloseMenu = () => setIsOpenMenu(false);
 
     return (
         <header className="header">
             <div className="wr">
                 <div className="header-content">
-                    <div className="header-logo">
+                    <div className="header-logo"
+                         data-aos="fade-up"
+                         data-aos-anchor-placement="bottom-center"
+                         data-aos-duration="1200"
+                    >
                         <a href="#">
                             <img src={Logo} alt="#"/>
                         </a>
                     </div>
                     <div className="header-block">
-                        <button className="header-button">
-                            {new Array(4).fill('').map((_, index) => (
-                                <span key={index}>
-                                    <span />
-                                </span>
-                            ))}
+                        <button
+                            type="button"
+                            className={`header-btn ${classOpenMenu}`}
+                            onClick={() => setIsOpenMenu(!isOpenMenu)}
+                            data-aos="fade-up"
+                            data-aos-anchor-placement="bottom-center"
+                            data-aos-duration="1500"
+                        >
+                            {[1, 2].map((item) => <span key={item} />)}
                         </button>
-                        <div className="header-nav">
+                        <div className={`header-nav ${classOpenMenu}`}>
                             <ul>
-                                <li>
+                                <li data-aos="fade-up"
+                                    data-aos-anchor-placement="bottom-center"
+                                    data-aos-duration="1000"
+                                >
                                     <a href="#">About</a>
                                 </li>
-                                <li>
+                                <li data-aos="fade-up"
+                                    data-aos-anchor-placement="bottom-center"
+                                    data-aos-duration="1200"
+                                >
                                     <a href="#">Technology</a>
                                 </li>
-                                <li>
+                                <li data-aos="fade-up"
+                                    data-aos-anchor-placement="bottom-center"
+                                    data-aos-duration="1500"
+                                >
                                     <a href="#">Documentation</a>
                                 </li>
                             </ul>
+                            <div className="cards-button">
+                                <button className="btn">register for beta</button>
+                                <a className="cards-link c-link">read docs</a>
+                            </div>
                         </div>
                     </div>
                 </div>

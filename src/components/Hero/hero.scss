@@ -3,6 +3,12 @@
 .hero {
   padding: 30px 0 94px;
   position: relative;
+  @media only screen and (max-width: $desktop-l) {
+    padding: get-vw(30px) 0 get-vw(94px);
+  }
+  @media only screen and (max-width: $mobile) {
+    padding: 140px 0 82px;
+  }
   &:after {
     position: absolute;
     content: "";
@@ -13,6 +19,16 @@
     height: 75px;
     left: 24%;
     bottom: 10%;
+    @media only screen and (max-width: $desktop-l) {
+      width: get-vw(65px);
+      height: get-vw(75px);
+    }
+    @media only screen and (max-width: $mobile) {
+      width: 55px;
+      height: 45px;
+      bottom: 32%;
+      left: 62%;
+    }
   }
 
   &-content {
@@ -31,6 +47,16 @@
     margin: 0 auto;
     padding-bottom: 30px;
     gap: 104px;
+    @media only screen and (max-width: $desktop-l) {
+      max-width: get-vw(920px);
+      padding-bottom: get-vw(30px);
+      gap: get-vw(104px);
+    }
+    @media only screen and (max-width: $mobile) {
+      padding-bottom: 24px;
+      gap: 85px;
+      max-width: 272px;
+    }
     span {
       display: inline-block;
       font-family: $fontOffBT;
@@ -39,18 +65,34 @@
       line-height: 1.07;
       text-transform: uppercase;
       color: $blackLight;
+      @media only screen and (max-width: $desktop-l) {
+        font-size: get-vw(20px);
+      }
+      @media only screen and (max-width: $mobile) {
+        font-size: 14px;
+      }
       &:last-child {
         padding: 0;
+        @media only screen and (max-width: $desktop-l) {
+          padding: get-vw(0px);
+        }
       }
     }
   }
 
   h1 {
-    margin: 0 auto;
+    margin: 0 auto 22px;
     max-width: 1000px;
     text-align: center;
-    padding-bottom: 22px;
     position: relative;
+    @media only screen and (max-width: $desktop-l) {
+      margin-bottom: get-vw(22px);
+      max-width: get-vw(1000px);
+    }
+    @media only screen and (max-width: $mobile) {
+      max-width: 281px;
+      margin-bottom: 24px;
+    }
     &:after {
       display: block;
       content: "";
@@ -61,6 +103,18 @@
       background-size: contain;
       right: -115px;
       bottom: 34px;
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(160px);
+        height: get-vw(115px);
+        right: get-vw(-115px);
+        bottom: get-vw(34px);
+      }
+      @media only screen and (max-width: $mobile) {
+        height: 89px;
+        width: 133px;
+        bottom: 190px;
+        right: 62px;
+      }
     }
     &:before {
       display: block;
@@ -71,6 +125,17 @@
       width: 511px;
       bottom: 20px;
       right: 44px;
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(511px);
+        bottom: get-vw(20px);
+        right: get-vw(44px);
+      }
+      @media only screen and (max-width: $mobile) {
+        height: 1px;
+        width: 157px;
+        bottom: 0;
+        right: 15px;
+      }
     }
   }
 
@@ -87,6 +152,12 @@
 
   &-earth {
     width: 190px;
+    @media only screen and (max-width: $desktop-l) {
+      width: get-vw(190px);
+    }
+    @media only screen and (max-width: $mobile) {
+      width: 50px;
+    }
     img {
       width: 100%;
       display: block;
@@ -102,6 +173,16 @@
     align-items: center;
     justify-content: flex-start;
     gap: 204px;
+    @media only screen and (max-width: $desktop-l) {
+      max-width: get-vw(1100px);
+      padding-bottom: get-vw(53px);
+      gap: get-vw(204px);
+    }
+    @media only screen and (max-width: $mobile) {
+      flex-direction: column;
+      gap: 40px;
+      padding-bottom: 40px;
+    }
   }
 
   &-left {
@@ -110,6 +191,15 @@
     justify-content: center;
     gap: 23px;
     width: 40%;
+    @media only screen and (max-width: $desktop-l) {
+      gap: get-vw(23px);
+    }
+    @media only screen and (max-width: $mobile) {
+      order: 2;
+      flex-direction: column;
+      gap: 16px;
+      width: 60%;
+    }
   }
 
   &-title {
@@ -120,12 +210,28 @@
     line-height: 1.07;
     text-transform: uppercase;
     color: $blackLight;
+    @media only screen and (max-width: $desktop-l) {
+      font-size: get-vw(20px);
+    }
+    @media only screen and (max-width: $mobile) {
+      order: 2;
+      font-size: 18px;
+    }
   }
 
   &-img {
     width: 116px;
     height: 116px;
     border-radius: 100%;
+    @media only screen and (max-width: $desktop-l) {
+      width: get-vw(116px);
+      height: get-vw(116px);
+    }
+    @media only screen and (max-width: $mobile) {
+      width: 72px;
+      height: 72px;
+      order: 1;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -143,6 +249,18 @@
     font-size: 15px;
     line-height: 1.2;
     color: $blackLight;
+    @media only screen and (max-width: $desktop-l) {
+      max-width: get-vw(245px);
+      font-size: get-vw(15px);
+    }
+    @media only screen and (max-width: $tablet) {
+      font-size: get-vw-td(13px);
+    }
+    @media only screen and (max-width: $mobile) {
+      order: 1;
+      max-width: 240px;
+      font-size: 14px;
+    }
   }
 
   &-item {
@@ -155,5 +273,14 @@
     line-height: 1.07;
     text-transform: uppercase;
     color: $blackLight;
+    @media only screen and (max-width: $desktop-l) {
+      max-width: get-vw(123px);
+      font-size: get-vw(15px);
+    }
+    @media only screen and (max-width: $mobile) {
+      max-width: 170px;
+      font-size: 14px;
+      margin: 0 auto;
+    }
   }
 }

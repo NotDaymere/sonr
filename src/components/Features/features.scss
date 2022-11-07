@@ -4,6 +4,13 @@
   background: #131313;
   padding: 128px 0 104px;
   position: relative;
+  overflow: hidden;
+  @media only screen and (max-width: $desktop-l) {
+    padding: get-vw(128px) 0 get-vw(104px);
+  }
+  @media only screen and (max-width: $mobile) {
+    padding: 70px 0 64px;
+  }
   &:after {
     position: absolute;
     content: "";
@@ -15,6 +22,15 @@
     left: 0;
     top: -16px;
     mix-blend-mode: difference;
+    @media only screen and (max-width: $desktop-l) {
+      height: get-vw(32px);
+      top: get-vw(-16px);
+    }
+    @media only screen and (max-width: $mobile) {
+      width: 978px;
+      height: 22px;
+      top: -11px;
+    }
   }
 
   &-content {
@@ -22,6 +38,9 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+    @media only screen and (max-width: $mobile) {
+      flex-direction: column;
+    }
     &:after {
       position: absolute;
       display: block;
@@ -32,6 +51,10 @@
       height: 65px;
       top: 8%;
       left: 28%;
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(55px);
+        height: get-vw(65px);
+      }
     }
     &:before {
       position: absolute;
@@ -43,6 +66,10 @@
       background-size: contain;
       bottom: 5%;
       left: 13%;
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(55px);
+        height: get-vw(65px);
+      }
     }
   }
 
@@ -50,10 +77,12 @@
     width: 62%;
     position: relative;
     z-index: 1;
+    @media only screen and (max-width: $mobile) {
+      width: 100%;
+    }
   }
 
   &-item {
-    position: absolute;
     font-family: $fontBranch;
     font-style: normal;
     font-weight: 400;
@@ -63,34 +92,33 @@
     color: #FFFFFF;
     mix-blend-mode: difference;
     writing-mode: vertical-rl;
-    transform: scale(-1, -1);
-    z-index: 0;
-    top: -60%;
-    left: -4%;
+    transform: scale(-1, -1) !important;
+    @media only screen and (max-width: $desktop-l) {
+      font-size: get-vw(180px);
+    }
+    @media only screen and (max-width: $mobile) {
+      font-size: 56px;
+      writing-mode: horizontal-tb;
+      transform: scale(1);
+    }
   }
 
   &-img {
     width: 500px;
     height: 406px;
-    z-index: 4;
-    position: relative;
-    transform: translate(-7px, -18px);
+    position: absolute;
+    transform: translate(24px, -600px);
+    @media only screen and (max-width: $desktop-l) {
+      width: get-vw(500px);
+      height: get-vw(406px);
+      transform: translate(get-vw(24px), get-vw(-600px));
+    }
     img {
       display: block;
       width: 100%;
       height: 100%;
     }
-    &:after {
-      position: absolute;
-      display: block;
-      content: "";
-      background: url("../../assets/img/Features/Ellipse.svg") center center no-repeat;
-      background-size: contain;
-      width: 878px;
-      height: 640px;
-      top: -30%;
-      left: -60%;
-    }
+    &:after,
     &:before {
       position: absolute;
       display: block;
@@ -99,6 +127,16 @@
       background-size: contain;
       width: 878px;
       height: 640px;
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(878px);
+        height: get-vw(640px);
+      }
+    }
+    &:after {
+      top: -30%;
+      left: -60%;
+    }
+    &:before {
       top: -40%;
       left: -55%;
     }
@@ -116,8 +154,14 @@
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
-    top: -14%;
-    left: 18.7%;
+    top: 24%;
+    left: 22.7%;
+    @media only screen and (max-width: $desktop-l) {
+      font-size: get-vw(15px);
+    }
+    @media only screen and (max-width: $tablet) {
+      font-size: get-vw-td(12px);
+    }
 
     &-text {
       width: 100%;
@@ -133,6 +177,9 @@
   &-right {
     width: 30.3%;
     position: relative;
+    @media only screen and (max-width: $mobile) {
+      width: 80%;
+    }
   }
 
   &-line {
@@ -144,6 +191,9 @@
     border: 1.5px solid #898989;
     left: -83px;
     top: 0;
+    @media only screen and (max-width: $desktop-l) {
+      left: get-vw(-83px);
+    }
     &:after {
       position: absolute;
       content: "";
@@ -153,6 +203,9 @@
       top: -2px;
       left: -1px;
       opacity: 1;
+      @media only screen and (max-width: $desktop-l) {
+        height: get-vw(105px);
+      }
     }
   }
 
@@ -161,10 +214,21 @@
     color: $white;
     opacity: 0.6;
     max-width: 350px;
+    @media only screen and (max-width: $desktop-l) {
+      max-width: get-vw(350px);
+    }
+    @media only screen and (max-width: $mobile) {
+      font-size: 28px;
+      margin-bottom: 16px;
+      max-width: 248px;
+    }
   }
 
   &-block {
     margin-bottom: 70px;
+    @media only screen and (max-width: $desktop-l) {
+      margin-bottom: get-vw(70px);
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -179,11 +243,29 @@
     color: $white;
     opacity: 0.6;
     max-width: 280px;
+    @media only screen and (max-width: $desktop-l) {
+      font-size: get-vw(15px);
+    }
+    @media only screen and (max-width: $tablet) {
+      font-size: get-vw(18px);
+    }
+    @media only screen and (max-width: $mobile) {
+      font-size: 14px;
+      max-width: 248px;
+    }
   }
 
   &-icon {
     margin-top: 70px;
     max-width: 55px;
+    @media only screen and (max-width: $desktop-l) {
+      margin-top: get-vw(70px);
+      max-width: get-vw(55px);
+    }
+    @media only screen and (max-width: $mobile) {
+      max-width: 55px;
+      margin-top: 32px;
+    }
     img {
       width: 100%;
       display: block;

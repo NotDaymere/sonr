@@ -1,3 +1,4 @@
+@import 'aos/dist/aos.css';
 @import "vars";
 @import "normalize";
 @import "fonts";
@@ -67,4 +68,7 @@ body {
 	width: 100%;
 }
 
+.fp-watermark {
+	display: none;
+}
 

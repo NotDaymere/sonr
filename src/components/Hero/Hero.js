@@ -9,14 +9,43 @@ function Hero () {
             <div className="wr">
                 <div className="hero-content">
                     <div className="hero-heading">
-                        <span>SONR</span>
-                        <span>SONR</span>
-                        <span>SONR</span>
+                        <span data-aos="fade-up"
+                              data-aos-anchor-placement="top-center"
+                              data-aos-duration="1500"
+                        >
+                            SONR
+                        </span>
+                        <span data-aos="fade-up"
+                              data-aos-anchor-placement="top-center"
+                              data-aos-duration="1200"
+                        >
+                            SONR
+                        </span>
+                        <span data-aos="fade-up"
+                              data-aos-anchor-placement="top-center"
+                              data-aos-duration="1500"
+                        >
+                            SONR
+                        </span>
                     </div>
-                    <h1>
+                    <h1
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="top-center"
+                        data-aos-duration="1700"
+                    >
                         We’re
-                        <span className="hero-build"> building</span>
-                        <span className="hero-span">
+                        <span className="hero-build"
+                              data-aos="fade-up"
+                              data-aos-anchor-placement="top-center"
+                              data-aos-duration="1800"
+                        >
+                            building
+                        </span>
+                        <span className="hero-span"
+                              data-aos="fade-up"
+                              data-aos-anchor-placement="top-center"
+                              data-aos-duration="1000"
+                        >
                             <img className="hero-earth" src={Earth} alt="#"/>
                             the internet
                         </span>

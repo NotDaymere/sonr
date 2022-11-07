@@ -2,6 +2,12 @@
 
 .sonr {
   padding: 113px 0 30px;
+  @media only screen and (max-width: $desktop-l) {
+    padding: get-vw(113px) 0 get-vw(30px);
+  }
+  @media only screen and (max-width: $mobile) {
+    padding: 54px 0;
+  }
 
   &-content {
     position: relative;
@@ -9,6 +15,12 @@
     align-items: center;
     justify-content: center;
     padding: 63px 35px 10px;
+    @media only screen and (max-width: $desktop-l) {
+      padding: get-vw(63px) get-vw(35px) get-vw(10px);
+    }
+    @media only screen and (max-width: $mobile) {
+      flex-wrap: wrap;
+    }
   }
 
   &-item {
@@ -18,10 +30,20 @@
     line-height: 0.9;
     text-transform: uppercase;
     color: #0a0909;
+    position: relative;
+    @media only screen and (max-width: $desktop-l) {
+      font-size: get-vw(476px);
+    }
+    @media only screen and (max-width: $mobile) {
+      width: 50%;
+      font-size: 204px;
+      text-align: center;
+    }
   }
 
   .s-one {
-    position: relative;
+    animation: flicker .6s infinite, shake .1s;
+    animation-iteration-count: infinite;
     &:after {
       display: block;
       position: absolute;
@@ -32,12 +54,26 @@
       height: 196px;
       top: -26px;
       right: -46px;
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(240px);
+        height: get-vw(196px);
+        top: get-vw(-26px);
+        right: get-vw(-46px);
+      }
+      @media only screen and (max-width: $mobile) {
+        width: 103px;
+        height: 84px;
+        top: -12px;
+        right: 50%;
+        margin-right: -80px;
+      }
     }
   }
 
   .s-two {
-    position: relative;
     z-index: 2;
+    animation: flicker .6s infinite, shake .5s;
+    animation-iteration-count: infinite;
     &:after {
       z-index: -1;
       display: block;
@@ -49,11 +85,23 @@
       height: 315px;
       top: -19px;
       right: -21px;
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(272px);
+        height: get-vw(315px);
+        top: get-vw(-19px);
+        right: -21px;
+      }
+      @media only screen and (max-width: $mobile) {
+        width: 110px;
+        height: 127px;
+        top: -10px;
+        right: 50%;
+        margin-right: -69px;
+      }
     }
   }
 
   .s-three {
-    position: relative;
     &:after {
       display: block;
       position: absolute;
@@ -65,6 +113,17 @@
       top: 50%;
       transform: translate(-53%, -50%);
       left: 50%;
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(228px);
+        height: get-vw(196px);
+      }
+      @media only screen and (max-width: $mobile) {
+        width: 103px;
+        height: 84px;
+        top: 83px;
+        left: 50%;
+        margin-left: 3px;
+      }
     }
   }
 
@@ -73,10 +132,18 @@
     width: 44px;
     height: 46px;
     border: 8px solid $black;
+    @media only screen and (max-width: $desktop-l) {
+      width: get-vw(44px);
+      height: get-vw(46px);
+    }
+    @media only screen and (max-width: $mobile) {
+      width: 16px;
+      height: 17px;
+      border: 3px solid $black;
+    }
   }
 
   .s-lt {
-    //top: -5%;
     top: 0;
     left: 0;
     border-bottom: none;
@@ -84,7 +151,6 @@
   }
 
   .s-rt {
-    //top: -5%;
     top: 0;
     right: 0;
     border-bottom: none;
@@ -92,7 +158,6 @@
   }
 
   .s-lb {
-    //bottom: 6%;
     bottom: 0;
     left: 0;
     border-top: none;
@@ -100,10 +165,44 @@
   }
 
   .s-rb {
-    //bottom: 6%;
     bottom: 0;
     right: 0;
     border-top: none;
     border-left: none;
   }
+}
+
+//вибрація
+//@keyframes shake {
+//  0% { transform: translate(1px, 1px) rotate(0deg); }
+//  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+//  20% { transform: translate(-3px, 0px) rotate(1deg); }
+//  30% { transform: translate(3px, 2px) rotate(0deg); }
+//  40% { transform: translate(1px, -1px) rotate(1deg); }
+//  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+//  60% { transform: translate(-3px, 1px) rotate(0deg); }
+//  70% { transform: translate(3px, 1px) rotate(-1deg); }
+//  80% { transform: translate(-1px, -1px) rotate(1deg); }
+//  90% { transform: translate(1px, 2px) rotate(0deg); }
+//  100% { transform: translate(1px, -2px) rotate(-1deg); }
+//}
+
+@keyframes shake {
+  0% { transform: translate(0px, 1px) rotate(0deg); }
+  10% { transform: translate(0px, -2px) rotate(-1deg); }
+  20% { transform: translate(0px, 0px) rotate(1deg); }
+  30% { transform: translate(0px, 2px) rotate(0deg); }
+  40% { transform: translate(0px, -1px) rotate(1deg); }
+  50% { transform: translate(0px, 2px) rotate(-1deg); }
+  60% { transform: translate(0px, 1px) rotate(0deg); }
+  70% { transform: translate(0px, 1px) rotate(-1deg); }
+  80% { transform: translate(0px, -1px) rotate(1deg); }
+  90% { transform: translate(0px, 2px) rotate(0deg); }
+  100% { transform: translate(0px, -2px) rotate(-1deg); }
+}
+
+//миганння
+@keyframes flicker {
+  from { opacity: 1;}
+  to { opacity: 0; }
 }

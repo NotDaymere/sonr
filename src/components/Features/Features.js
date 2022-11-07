@@ -10,7 +10,10 @@ function Features () {
             <div className="wr">
                 <div className="features-content">
                     <div className="features-left">
-                        <div className="features-item">
+                        <div className="features-item"
+                             data-aos="fade-left"
+                             data-aos-duration="1000"
+                        >
                             FEATURES
                         </div>
                         <div className="features-img">
@@ -30,7 +33,10 @@ function Features () {
                     </div>
                     <div className="features-right">
                         <div className="features-line"></div>
-                        <div className="features-block">
+                        <div className="features-block"
+                             data-aos="fade-up"
+                             data-aos-duration="1000"
+                        >
                             <h2>Secure Your Digital Liberty</h2>
                             <div className="features-text">
                                 Simpler and more secure than passwords or key phrases. Access your apps and data using only your device.
@@ -39,7 +45,10 @@ function Features () {
                                 <img src={Figure} alt="#"/>
                             </div>
                         </div>
-                        <div className="features-block">
+                        <div className="features-block"
+                             data-aos="fade-up"
+                             data-aos-duration="1200"
+                        >
                             <h2>Native Compatibility</h2>
                             <div className="features-text">
                                 Sonr apps are interoperable by design. Each new app creates exponential opportunity.
@@ -48,7 +57,10 @@ function Features () {
                                 <img src={Figure} alt="#"/>
                             </div>
                         </div>
-                        <div className="features-block">
+                        <div className="features-block"
+                             data-aos="fade-up"
+                             data-aos-duration="1500"
+                        >
                             <h2>Cross-Chain  and IBC Enabled</h2>
                             <div className="features-text">
                                 Sonr supports communication with hundreds of other blockchains for streamlined development and superior user experience.

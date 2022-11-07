@@ -2,12 +2,22 @@
 
 .steps {
   padding: 186px 0 125px;
+  @media only screen and (max-width: $desktop-l) {
+    padding: get-vw(186px) 0 get-vw(125px);
+  }
+  @media only screen and (max-width: $mobile) {
+    padding: 51px 0 72px;
+  }
 
   .h1 {
     max-width: 1053px;
     margin: 0 auto 86px;
     text-align: center;
     position: relative;
+    @media only screen and (max-width: $desktop-l) {
+      max-width: get-vw(1053px);
+      margin: 0 auto get-vw(86px);
+    }
     &:after {
       position: absolute;
       display: block;
@@ -19,51 +29,103 @@
       top: -22%;
       left: 50%;
       margin-left: -30px;
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(55px);
+        height: get-vw(39px);
+        margin-left: get-vw(-30px);
+      }
+      @media only screen and (max-width: $mobile) {
+        width: 55px;
+        height: 39px;
+        top: -43px;
+        left: 88px;
+      }
     }
   }
 
   &-block {
     width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
+    //display: block;
+    //align-items: flex-start;
+    //justify-content: space-between;
+    //flex-direction: column;
+    //@media only screen and (max-width: $mobile) {
+    //  display: block;
+    //}
+
+    .slick-slide {
+      &:nth-child(2n) {
+        .steps-img {
+          transform: rotate(-90deg) scale(0.2);
+          top: -45%;
+          right: 2%;
+        }
+        .steps-box:hover {
+          .steps-img {
+            transform: rotate(0deg) scale(1.27);
+          }
+        }
+      }
+      &:nth-child(3n) {
+        .steps-title {
+          max-width: 300px;
+          min-width: 280px;
+          @media only screen and (max-width: $desktop-l) {
+            max-width: get-vw(300px);
+            min-width: get-vw(280px);
+          }
+        }
+        .steps-img {
+          top: -85%;
+          right: 3%;
+        }
+        .steps-box:hover {
+          .steps-img {
+            transform: rotate(0deg) scale(1.1);
+          }
+        }
+      }
+    }
   }
 
   &-box {
     transition: all .3s;
-    border-bottom: 2px solid rgba(#000, 0.2);
+    //border-bottom: 2px solid #000;
     width: 100%;
     position: relative;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: space-between;
     padding: 50px 0 60px;
-    &:nth-child(2n) {
-      .steps-img {
-        transform: rotate(-90deg) scale(0.2);
-        top: -45%;
-        right: 2%;
-      }
+    &.aos-animate {
+      opacity: 0.2 !important;
+      transition: all .3s !important;
     }
-    &:nth-child(3n) {
-      .steps-title {
-        max-width: 300px;
-        min-width: 280px;
-      }
-      .steps-img {
-        top: -85%;
-        right: 3%;
-      }
-      &:hover {
-        .steps-img {
-          transform: rotate(0deg) scale(1.1);
-        }
-      }
+    @media only screen and (max-width: $desktop-l) {
+      padding: get-vw(50px) 0 get-vw(60px);
+    }
+    @media only screen and (max-width: $mobile) {
+      padding: 32px 0;
+      border: none;
+    }
+    &:after {
+      transition: background 0.3s;
+      content: '';
+      position: absolute;
+      display: block;
+      height: 2px;
+      background: #000;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
     &:hover {
-      border-bottom: 2px solid rgba(#000, 1);
-      opacity: 1;
+      &.aos-animate {
+        opacity: 1 !important;
+      }
+      &:after {
+        background: rgba(#000, 0.1);
+      }
       .steps-img {
         opacity: 1;
         transform: rotate(0deg) scale(1.27);
@@ -75,15 +137,30 @@
     width: 462px;
     height: 552px;
     border-radius: 407px;
-    mix-blend-mode: difference;
     z-index: -1;
     transition: all .4s;
     position: absolute;
+    background: #F6F6F6;
     transform: rotate(90deg) scale(0.2);
     opacity: 0;
     top: 10%;
     right: 10%;
+    @media only screen and (max-width: $desktop-l) {
+      width: get-vw(462px);
+      height: get-vw(552px);
+    }
+    @media only screen and (max-width: $mobile) {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 229px;
+      height: 289px;
+      opacity: 1;
+      transform: none;
+      margin: 0 auto;
+    }
     img {
+      mix-blend-mode: difference;
       display: block;
       width: 100%;
       height: 100%;
@@ -92,14 +169,13 @@
   }
 
   &-case {
-    opacity: 0.2;
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    transition: opacity 0.3s;
-    &:hover {
+    @media only screen and (max-width: $mobile) {
       opacity: 1;
+      flex-direction: column;
     }
   }
 
@@ -111,12 +187,27 @@
     line-height: 0.8;
     text-transform: uppercase;
     color: $black;
+    @media only screen and (max-width: $desktop-l) {
+      max-width: get-vw(130px);
+      font-size: get-vw(120px);
+    }
+    @media only screen and (max-width: $mobile) {
+      font-size: 56px;
+      padding-bottom: 8px;
+    }
   }
 
   &-text {
     width: 100%;
     max-width: 385px;
     margin-left: 235px;
+    @media only screen and (max-width: $desktop-l) {
+      max-width: get-vw(385px);
+      margin-left: get-vw(235px);
+    }
+    @media only screen and (max-width: $mobile) {
+      margin-left: 0;
+    }
   }
 
   &-title {
@@ -125,9 +216,18 @@
     font-size: 40px;
     line-height: 1.2;
     text-transform: uppercase;
-    color: #161517;
     margin-bottom: 23px;
     min-width: 380px;
+    @media only screen and (max-width: $desktop-l) {
+      font-size: get-vw(40px);
+      margin-bottom: get-vw(23px);
+      min-width: get-vw(380px);
+    }
+    @media only screen and (max-width: $mobile) {
+      margin: 0 0 16px;
+      font-size: 28px;
+      min-width: 271px;
+    }
   }
 
   &-description {
@@ -137,5 +237,42 @@
     font-size: 15px;
     line-height: 1.1;
     color: #73717C;
+    @media only screen and (max-width: $desktop-l) {
+      max-width: get-vw(314px);
+      font-size: get-vw(15px);
+    }
+    @media only screen and (max-width: $tablet) {
+      font-size: get-vw-td(15px);
+    }
+    @media only screen and (max-width: $mobile) {
+      font-size: 15px;
+      min-width: 210px;
+    }
+  }
+
+//  slider
+  .slick-list {
+    overflow: visible;
+  }
+
+  .slick-track {
+    display: contents;
+  }
+
+  .slick-dots li {
+    width: 33.3%;
+    margin: 0;
+  }
+
+  .slick-dots li button {
+    width: 100%;
+    margin: 0;
+  }
+
+  .slick-dots li button:before {
+    content: "";
+    border-bottom: 1px solid;
+    width: 100%;
+    height: 0;
   }
 }

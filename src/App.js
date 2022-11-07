@@ -11,7 +11,7 @@ import AOS from "aos";
 function App() {
 
     useEffect(() => {
-        AOS.init({ once: true});
+        AOS.init();
         AOS.refresh();
     }, []);
 

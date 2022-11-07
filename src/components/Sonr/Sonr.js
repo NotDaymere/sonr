@@ -7,10 +7,10 @@ function Sonr () {
             <div className="wr">
                 <div className="sonr-content">
                     <div className="sonr-item s-one">
-                        s
+                        <span>s</span>
                     </div>
                     <div className="sonr-item s-two">
-                        o
+                        <span>o</span>
                     </div>
                     <div className="sonr-item">
                         n

@@ -1,6 +1,7 @@
 @import "../../assets/scss/vars";
 
 .cards {
+  animation: block 1s;
   padding: 0 0 92px;
   position: relative;
   overflow: hidden;
@@ -21,6 +22,7 @@
     height: 1000px;
     top: 2%;
     left: 0;
+    animation: line 2s;
     @media only screen and (max-width: $desktop-l) {
       height: get-vw(1000px);
     }
@@ -99,6 +101,7 @@
     }
 
     &.c-two {
+      animation: cardTwo 2s;
       background: #EFCBF5;
       order: 1;
       z-index: 2;
@@ -135,6 +138,7 @@
     }
 
     &.c-three {
+      animation: cardThree 2s;
       background: #C9E5FF;
       order: 3;
       z-index: 2;
@@ -383,3 +387,25 @@
     }
   }
 }
+
+@keyframes block {
+  from { transform: translate(0, 100px)}
+  to {transform: translate(0, 0)}
+}
+
+@keyframes cardTwo {
+  from {transform: rotate(-6deg) translate(211px, 81px)}
+  to {transform: rotate(-9.13deg) translate(37px, 117px)}
+}
+
+@keyframes cardThree {
+  from {transform: rotate(6deg) translate(-329px, 93px)}
+  to {transform: rotate(7deg) translate(-24px, 136px)}
+}
+
+@keyframes line {
+  from {transform: scale(1, 0.2)}
+  to {transform: scale(1)}
+}
+//link svg!!!
+//https://app.svgator.com/editor#/b7a4114d71164c30a43133aa6a7a7484

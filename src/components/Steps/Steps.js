@@ -29,7 +29,6 @@ const dataSteps = [
 function Steps () {
     const settings = {
         arrows: false,
-        settings: 'unslick',
         responsive: [
             {
                 breakpoint: 19200,

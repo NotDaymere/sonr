@@ -29,6 +29,7 @@ function Features() {
     const [top, setTop] = useState(0);
 
     const lineOffset = () => {
+        if (window.innerWidth <= 768) return;
         const containerRect = containerRef.current.getBoundingClientRect();
         const _top = (containerRect.top * -1) / ((containerRect.height) / 100);
         if (_top >= 100) {
@@ -43,7 +44,7 @@ function Features() {
     };
 
     useEffect(() => {
-        if (!containerRef.current) return;
+        if (!containerRef.current || window.innerWidth <= 768) return;
         const height = containerRef.current.clientHeight;
         containerRef.current.style.height = `${height + (data.length * 200)}px`;
         window.addEventListener('scroll', lineOffset);

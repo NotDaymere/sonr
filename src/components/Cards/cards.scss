@@ -73,6 +73,7 @@
       transform: scale(1.1);
       .cards-box-link {
         opacity: 1;
+        transform: rotate(-15.76deg) scale(1);
       }
     }
 
@@ -173,10 +174,10 @@
     height: 116px;
     background: url("../../assets/img/Cards/arrow_2.svg") center center no-repeat;
     background-size: contain;
-    transform: rotate(-15.76deg);
+    transform: rotate(-15.76deg) scale(0);
     mix-blend-mode: difference;
     text-decoration: none;
-    transition: opacity 0.3s;
+    transition: all 0.3s;
     z-index: 4;
     @media only screen and (max-width: $desktop-l) {
       width: get-vw(116px);

@@ -46,18 +46,16 @@ h1, .h1 {
 	line-height: 1.07;
 	margin: 0 0 34px;
 	text-transform: uppercase;
-	span {
-		font-family: $fontOffBT;
-	}
-	p {
-		margin: 0;
-	}
 	@media only screen and (max-width: $desktop-l) {
 		font-size: get-vw(120px);
 		margin: 0 0  get-vw(34px);
 	}
+	@media only screen and (max-width: $tablet) {
+		font-size: get-vw-td(100px);
+	}
 	@media only screen and (max-width: $mobile) {
 		font-size: 36px;
+		font-size: get-vw-md(36px);
 		margin: 0 0 24px;
 	}
 }

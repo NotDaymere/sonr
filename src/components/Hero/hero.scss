@@ -3,33 +3,40 @@
 .hero {
   padding: 30px 0 94px;
   position: relative;
+
   @media only screen and (max-width: $desktop-l) {
     padding: get-vw(30px) 0 get-vw(94px);
   }
+
+  @media only screen and (max-width: $tablet) {
+    padding-top: 0;
+  }
+
   @media only screen and (max-width: $mobile) {
     padding: 140px 0 82px;
   }
-  &:after {
-    position: absolute;
-    content: "";
-    display: block;
-    background: url("../../assets/img/White.svg") center center no-repeat;
-    background-size: contain;
-    width: 65px;
-    height: 75px;
-    left: 24%;
-    bottom: 10%;
-    @media only screen and (max-width: $desktop-l) {
-      width: get-vw(65px);
-      height: get-vw(75px);
-    }
-    @media only screen and (max-width: $mobile) {
-      width: 55px;
-      height: 45px;
-      bottom: 32%;
-      left: 62%;
-    }
-  }
+
+  // &:after {
+  //   @include content;
+  //   background: url("../../assets/img/White.svg") center center no-repeat;
+  //   background-size: contain;
+  //   width: 65px;
+  //   height: 75px;
+  //   left: 24%;
+  //   bottom: 10%;
+
+  //   @media only screen and (max-width: $desktop-l) {
+  //     width: get-vw(65px);
+  //     height: get-vw(75px);
+  //   }
+
+  //   @media only screen and (max-width: $mobile) {
+  //     width: 55px;
+  //     height: 45px;
+  //     bottom: 32%;
+  //     left: 62%;
+  //   }
+  // }
 
   &-content {
     display: flex;
@@ -44,110 +51,128 @@
     justify-content: flex-start;
     max-width: 920px;
     width: 100%;
-    margin: 0 auto;
-    padding-bottom: 30px;
+    margin: 0 auto 30px;
     gap: 104px;
+
     @media only screen and (max-width: $desktop-l) {
       max-width: get-vw(920px);
-      padding-bottom: get-vw(30px);
+      margin-bottom: get-vw(30px);
       gap: get-vw(104px);
     }
-    @media only screen and (max-width: $mobile) {
-      padding-bottom: 24px;
-      gap: 85px;
-      max-width: 272px;
+
+    @media only screen and (max-width: $tablet) {
+			max-width: get-vw-td(920px);
+			margin-bottom: 20px;
     }
-    span {
-      display: inline-block;
+
+    @media only screen and (max-width: $mobile) {
+      margin-bottom: 24px;
+			gap: 0;
+			justify-content: space-between;
+			max-width: get-vw-md(272px);
+    }
+
+    &-item {
       font-family: $fontOffBT;
       font-weight: 700;
       font-size: 20px;
       line-height: 1.07;
       text-transform: uppercase;
       color: $blackLight;
+
       @media only screen and (max-width: $desktop-l) {
         font-size: get-vw(20px);
       }
+
+			@media only screen and (max-width: $tablet) {
+				font-size: get-vw-td(18px);
+			}
+
       @media only screen and (max-width: $mobile) {
         font-size: 14px;
+				max-width: none;
       }
+
       &:last-child {
         padding: 0;
-        @media only screen and (max-width: $desktop-l) {
-          padding: get-vw(0px);
-        }
       }
     }
   }
 
-  h1 {
-    margin: 0 auto 22px;
-    max-width: 1000px;
+  &-description {
+    margin: 0 auto 33px;
     text-align: center;
-    position: relative;
+    max-width: 1000px;
+		position: relative;
     @media only screen and (max-width: $desktop-l) {
       margin-bottom: get-vw(22px);
       max-width: get-vw(1000px);
     }
+		@media only screen and (max-width: $tablet) {
+			margin-bottom: get-vw-td(22px);
+			max-width: get-vw-td(1000px);
+		}
     @media only screen and (max-width: $mobile) {
-      max-width: 281px;
+			max-width: none;
       margin-bottom: 24px;
-    }
-    &:after {
-      display: block;
-      content: "";
-      position: absolute;
-      width: 160px;
-      height: 115px;
-      background: url("../../assets/img/Hero/eye.svg") center center no-repeat;
-      background-size: contain;
-      right: -115px;
-      bottom: 34px;
-      @media only screen and (max-width: $desktop-l) {
-        width: get-vw(160px);
-        height: get-vw(115px);
-        right: get-vw(-115px);
-        bottom: get-vw(34px);
-      }
-      @media only screen and (max-width: $mobile) {
-        height: 89px;
-        width: 133px;
-        bottom: 190px;
-        right: 62px;
-      }
-    }
-    &:before {
-      display: block;
-      position: absolute;
-      content: "";
-      background: #7265FF;
-      height: 3px;
-      width: 511px;
-      bottom: 20px;
-      right: 44px;
-      @media only screen and (max-width: $desktop-l) {
-        width: get-vw(511px);
-        bottom: get-vw(20px);
-        right: get-vw(44px);
-      }
-      @media only screen and (max-width: $mobile) {
-        height: 1px;
-        width: 157px;
-        bottom: 0;
-        right: 15px;
-      }
+			position: static;
     }
   }
 
-  &-span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &-build {
+  &-title {
     font-family: $fontBranch;
-    color: #7265FF;
+    margin: 0;
+		// &.aos-animate {
+		// 	animation: .3s linear 3s visible-text forwards;
+		// }
+  }
+
+  &-last-title {
+    position: relative;
+    margin: 0;
+		// &.aos-animate {
+		// 	animation: 1s linear 3s visible-text forwards;
+		// }
+  }
+
+	&-eye {
+		position: absolute;
+		width: 160px;
+		height: 115px;
+		right: -115px;
+		bottom: 25px;
+		@media only screen and (max-width: $desktop-l) {
+			width: get-vw(160px);
+			height: get-vw(115px);
+			right: get-vw(-115px);
+			bottom: get-vw(25px);
+		}
+		@media only screen and (max-width: $tablet) {
+			width: get-vw-td(140px);
+			height: get-vw-td(95px);
+			right: get-vw-td(-115px);
+			bottom: get-vw-td(25px);
+		}
+		@media only screen and (max-width: $mobile) {
+			height: 89px;
+			width: 133px;
+			top: 8px;
+			bottom: unset;
+			right: 50%;
+			margin-right: -66px;
+		}
+		img {
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+
+  &-subtitle {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: $fontOffBT;
+    margin: 0;
   }
 
   &-earth {
@@ -155,8 +180,11 @@
     @media only screen and (max-width: $desktop-l) {
       width: get-vw(190px);
     }
+		@media only screen and (max-width: $tablet) {
+			width: get-vw-td(140px);
+		}
     @media only screen and (max-width: $mobile) {
-      width: 50px;
+			width: get-vw-md(50px);
     }
     img {
       width: 100%;
@@ -165,107 +193,124 @@
   }
 
   &-block {
-    padding-bottom: 53px;
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: 945px;
+    margin: 0 auto 51px;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 204px;
+    justify-content: space-between;
+    padding-right: 11%;
     @media only screen and (max-width: $desktop-l) {
       max-width: get-vw(1100px);
-      padding-bottom: get-vw(53px);
+      margin-bottom: get-vw(53px);
       gap: get-vw(204px);
     }
+
+		@media only screen and (max-width: $tablet) {
+			max-width: get-vw-td(1100px);
+			padding-right: 0;
+		}
+
     @media only screen and (max-width: $mobile) {
       flex-direction: column;
-      gap: 40px;
-      padding-bottom: 40px;
+			align-items: flex-start;
+      gap: 0;
+      margin-bottom: 40px;
     }
-  }
 
-  &-left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 23px;
-    width: 40%;
-    @media only screen and (max-width: $desktop-l) {
-      gap: get-vw(23px);
+    &-left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media only screen and (max-width: $mobile) {
+        order: 2;
+        flex-direction: column;
+        gap: 16px;
+				width: 100%;
+      }
     }
-    @media only screen and (max-width: $mobile) {
-      order: 2;
-      flex-direction: column;
-      gap: 16px;
-      width: 60%;
-    }
-  }
 
-  &-title {
-    font-family: $fontOffBT;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.07;
-    text-transform: uppercase;
-    color: $blackLight;
-    @media only screen and (max-width: $desktop-l) {
-      font-size: get-vw(20px);
-    }
-    @media only screen and (max-width: $mobile) {
-      order: 2;
-      font-size: 18px;
-    }
-  }
+    &-text {
+      font-family: $fontOffBT;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.07;
+      text-transform: uppercase;
+      color: $blackLight;
+      padding-right: 23px;
 
-  &-img {
-    width: 116px;
-    height: 116px;
-    border-radius: 100%;
-    @media only screen and (max-width: $desktop-l) {
-      width: get-vw(116px);
-      height: get-vw(116px);
+      @media only screen and (max-width: $desktop-l) {
+        font-size: get-vw(20px);
+      }
+
+			@media only screen and (max-width: $tablet) {
+				font-size: get-vw-td(18px);
+			}
+
+      @media only screen and (max-width: $mobile) {
+        order: 2;
+        font-size: 18px;
+				padding-right: 0;
+      }
     }
-    @media only screen and (max-width: $mobile) {
-      width: 72px;
-      height: 72px;
-      order: 1;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      display: block;
+
+    &-img {
+      width: 116px;
+      height: 116px;
       border-radius: 100%;
+
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(116px);
+        height: get-vw(116px);
+      }
+
+      @media only screen and (max-width: $mobile) {
+        width: 72px;
+        height: 72px;
+        order: 1;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 100%;
+      }
+    }
+
+    &-right {
+      max-width: 245px;
+      width: 100%;
+      font-family: $fontPlusJD;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.2;
+      color: $blackLight;
+
+      @media only screen and (max-width: $desktop-l) {
+        max-width: get-vw(245px);
+        font-size: get-vw(15px);
+      }
+
+      @media only screen and (max-width: $tablet) {
+        font-size: get-vw-td(13px);
+      }
+
+      @media only screen and (max-width: $mobile) {
+        order: 1;
+        max-width: 240px;
+				font-size: 14px;
+				margin-bottom: 40px;
+      }
     }
   }
 
-  &-right {
-    max-width: 245px;
-    width: 100%;
-    font-family: $fontPlusJD;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 1.2;
-    color: $blackLight;
-    @media only screen and (max-width: $desktop-l) {
-      max-width: get-vw(245px);
-      font-size: get-vw(15px);
-    }
-    @media only screen and (max-width: $tablet) {
-      font-size: get-vw-td(13px);
-    }
-    @media only screen and (max-width: $mobile) {
-      order: 1;
-      max-width: 240px;
-      font-size: 14px;
-    }
-  }
-
-  &-item {
-    margin-left: auto;
-    max-width: 123px;
+  &-bottom {
+    text-align: right;
+    margin: 0 auto;
+    max-width: 1110px;
     font-family: $fontBasicGP;
     font-style: normal;
     font-weight: 700;
@@ -274,13 +319,19 @@
     text-transform: uppercase;
     color: $blackLight;
     @media only screen and (max-width: $desktop-l) {
-      max-width: get-vw(123px);
       font-size: get-vw(15px);
     }
+		@media only screen and (max-width: $tablet) {
+			font-size: get-vw-td(13px);
+		}
+
     @media only screen and (max-width: $mobile) {
       max-width: 170px;
       font-size: 14px;
       margin: 0 auto;
+      br {
+        display: none;
+      }
     }
   }
 }

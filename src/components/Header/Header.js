@@ -8,7 +8,10 @@ function Header () {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const classOpenMenu = useMemo(() => isOpenMenu ? 'open' : '', [isOpenMenu]);
 
-    const onCloseMenu = () => setIsOpenMenu(false);
+    const toggleOpenMenu = () => {
+        setIsOpenMenu(!isOpenMenu);
+        document.body.style.overflow = !isOpenMenu ? 'hidden' : 'unset';
+    };
 
     return (
         <header className="header">
@@ -27,10 +30,7 @@ function Header () {
                         <button
                             type="button"
                             className={`header-btn ${classOpenMenu}`}
-                            onClick={() => setIsOpenMenu(!isOpenMenu)}
-                            data-aos="fade-up"
-                            data-aos-anchor-placement="bottom-center"
-                            data-aos-duration="1500"
+                            onClick={toggleOpenMenu}
                         >
                             {[1, 2].map((item) => <span key={item} />)}
                         </button>

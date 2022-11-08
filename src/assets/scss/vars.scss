@@ -28,3 +28,14 @@ $fontPlusJD: "PlusJakartaDisplay", Arial, sans-serif;
   $vw-context: (1024 * 0.01) * 1px;
   @return ($target / $vw-context) * 1vw;
 }
+
+@function get-vw-md($target) {
+  $vw-context: (320 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@mixin content {
+  content: '';
+  position: absolute;
+  display: block;
+}

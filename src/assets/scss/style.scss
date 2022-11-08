@@ -58,7 +58,7 @@ body {
 }
 
 .App {
-	overflow: hidden;
+	// overflow: hidden;
 }
 
 .wr {
@@ -68,7 +68,24 @@ body {
 	width: 100%;
 }
 
-.fp-watermark {
-	display: none;
+.b-color-blue {
+    color: #7265FF;
+}
+
+.b-text-underline {
+	position: relative;
+	&::after {
+		@include content;
+	    left: 9px;
+	    width: 100%;
+		bottom: 14px;
+		height: 3px;
+		background: #7265FF;
+		@media only screen and (max-width: $mobile) {
+			left: 0;
+			bottom: get-vw-md(5px);
+			height: 2px;
+		  }
+	}
 }
 

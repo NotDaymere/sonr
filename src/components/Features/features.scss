@@ -4,7 +4,6 @@
   background: #131313;
   padding: 128px 0 104px;
   position: relative;
-  overflow: hidden;
   @media only screen and (max-width: $desktop-l) {
     padding: get-vw(128px) 0 get-vw(104px);
   }
@@ -12,12 +11,10 @@
     padding: 70px 0 64px;
   }
   &:after {
-    position: absolute;
-    content: "";
-    display: block;
+    @include content;
     background: url("../../assets/img/Hero/textBottom.svg") center center no-repeat;
     background-size: contain;
-    width: 100vw;
+    width: 100%;
     height: 32px;
     left: 0;
     top: -16px;
@@ -33,43 +30,24 @@
     }
   }
 
+  &-container {
+    .wr {
+      position: sticky;
+      top: 0;
+    }
+  }
+
+  &-inner {
+    position: relative;
+    overflow: hidden;
+  }
+
   &-content {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
-    position: relative;
     @media only screen and (max-width: $mobile) {
       flex-direction: column;
-    }
-    &:after {
-      position: absolute;
-      display: block;
-      content: "";
-      background: url("../../assets/img/Black.svg") center center no-repeat;
-      background-size: contain;
-      width: 55px;
-      height: 65px;
-      top: 8%;
-      left: 28%;
-      @media only screen and (max-width: $desktop-l) {
-        width: get-vw(55px);
-        height: get-vw(65px);
-      }
-    }
-    &:before {
-      position: absolute;
-      display: block;
-      content: "";
-      width: 55px;
-      height: 65px;
-      background: url("../../assets/img/White.svg") center center no-repeat;
-      background-size: contain;
-      bottom: 5%;
-      left: 13%;
-      @media only screen and (max-width: $desktop-l) {
-        width: get-vw(55px);
-        height: get-vw(65px);
-      }
     }
   }
 
@@ -120,9 +98,7 @@
     }
     &:after,
     &:before {
-      position: absolute;
-      display: block;
-      content: "";
+      @include content;
       background: url("../../assets/img/Features/Ellipse.svg") center center no-repeat;
       background-size: contain;
       width: 878px;
@@ -183,37 +159,43 @@
   }
 
   &-line {
-    position: absolute;
-    content: "";
-    display: block;
     height: 97.5%;
-    opacity: 0.4;
-    border: 1.5px solid #898989;
+    background: rgba(#898989, 0.4);
     left: -83px;
     top: 0;
+    position: absolute;
+    width: 2px;
     @media only screen and (max-width: $desktop-l) {
       left: get-vw(-83px);
     }
-    &:after {
-      position: absolute;
-      content: "";
-      display: block;
-      height: 105px;
-      border: 1.5px solid #EAEAEA;
-      top: -2px;
-      left: -1px;
-      opacity: 1;
-      @media only screen and (max-width: $desktop-l) {
-        height: get-vw(105px);
-      }
+  }
+  &-line-inner {
+    background: #EAEAEA;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 105px;
+    left: 0;
+    &::after {
+      @include content;
+      background: linear-gradient(90deg, #F8DBB8 0%, #CCBBE4 46.15%, #9187FF 100%);
+      opacity: 0.2;
+      filter: blur(213.207px);
+      width: 322px;
+      height: 322px;
+      left: 100%;
+      top: 50%;
+      margin-left: 80px;
+      margin-top: -161px;
     }
   }
 
-  h2 {
+  &-title {
     text-transform: uppercase;
     color: $white;
     opacity: 0.6;
     max-width: 350px;
+    transition: opacity 0.3s;
     @media only screen and (max-width: $desktop-l) {
       max-width: get-vw(350px);
     }
@@ -226,11 +208,21 @@
 
   &-block {
     margin-bottom: 70px;
+    
     @media only screen and (max-width: $desktop-l) {
       margin-bottom: get-vw(70px);
     }
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &-block-inner {
+    &.active {
+      .features-title,
+      .features-text {
+        opacity: 1;
+      }
     }
   }
 
@@ -242,6 +234,7 @@
     line-height: 1.2;
     color: $white;
     opacity: 0.6;
+    transition: opacity 0.3s;
     max-width: 280px;
     @media only screen and (max-width: $desktop-l) {
       font-size: get-vw(15px);

@@ -6,7 +6,7 @@
     padding: get-vw(113px) 0 get-vw(30px);
   }
   @media only screen and (max-width: $mobile) {
-    padding: 54px 0;
+    padding: 54px 0 29px;
   }
 
   &-content {
@@ -20,6 +20,8 @@
     }
     @media only screen and (max-width: $mobile) {
       flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
     }
   }
 
@@ -40,101 +42,133 @@
       font-size: 204px;
       text-align: center;
     }
-  }
 
-  .s-one {
+    &:after {
+      @include content;
+    }
+
     span {
-      animation: flicker .6s infinite, shake .1s;
+      display: block;
+      animation: shake .6s infinite;
       animation-iteration-count: infinite;
     }
-    &:after {
-      display: block;
-      position: absolute;
-      background: url("../../assets/img/Sonr/earth.svg") center center no-repeat;
-      background-size: contain;
-      content: "";
-      width: 240px;
-      height: 196px;
-      top: -26px;
-      right: -46px;
-      animation: position 2s;
-      @media only screen and (max-width: $desktop-l) {
-        width: get-vw(240px);
-        height: get-vw(196px);
-        top: get-vw(-26px);
-        right: get-vw(-46px);
-      }
-      @media only screen and (max-width: $mobile) {
-        width: 103px;
-        height: 84px;
-        top: -12px;
-        right: 50%;
-        margin-right: -80px;
-      }
-    }
-  }
 
-  .s-two {
-    z-index: 2;
-    span {
-      animation: flicker .6s infinite, shake .5s;
-      animation-iteration-count: infinite;
+    &.aos-animate {
+      &.s-one {
+        &:after {
+          animation: position 2s;
+        }
+      }
+      &.s-two {
+        span {
+          animation-delay: .3s;
+        }
+        &:after {
+          animation: show 2s;
+        }
+      }
+      &.s-three {
+        &:after {
+          animation: positionTwo 2s;
+        }
+      }
     }
-    &:after {
-      z-index: -1;
-      display: block;
-      position: absolute;
-      background: url("../../assets/img/Sonr/Ellipse.svg") center center no-repeat;
-      background-size: contain;
-      content: "";
-      width: 272px;
-      height: 315px;
-      top: -19px;
-      right: -21px;
-      animation: show 2s;
-      @media only screen and (max-width: $desktop-l) {
-        width: get-vw(272px);
-        height: get-vw(315px);
-        top: get-vw(-19px);
+
+    &.s-one {
+      &:after {
+        background: url("../../assets/img/Sonr/earth.svg") center center no-repeat;
+        background-size: contain;
+        width: 240px;
+        height: 196px;
+        top: -26px;
+        right: -46px;
+        @media only screen and (max-width: $desktop-l) {
+          width: get-vw(240px);
+          height: get-vw(196px);
+          top: get-vw(-26px);
+          right: get-vw(-46px);
+        }
+        @media only screen and (max-width: $mobile) {
+          width: 103px;
+          height: 84px;
+          top: -12px;
+          right: 50%;
+          margin-right: -80px;
+        }
+      }
+    }
+
+    &.s-two {
+      z-index: 2;
+      &:after {
+        z-index: -1;
+        background: url("../../assets/img/Sonr/Ellipse.svg") center center no-repeat;
+        background-size: contain;
+        width: 272px;
+        height: 315px;
+        top: -19px;
         right: -21px;
-      }
-      @media only screen and (max-width: $mobile) {
-        width: 110px;
-        height: 127px;
-        top: -10px;
-        right: 50%;
-        margin-right: -69px;
+        @media only screen and (max-width: $desktop-l) {
+          width: get-vw(272px);
+          height: get-vw(315px);
+          top: get-vw(-19px);
+          right: -21px;
+        }
+        @media only screen and (max-width: $mobile) {
+          width: 110px;
+          height: 127px;
+          top: -10px;
+          right: 50%;
+          margin-right: -69px;
+        }
       }
     }
-  }
 
-  .s-three {
-    &:after {
-      display: block;
-      position: absolute;
-      background: url("../../assets/img/Sonr/earth.svg") center center no-repeat;
-      background-size: contain;
-      content: "";
-      width: 228px;
-      height: 196px;
-      top: 50%;
-      transform: translate(-53%, -50%);
-      left: 50%;
-      animation: positionTwo 2s;
-      @media only screen and (max-width: $desktop-l) {
-        width: get-vw(228px);
-        height: get-vw(196px);
-      }
-      @media only screen and (max-width: $mobile) {
-        width: 103px;
-        height: 84px;
-        top: 83px;
+    &.s-three {
+      &:after {
+        background: url("../../assets/img/Sonr/earth.svg") center center no-repeat;
+        background-size: contain;
+        width: 228px;
+        height: 196px;
+        top: 50%;
+        transform: translate(-53%, -50%);
         left: 50%;
-        margin-left: 3px;
+        @media only screen and (max-width: $desktop-l) {
+          width: get-vw(228px);
+          height: get-vw(196px);
+        }
+        @media only screen and (max-width: $mobile) {
+          width: 103px;
+          height: 84px;
+          top: 83px;
+          left: 50%;
+          margin-left: 3px;
+        }
       }
     }
   }
 
+  &-angles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    &.aos-animate {
+      .s-lt {
+        animation: lt 2s;
+      }
+      .s-rt {
+        animation: rt 2s;
+      }
+      .s-lb {
+        animation: lb 2s;
+      }
+      .s-rb {
+        animation: rb 2s;
+      }
+    }
+  }
 
   &-angle {
     position: absolute;
@@ -150,59 +184,74 @@
       height: 17px;
       border: 3px solid $black;
     }
-  }
 
-  .s-lt {
-    animation: lt 2s;
-    top: 0;
-    left: 0;
-    border-bottom: none;
-    border-right: none;
-  }
+    &.s-lt {
+      top: 0;
+      left: 0;
+      border-bottom: none;
+      border-right: none;
+      @media only screen and (max-width: $mobile) {
+        top: 5px;
+        left: 6px;
+      }
+    }
 
-  .s-rt {
-    animation: rt 2s;
-    top: 0;
-    right: 0;
-    border-bottom: none;
-    border-left: none;
-  }
+    &.s-rt {
+      top: 0;
+      right: 0;
+      border-bottom: none;
+      border-left: none;
+      @media only screen and (max-width: $mobile) {
+        top: 5px;
+        right: 6px;
+      }
+    }
 
-  .s-lb {
-    animation: lb 2s;
-    bottom: 0;
-    left: 0;
-    border-top: none;
-    border-right: none;
-  }
+    &.s-lb {
+      bottom: 0;
+      left: 0;
+      border-top: none;
+      border-right: none;
+      @media only screen and (max-width: $mobile) {
+        bottom: 22px;
+        left: 6px;
+      }
+    }
 
-  .s-rb {
-    animation: rb 2s;
-    bottom: 0;
-    right: 0;
-    border-top: none;
-    border-left: none;
+    &.s-rb {
+      bottom: 0;
+      right: 0;
+      border-top: none;
+      border-left: none;
+      @media only screen and (max-width: $mobile) {
+        bottom: 22px;
+        right: 5px;
+      }
+    }
   }
 }
 
-
 @keyframes shake {
-  0% { transform: translate(0px, 1px) rotate(0deg); }
-  10% { transform: translate(0px, -2px) rotate(-1deg); }
-  20% { transform: translate(0px, 0px) rotate(1deg); }
-  30% { transform: translate(0px, 2px) rotate(0deg); }
-  40% { transform: translate(0px, -1px) rotate(1deg); }
-  50% { transform: translate(0px, 2px) rotate(-1deg); }
-  60% { transform: translate(0px, 1px) rotate(0deg); }
-  70% { transform: translate(0px, 1px) rotate(-1deg); }
-  80% { transform: translate(0px, -1px) rotate(1deg); }
-  90% { transform: translate(0px, 2px) rotate(0deg); }
-  100% { transform: translate(0px, -2px) rotate(-1deg); }
+  0% { transform: skewY(-2deg) translateY(0); opacity: 1; }
+  5% { transform: skewY(2deg) translateY(5px); opacity: 0; }
+  10% { transform: skewY(-2deg) translateY(0); opacity: 1; }
+  15% { transform: skewY(2deg) translateY(5px); opacity: 0; }
+  20% { transform: skewY(0deg) translateY(0); opacity: 1; }
+  100% { transform: skewY(0deg) translateY(0); opacity: 1; }
 }
 
 @keyframes flicker {
-  from { opacity: 1;}
-  to { opacity: 0; }
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0, 2px);
+  }
+  100% {
+    transform: translate(0, -2px) rotate3d(1, 1, 0);
+  }
 }
 
 @keyframes item {

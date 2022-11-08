@@ -4,9 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 //img
-import Mobile from "../../assets/img/Steps/mobile.svg";
-import Technology from "../../assets/img/Steps/technology.svg";
-import Keyboard from "../../assets/img/Steps/keyboard.svg";
+import Mobile from "../../assets/img/Steps/mobile.png";
+import Technology from "../../assets/img/Steps/technology.png";
+import Keyboard from "../../assets/img/Steps/keyboard.png";
 
 const dataSteps = [
     {
@@ -29,6 +29,7 @@ const dataSteps = [
 function Steps () {
     const settings = {
         arrows: false,
+        settings:  'unslick',
         responsive: [
             {
                 breakpoint: 19200,
@@ -49,7 +50,7 @@ function Steps () {
     };
 
     return (
-        <div className="steps">
+        <div className="steps" id="Documentation">
             <div className="wr">
                 <div className="steps-content">
                     <div className="h1"

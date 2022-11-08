@@ -4,7 +4,8 @@ import "./features.scss";
 
 //img
 import Figure from "../../assets/img/Features/figure.svg";
-import Sphere from "../../assets/img/Features/planet.svg";
+import Sphere from "../../assets/img/Features/sphere.svg";
+import Arrow from "../../assets/img/Features/arrow.svg";
 
 const data = [
     {
@@ -29,14 +30,13 @@ function Features() {
 
     const lineOffset = () => {
         const containerRect = containerRef.current.getBoundingClientRect();
-        const _top = (containerRect.top * -1) / (containerRect.height / 100);
+        const _top = (containerRect.top * -1) / ((containerRect.height) / 100);
         if (_top >= 100) {
             setTop(100);
             return;
         }
         if (_top <= 0) {
             setTop(0);
-            console.log(0);
             return;
         }
         setTop(_top);
@@ -53,7 +53,7 @@ function Features() {
     }, []);
 
     return (
-        <div className="features">
+        <div className="features" id="About">
             <div className="features-container" ref={containerRef}>
                 <div className="wr">
                     <div className="features-content">
@@ -63,20 +63,23 @@ function Features() {
                             </div>
                             <div className="features-img">
                                 <img src={Sphere} alt="#" />
+                                <a className="features-link" href="#">
+                                    <img src={Arrow} alt="#"/>
+                                </a>
                             </div>
                             <div className="features-paragraph">
                                 <p className="features-paragraph-text">
                                     A robust, rapid-scaling
-                                    <br /> platform for interconnected
-                                    <br />apps, and total digital
-                                    <br />autonomy
+                                    <span>platform for interconnected</span>
+                                    <span>apps, and total digital</span>
+                                    <span>autonomy</span>
                                 </p>
                                 <p className="features-paragraph-text p-two">
                                     A robust, rapid-
-                                    <br />&nbsp;&nbsp;&nbsp;&nbsp;scaling platform
-                                    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for interconnected
-                                    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apps, and total
-                                    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;digital autonomy
+                                    <span>scaling platform</span>
+                                    <span>for interconnected</span>
+                                    <span>apps, and total</span>
+                                    <span>digital autonomy</span>
                                 </p>
                             </div>
                         </div>

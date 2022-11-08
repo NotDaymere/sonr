@@ -44,8 +44,6 @@
   }
 
   &-btn {
-    display: block;
-    margin-right: 1px;
     width: 12px;
     height: 12px;
     display: flex;
@@ -84,9 +82,7 @@
       }
       &:after,
       &:before{
-        position: absolute;
-        content: "";
-        display: block;
+        @include content;
         background: $black;
         width: 3px;
         height: 3px;
@@ -137,7 +133,7 @@
       height: calc(100vh - 72px);
       z-index: 1000;
       width: 100vw;
-      padding: 20px 20px 40px;
+      padding: 72px 20px 40px;
       border-radius: 8px;
       background: #F6F6F6;
       transition: all .3s;
@@ -159,7 +155,7 @@
       margin: 0;
       padding: 0;
       @media only screen and (max-width: $mobile) {
-        gap: 20px;
+        gap: 32px;
         flex-direction: column;
         width: 100%;
         align-items: center;
@@ -210,7 +206,11 @@
     display: none;
     @media only screen and (max-width: $mobile) {
       display: flex;
-      padding-top: 91px;
+      padding-top: 98px;
+      padding-right: 8px;
+      .btn {
+        padding: 20px 48px;
+      }
     }
     .c-link {
       border-color: #f6f6f6;

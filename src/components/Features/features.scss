@@ -12,7 +12,7 @@
   }
   &:after {
     @include content;
-    background: url("../../assets/img/Hero/textBottom.svg") center center no-repeat;
+    background: url("../../assets/img/Features/textBottom.svg") center center no-repeat;
     background-size: contain;
     width: 100%;
     height: 32px;
@@ -24,16 +24,22 @@
       top: get-vw(-16px);
     }
     @media only screen and (max-width: $mobile) {
-      width: 978px;
       height: 22px;
       top: -11px;
+      background-size: cover;
     }
   }
 
   &-container {
+    @media only screen and (max-width: $mobile) {
+      height: auto !important;
+    }
     .wr {
       position: sticky;
       top: 0;
+      @media only screen and (max-width: $mobile) {
+        position: static;
+      }
     }
   }
 
@@ -48,6 +54,8 @@
     justify-content: space-between;
     @media only screen and (max-width: $mobile) {
       flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
   }
 
@@ -55,8 +63,17 @@
     width: 62%;
     position: relative;
     z-index: 1;
+    margin-left: -30px;
+    @media only screen and (max-width: $desktop-l) {
+      margin-left: 30px;
+    }
     @media only screen and (max-width: $mobile) {
-      width: 100%;
+      width: calc(100% + 30px);
+      min-height: 538px;
+      margin: -70px -15px 0;
+      padding: 70px 15px 0;
+      text-align: center;
+      overflow: hidden;
     }
   }
 
@@ -76,8 +93,9 @@
     }
     @media only screen and (max-width: $mobile) {
       font-size: 56px;
+      padding-bottom: 297px;
       writing-mode: horizontal-tb;
-      transform: scale(1);
+      transform: scale(1) !important;
     }
   }
 
@@ -85,16 +103,28 @@
     width: 500px;
     height: 406px;
     position: absolute;
-    transform: translate(24px, -600px);
+    transform: translate(24px, -637px);
     @media only screen and (max-width: $desktop-l) {
       width: get-vw(500px);
       height: get-vw(406px);
       transform: translate(get-vw(24px), get-vw(-600px));
     }
+    @media only screen and (max-width: $mobile) {
+      width: 385px;
+      height: 313px;
+      top: 90px;
+      left: 50%;
+      margin-left: -188px;
+      transform: translate(0, 0);
+    }
+    & > img {
+      animation: rotateAnimation 4s linear infinite;
+    }
     img {
       display: block;
       width: 100%;
       height: 100%;
+      position: relative;
     }
     &:after,
     &:before {
@@ -103,18 +133,53 @@
       background-size: contain;
       width: 878px;
       height: 640px;
+      z-index: 1;
       @media only screen and (max-width: $desktop-l) {
         width: get-vw(878px);
         height: get-vw(640px);
+      }
+      @media only screen and (max-width: $mobile) {
+        width: 590px;
+        height: 619px;
       }
     }
     &:after {
       top: -30%;
       left: -60%;
+      @media only screen and (max-width: $mobile) {
+        transform: translate(-86px, -140px);
+        top: 0;
+        left: 0;
+      }
     }
     &:before {
       top: -40%;
       left: -55%;
+      @media only screen and (max-width: $mobile) {
+        transform: translate(-86px, -111px);
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &-link {
+    position: absolute;
+    mix-blend-mode: difference;
+    width: 115px;
+    height: 115px;
+    z-index: 3;
+    left: 65%;
+    display: block;
+    top: 70%;
+    @media only screen and (max-width: $desktop-l) {
+      width: get-vw(115px);
+      height: get-vw(115px);
+    }
+    @media only screen and (max-width: $mobile) {
+      width: 70px;
+      height: 70px;
+      top: 75%;
     }
   }
 
@@ -130,7 +195,7 @@
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
-    top: 24%;
+    top: 20%;
     left: 22.7%;
     @media only screen and (max-width: $desktop-l) {
       font-size: get-vw(15px);
@@ -138,15 +203,52 @@
     @media only screen and (max-width: $tablet) {
       font-size: get-vw-td(12px);
     }
+    @media only screen and (max-width: $mobile) {
+      font-size: 14px;
+      max-width: 290px;
+      margin: 0 auto 20px;
+      position: initial;
+      top: 0;
+      left: 0;
+      text-align: initial;
+    }
 
     &-text {
       width: 100%;
+      margin: 0 0 5px;
+      span {
+        display: block;
+        @media only screen and (max-width: $mobile) {
+          padding: 0 !important;
+        }
+      }
     }
 
     .p-two {
       position: absolute;
       right: -87%;
-      top: 77%;
+      top: 84%;
+      @media only screen and (max-width: $mobile) {
+        right: 0;
+        top: 0;
+        padding-left: 74px;
+        position: initial;
+      }
+      span {
+        display: block;
+        &:nth-child(n) {
+          padding-left: 20px;
+        }
+        &:nth-child(2n) {
+          padding-left: 44px;
+        }
+        &:nth-child(3n) {
+          padding-left: 60px;
+        }
+        &:nth-child(4n) {
+          padding-left: 73px;
+        }
+      }
     }
   }
 
@@ -176,6 +278,9 @@
     top: 0;
     height: 105px;
     left: 0;
+    @media only screen and (max-width: $mobile) {
+      position: sticky;
+    }
     &::after {
       @include content;
       background: linear-gradient(90deg, #F8DBB8 0%, #CCBBE4 46.15%, #9187FF 100%);
@@ -187,6 +292,12 @@
       top: 50%;
       margin-left: 80px;
       margin-top: -161px;
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(322px);
+        height: get-vw(322px);
+        margin-left: get-vw(80px);
+        margin-top: get-vw(-161px);
+      }
     }
   }
 
@@ -202,7 +313,7 @@
     @media only screen and (max-width: $mobile) {
       font-size: 28px;
       margin-bottom: 16px;
-      max-width: 248px;
+      max-width: 95%;
     }
   }
 
@@ -244,7 +355,7 @@
     }
     @media only screen and (max-width: $mobile) {
       font-size: 14px;
-      max-width: 248px;
+      max-width: 95%;
     }
   }
 
@@ -264,4 +375,9 @@
       display: block;
     }
   }
+}
+
+@keyframes rotateAnimation {
+  0% {transform: rotate(0);}
+  100% {transform: rotate(360deg);}
 }

@@ -2,10 +2,10 @@ import "./cards.scss";
 
 function Cards () {
     return (
-        <div className="cards">
+        <div className="cards" id="Technology">
             <div className="wr">
                 <div className="cards-content">
-                    <div className="cards-block">
+                    <div className="cards-block" data-aos="fade">
                         <div className="cards-box c-one">
                             <a href="#" className="cards-box-link" />
                             <div className="cards-top">
@@ -50,7 +50,7 @@ function Cards () {
                                 <a className="cards-link" href="#">read docs</a>
                             </div>
                         </div>
-                        <div className="cards-box c-two">
+                        <div className="cards-box c-two" data-aos="fade">
                             <a href="#" className="cards-box-link" />
                             <div className="cards-top">
                                 <div className="cards-title">
@@ -62,7 +62,7 @@ function Cards () {
                                 Streamline connectivity, authorization and cross-platform compatibility into a single workflow. Integrate with Sonr’s Motor plugins to automatically secure peer-to-peer networking from any device.
                             </div>
                         </div>
-                        <div className="cards-box c-three">
+                        <div className="cards-box c-three" data-aos="fade">
                             <a href="#" className="cards-box-link" />
                             <div className="cards-top">
                                 <div className="cards-title">
@@ -77,7 +77,7 @@ function Cards () {
                     </div>
                     <div className="cards-button">
                         <button className="btn">register for beta</button>
-                        <a className="cards-link c-link">read docs</a>
+                        <a href="#" className="cards-link c-link">read docs</a>
                     </div>
                 </div>
             </div>

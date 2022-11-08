@@ -4,21 +4,18 @@
   animation: block 1s;
   padding: 0 0 92px;
   position: relative;
-  overflow: hidden;
   @media only screen and (max-width: $desktop-l) {
     padding: 0 0 get-vw(92px);
   }
   @media only screen and (max-width: $mobile) {
-    padding: 16px 0 22px;
+    padding: 16px 0 50px;
   }
   &:after {
     z-index: -1;
-    position: absolute;
-    display: block;
-    content: "";
+    @include content;
     background: url("../../assets/img/Cards/line.svg") center center no-repeat;
     background-size: contain;
-    width: 100vw;
+    width: 100%;
     height: 1000px;
     top: 2%;
     left: 0;
@@ -27,7 +24,7 @@
       height: get-vw(1000px);
     }
     @media only screen and (max-width: $mobile) {
-      top: 69%;
+      top: 788px;
     }
   }
 
@@ -36,6 +33,9 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 300px;
+    &.aos-animate {
+      animation: block 2s;
+    }
     @media only screen and (max-width: $desktop-l) {
       padding-bottom: get-vw(300px);
     }
@@ -65,8 +65,8 @@
     @media only screen and (max-width: $tablet) {
       padding: 20px 20px 20px 30px;
     }
-    @media only screen and (max-width: $tablet) {
-      padding: 32px;
+    @media only screen and (max-width: $mobile) {
+      padding: 32px 32px 16px;
       min-width: 272px;
     }
     &:hover {
@@ -87,7 +87,7 @@
         @media only screen and (max-width: $desktop-l) {
           max-width: get-vw(227px);
         }
-        @media only screen and (max-width: $tablet) {
+        @media only screen and (max-width: $mobile) {
           max-width: 250px;
         }
       }
@@ -102,11 +102,13 @@
     }
 
     &.c-two {
-      animation: cardTwo 2s;
       background: #EFCBF5;
       order: 1;
       z-index: 2;
-      transform: rotate(-9.13deg) translate(37px, 117px);
+      &.aos-animate {
+        transform: rotate(-9.13deg) translate(37px, 117px);
+        animation: cardTwo 2s;
+      }
       .cards-description {
         max-width: 314px;
         @media only screen and (max-width: $desktop-l) {
@@ -120,9 +122,10 @@
         transform: rotate(-12.13deg) translate(28px, 95px);
       }
       @media only screen and (max-width: $mobile) {
-        transform: none;
+        transform: none !important;
         order: 2;
         max-width: 216px;
+        padding: 32px;
       }
       .cards-box-link {
         right: 67px;
@@ -133,17 +136,21 @@
         }
       }
       &:hover {
-        transform: rotate(0) translate(37px, 117px) scale(1.1);
         z-index: 5;
+        &.aos-animate {
+          transform: rotate(0) translate(37px, 117px) scale(1.1);
+        }
       }
     }
 
     &.c-three {
-      animation: cardThree 2s;
       background: #C9E5FF;
       order: 3;
       z-index: 2;
-      transform: rotate(7deg) translate(-24px, 136px);
+      &.aos-animate {
+        transform: rotate(7deg) translate(-24px, 136px);
+        animation: cardThree 2s;
+      }
       .cards-box-link {
         top: 95px;
         left: 62px;
@@ -156,12 +163,15 @@
         transform: rotate(10deg) translate(-28px, 114px);
       }
       @media only screen and (max-width: $mobile) {
-        transform: none;
+        transform: none !important;
         max-width: 198px;
+        padding: 32px;
       }
       &:hover {
-        transform: rotate(0) translate(-24px, 136px) scale(1.1);
         z-index: 5;
+        &.aos-animate {
+          transform: rotate(0) translate(-24px, 136px) scale(1.1);
+        }
       }
     }
   }
@@ -264,9 +274,7 @@
       padding-bottom: get-vw(8px);
     }
     &:after {
-      display: block;
-      content: "";
-      position: absolute;
+      @include content;
       background: #3A37FF;
       width: 28px;
       height: 2px;
@@ -348,16 +356,14 @@
       font-size: get-vw-td(15px);
     }
     @media only screen and (max-width: $mobile) {
-      padding-top: 25px;
-      font-size: 16px;
+      margin: 32px 32px 0 0;
+      font-size: 20px;
     }
     &:hover {
       border-color: $blackLight;
     }
     &:after {
-      position: absolute;
-      content: "";
-      display: block;
+      @include content;
       background: url("../../assets/img/Cards/arrow.svg") center center no-repeat;
       background-size: contain;
       width: 24px;
@@ -372,10 +378,10 @@
         margin-top: get-vw(-15px);
       }
       @media only screen and (max-width: $mobile) {
-        width: 18px;
-        height: 28px;
-        right: -20px;
-        top: 26px;
+        width: 23px;
+        height: 31px;
+        right: -31px;
+        top: -6px;
       }
     }
   }
@@ -408,5 +414,3 @@
   from {transform: scale(1, 0.2)}
   to {transform: scale(1)}
 }
-//link svg!!!
-//https://app.svgator.com/editor#/b7a4114d71164c30a43133aa6a7a7484

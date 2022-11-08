@@ -22,26 +22,32 @@ function Hero() {
                         ))}
                     </div>
                     <div className="hero-description">
-                        <h1 className="hero-title" data-aos="fade-up" data-aos-delay="100">
-                            We’re&nbsp;
-                            <span className="b-color-blue">
-                                building
+                        <h1 className="hero-title">
+                            <span className="b-title-text" data-aos="fade-down" data-aos-delay="100">
+                                We’re&nbsp;
+                                <span className="b-color-blue">
+                                    building
+                                </span>
                             </span>
                         </h1>
-                        <div className="hero-subtitle h1" data-aos="fade-up" data-aos-delay="300">
-                            <img className="hero-earth" src={Earth} alt="#" />
-                            the internet
+                        <div className="hero-subtitle h1">
+                            <div className="b-title-text" data-aos="fade-down" data-aos-delay="300">
+                                <img className="hero-earth" src={Earth} alt="#" />
+                                the internet
+                            </div>
                         </div>
-                        <div className="hero-last-title h1" data-aos="fade-up" data-aos-delay="500">
-                            you <span className="b-text-underline">deserve</span>
+                        <div className="hero-last-title h1">
+                            <div className="b-title-text" data-aos="fade-down" data-aos-delay="500">
+                                you <span className="b-text-underline">deserve</span>
+                            </div>
                         </div>
-                        <div className="hero-eye" data-aos="fade-up" data-aos-delay="500">
+                        <div className="hero-eye" data-aos="fade-left" data-aos-delay="500">
                             <img src={Eye} />
                         </div>
                     </div>
 
                     <div className="hero-block">
-                        <div className="hero-block-left">
+                        <div className="hero-block-left" data-aos="fade-right">
                             <div className="hero-block-text">
                                 view showreel
                             </div>
@@ -49,12 +55,12 @@ function Hero() {
                                 <img src={Arrow} alt="#" />
                             </a>
                         </div>
-                        <div className="hero-block-right">
+                        <div className="hero-block-right" data-aos="fade-left">
                             A robust, rapid-scaling platform for interconnected apps, and total digital autonomy
                         </div>
                     </div>
                 </div>
-                <div className="hero-bottom">
+                <div className="hero-bottom" data-aos="fade-up">
                     all data in<br/>one place
                 </div>
             </div>

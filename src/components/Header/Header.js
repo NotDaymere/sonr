@@ -40,19 +40,19 @@ function Header () {
                                     data-aos-anchor-placement="bottom-center"
                                     data-aos-duration="1000"
                                 >
-                                    <a href="#">About</a>
+                                    <a href="#About">About</a>
                                 </li>
                                 <li data-aos="fade-up"
                                     data-aos-anchor-placement="bottom-center"
                                     data-aos-duration="1200"
                                 >
-                                    <a href="#">Technology</a>
+                                    <a href="#Technology">Technology</a>
                                 </li>
                                 <li data-aos="fade-up"
                                     data-aos-anchor-placement="bottom-center"
                                     data-aos-duration="1500"
                                 >
-                                    <a href="#">Documentation</a>
+                                    <a href="#Documentation">Documentation</a>
                                 </li>
                             </ul>
                             <div className="cards-button">

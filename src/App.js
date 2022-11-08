@@ -11,7 +11,10 @@ import AOS from "aos";
 function App() {
 
     useEffect(() => {
-        AOS.init();
+        AOS.init({
+            once: true,
+            anchorPlacement: 'top-bottom bottom-top',
+        });
         AOS.refresh();
     }, []);
 

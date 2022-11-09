@@ -1,8 +1,8 @@
 import "./hero.scss";
 //img
-import Earth from "../../assets/img/Hero/earth.svg";
+import Earth from "../../assets/img/Hero/earth2.gif";
 import Arrow from "../../assets/img/Hero/arrow.svg";
-import Eye from "../../assets/img/Hero/eye.svg";
+import Eye from "../../assets/img/Hero/eye2.gif";
 
 function Hero() {
     return (
@@ -31,7 +31,7 @@ function Hero() {
                             </span>
                         </h1>
                         <div className="hero-subtitle h1">
-                            <div className="b-title-text" data-aos="fade-down" data-aos-delay="300">
+                            <div className="b-title-text b-line" data-aos="fade-down" data-aos-delay="300">
                                 <img className="hero-earth" src={Earth} alt="#" />
                                 the internet
                             </div>

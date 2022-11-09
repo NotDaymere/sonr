@@ -112,6 +112,33 @@
     display: block;
   }
 
+  .b-line {
+    position: relative;
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      background: url("../../assets/img/Hero/line.svg")center center no-repeat;
+      background-size: contain;
+      width: 83px;
+      height: 35px;
+      left: 4px;
+      top: 50%;
+      margin-top: -34px;
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(83px);
+        height: get-vw(35px);
+        margin-top: get-vw(-34px);
+      }
+      @media only screen and (max-width: $mobile) {
+        width: get-vw-md(15px);
+        height: get-vw-md(15px);
+        left: get-vw-md(5px);
+        margin-top: get-vw-md(-5px);
+      }
+    }
+  }
+
   &-last-title {
     position: relative;
   }
@@ -127,29 +154,53 @@
 
   &-eye {
     position: absolute;
-    width: 160px;
-    height: 115px;
-    right: -115px;
+    width: 120px;
+    height: 90px;
+    right: -130px;
     bottom: 25px;
     @media only screen and (max-width: $desktop-l) {
-      width: get-vw(160px);
-      height: get-vw(115px);
-      right: get-vw(-115px);
+      width: get-vw(120px);
+      height: get-vw(90px);
+      right: get-vw(-130px);
       bottom: get-vw(25px);
     }
     @media only screen and (max-width: $tablet) {
-      width: get-vw-td(140px);
-      height: get-vw-td(95px);
-      right: get-vw-td(-115px);
+      width: get-vw-td(100px);
+      height: get-vw-td(70px);
+      right: get-vw-td(-100px);
       bottom: get-vw-td(25px);
     }
     @media only screen and (max-width: $mobile) {
       height: 89px;
-      width: 133px;
       top: 8px;
       bottom: unset;
       right: 50%;
-      margin-right: -66px;
+      width: 84px;
+      margin-right: -47px;
+    }
+    &:after {
+      display: block;
+      position: absolute;
+      content: "";
+      background: url("../../assets/img/Hero/text.svg") center center no-repeat;
+      background-size: contain;
+      width: 120px;
+      height: 20px;
+      bottom: -25px;
+      left: 50%;
+      margin-left: -65px;
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(120px);
+        height: get-vw(20px);
+        bottom: get-vw(-25px);
+        margin-left: get-vw(-65px);
+      }
+      @media only screen and (max-width: $mobile) {
+        width: 120px;
+        height: 20px;
+        bottom: -4px;
+        margin-left: -71px;
+      }
     }
 
     img {
@@ -159,17 +210,18 @@
   }
 
   &-earth {
-    width: 190px;
+    width: 135px;
+    margin: 0px -25px 0 65px;
     @media only screen and (max-width: $desktop-l) {
-      width: get-vw(190px);
+      width: get-vw(135px);
+      margin: 0 get-vw(-25px) 0 get-vw(65px);
     }
     @media only screen and (max-width: $tablet) {
-      width: get-vw-td(140px);
+      width: get-vw-td(120px);
     }
     @media only screen and (max-width: $mobile) {
       width: get-vw-md(50px);
     }
-
     img {
       width: 100%;
       display: block;

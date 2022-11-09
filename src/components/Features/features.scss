@@ -12,13 +12,14 @@
   }
   &:after {
     @include content;
-    background: url("../../assets/img/Features/textBottom.svg") center center no-repeat;
+    background: url("../../assets/img/Features/textBottom.svg") center center repeat-x;
     background-size: contain;
     width: 100%;
     height: 32px;
     left: 0;
     top: -16px;
     mix-blend-mode: difference;
+    animation: backgroundPosition 300s infinite linear;
     @media only screen and (max-width: $desktop-l) {
       height: get-vw(32px);
       top: get-vw(-16px);
@@ -110,15 +111,16 @@
       transform: translate(get-vw(24px), get-vw(-600px));
     }
     @media only screen and (max-width: $mobile) {
-      width: 385px;
-      height: 313px;
-      top: 90px;
+      width: 307px;
+      height: 298px;
+      top: 111px;
       left: 50%;
-      margin-left: -188px;
+      margin-left: -155px;
       transform: translate(0, 0);
     }
     & > img {
-      animation: rotateAnimation 4s linear infinite;
+      width: 500px;
+      height: 406px;
     }
     img {
       display: block;
@@ -180,6 +182,7 @@
       width: 70px;
       height: 70px;
       top: 75%;
+      left: 72%;
     }
   }
 
@@ -226,7 +229,7 @@
 
     .p-two {
       position: absolute;
-      right: -87%;
+      right: -106%;
       top: 84%;
       @media only screen and (max-width: $mobile) {
         right: 0;
@@ -380,4 +383,13 @@
 @keyframes rotateAnimation {
   0% {transform: rotate(0);}
   100% {transform: rotate(360deg);}
+}
+
+@keyframes backgroundPosition {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: 40000px center;
+  }
 }

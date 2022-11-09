@@ -153,10 +153,10 @@
         animation: cardThree 2s;
       }
       .cards-box-link {
-        top: 95px;
+        top: 140px;
         left: 62px;
         @media only screen and (max-width: $desktop-l) {
-          top: get-vw(95px);
+          top: get-vw(140px);
           left: get-vw(62px);
         }
       }

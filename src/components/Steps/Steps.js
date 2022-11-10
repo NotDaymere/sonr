@@ -50,7 +50,7 @@ function Steps () {
     };
 
     return (
-        <div className="steps" id="Documentation">
+        <div className="steps">
             <div className="wr">
                 <div className="steps-content">
                     <div className="h1"

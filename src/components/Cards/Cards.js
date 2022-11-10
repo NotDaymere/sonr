@@ -2,7 +2,7 @@ import "./cards.scss";
 
 function Cards () {
     return (
-        <div className="cards" id="Technology">
+        <div className="cards">
             <div className="wr">
                 <div className="cards-content">
                     <div className="cards-block" data-aos="fade">

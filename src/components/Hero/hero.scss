@@ -112,33 +112,6 @@
     display: block;
   }
 
-  .b-line {
-    position: relative;
-    &:after {
-      position: absolute;
-      display: block;
-      content: "";
-      background: url("../../assets/img/Hero/line.svg")center center no-repeat;
-      background-size: contain;
-      width: 83px;
-      height: 35px;
-      left: 4px;
-      top: 50%;
-      margin-top: -34px;
-      @media only screen and (max-width: $desktop-l) {
-        width: get-vw(83px);
-        height: get-vw(35px);
-        margin-top: get-vw(-34px);
-      }
-      @media only screen and (max-width: $mobile) {
-        width: get-vw-md(15px);
-        height: get-vw-md(15px);
-        left: get-vw-md(5px);
-        margin-top: get-vw-md(-5px);
-      }
-    }
-  }
-
   &-last-title {
     position: relative;
   }
@@ -210,14 +183,12 @@
   }
 
   &-earth {
-    width: 135px;
-    margin: 0px -25px 0 65px;
+    width: 190px;
     @media only screen and (max-width: $desktop-l) {
-      width: get-vw(135px);
-      margin: 0 get-vw(-25px) 0 get-vw(65px);
+      width: get-vw(190px);
     }
     @media only screen and (max-width: $tablet) {
-      width: get-vw-td(120px);
+      width: get-vw-td(140px);
     }
     @media only screen and (max-width: $mobile) {
       width: get-vw-md(50px);
@@ -368,6 +339,28 @@
       br {
         display: none;
       }
+    }
+  }
+
+  &-white {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 90px;
+    left: 50%;
+    z-index: 0;
+    margin-left: -415px;
+    @media only screen and (max-width: $desktop-l) {
+      width: get-vw(60px);
+      height: get-vw(60px);
+      bottom: get-vw(90px);
+      margin-left: get-vw(-415px);
+    }
+    @media only screen and (max-width: $mobile) {
+      width: 50px;
+      height: 50px;
+      margin-left: 75px;
+      bottom: 220px;
     }
   }
 }

@@ -54,7 +54,7 @@ function Features() {
     }, []);
 
     return (
-        <div className="features" id="About">
+        <div className="features">
             <div className="features-container" ref={containerRef}>
                 <div className="wr">
                     <div className="features-content">

@@ -9,7 +9,6 @@ import LogoWhite from "../../assets/img/Logo/White.svg";
 
 function Header (props) {
     let location = useLocation();
-
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const [theme, setTheme] = useState('black');
 

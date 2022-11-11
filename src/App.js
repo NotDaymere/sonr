@@ -9,6 +9,7 @@ import Header from "./components/Header/Header";
 
 //Pages
 import Home from "./components/Pages/Home/Home" 
+import About from "./components/Pages/About/About";
 import Blog from "./components/Pages/Blog/Blog";
 import Article from "./components/Pages/Article/Article";
 
@@ -31,8 +32,10 @@ function App() {
                 <Header />
                 <Routes>
                     <Route exact path='/' element={<Home />} />
+                    <Route exact path='/about' element={<About />} />
                     <Route exact path='/blog' element={<Blog />} />
                     <Route exact path='/article' element={<Article />} />
+                    
                 </Routes>
             </Router>
         </div>

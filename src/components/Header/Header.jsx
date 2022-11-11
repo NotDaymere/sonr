@@ -40,7 +40,7 @@ function Header (props) {
 
     useEffect(() => {
         dataThemeLinks.map((link) => {
-            if(link.pathname === location.pathname) {
+            if(link.pathname === location.pathname.toLowerCase()) {
                 setTheme(link.theme)
             }
         })

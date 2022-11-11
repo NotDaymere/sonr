@@ -1,0 +1,66 @@
+@import "../../../../../../../assets/scss/vars";
+
+.Comments {
+    padding: 64px 25px;
+}
+
+.Comments_title {
+    color: #000;
+    font-size: 25px;
+    font-weight: 500;
+
+    @media only screen and (max-width: $mobile) {
+        font-size: 18px;
+    }
+}
+
+.Comments_comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+
+    @media only screen and (max-width: $mobile) {
+        flex-wrap: wrap;
+    }
+}
+
+.Comments_img {
+    width: 50px;
+    height: 50px;
+
+}
+
+.Comments_input_container {
+    width: 85%;
+    padding: 30px 0 50px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+
+    @media only screen and (max-width: $mobile) {
+        width: 100%;
+        padding: 30px 0 20px;
+    }
+}
+
+.Comments_input {
+    width: 100%;
+    padding: 0;
+
+    color: #000;
+    font-size: 25px;
+    font-weight: 500;
+
+    background-color: transparent;
+
+    border: 0;
+
+    outline: none;
+
+    &::placeholder {
+        opacity: .4;
+    }
+
+    @media only screen and (max-width: $mobile) {
+        font-size: 15px;
+    }
+}

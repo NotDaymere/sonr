@@ -1,0 +1,82 @@
+@import "../../../../../assets/scss/vars";
+
+.MoreArticle {
+    padding-top: 80px;
+
+    @media only screen and (max-width: $mobile) {
+        padding-top: 50px;
+    }
+}
+
+.MoreArticle_points {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    margin: 30px auto;
+
+    background-color: rgba(19, 19, 19, 0.25);
+
+    border-radius: 100%;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        background-color: #131313;
+
+        @media only screen and (max-width: $mobile) {
+            width: 9px;
+            height: 9px;
+        }
+    }
+
+    &::before {
+        opacity: .1;
+        transform: translateX(-50%) translateY(-300%);
+    }
+
+    &::after {
+        transform: translateX(-50%) translateY(300%);
+        opacity: .5;
+    }
+
+    @media only screen and (max-width: $mobile) {
+        width: 9px;
+        height: 9px;
+        margin: 20px auto;
+    }
+}
+
+.MoreArticle_title {
+    padding-top: 64px;
+
+    color: #0E0E0E;
+    font-size: 40px;
+    font-family: $fontBranch;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $mobile) {
+        font-size: 30px;
+    }
+}
+
+.MoreArticle_filter {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.MoreArticle_posts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+
+    @media only screen and (max-width: $mobile) {
+        flex-wrap: wrap;
+    }
+}

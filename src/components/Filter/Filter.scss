@@ -1,4 +1,4 @@
-@import "../../../../../../../assets/scss/vars";
+@import "../../assets/scss/vars";
 
 .Filter {
     display: flex;
@@ -52,7 +52,6 @@
     color: $blackLight;
     font-size: 15px;
     font-weight: 500;
-    text-transform: uppercase;
 
     cursor: pointer;
     transition: all .1s linear;
@@ -117,6 +116,7 @@
     font-size: 20px;
     font-weight: 500;
     font-family: $font;
+    text-transform: unset;
 
     background-color: $whiteLight_1;
 

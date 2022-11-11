@@ -1,0 +1,29 @@
+@import "../../../../../../../assets/scss/vars";
+
+.Info {
+    & + & {
+        margin-left: 140px;
+    }
+}
+
+.Info_title {
+    color: #0B0A0A;
+    font-size: 15px;
+    font-weight: 500;
+
+    opacity: .6;
+
+    @media only screen and (max-width: $mobile) {
+        font-size: 11px;
+    }
+}
+
+.Info_content {
+    color: #0B0A0A;
+    font-size: 30px;
+    font-weight: 500;
+
+    @media only screen and (max-width: $mobile) {
+        font-size: 15px;
+    }
+}

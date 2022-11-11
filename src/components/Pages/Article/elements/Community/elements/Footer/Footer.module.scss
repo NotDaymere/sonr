@@ -1,0 +1,52 @@
+@import "../../../../../../../assets/scss/vars";
+
+.Footer {
+    padding: 40px 0;
+    background-color: #131313;
+}
+
+.Footer_container {
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $mobile) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.Footer_likes {
+    display: flex;
+    align-items: center;
+}
+
+.Footer_likes_images {
+    display: flex;
+}
+
+.Footer_likes_img { 
+    width: 50px;
+    height: 50px;
+
+    &:nth-child(2) {
+        transform: translateX(-50%);
+    }
+}
+
+.Footer_likes_count {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+
+    transform: translateX(-20%);
+}
+
+.Footer_social {
+    display: flex;
+
+    @media only screen and (max-width: $mobile) {
+        width: 100%;
+        margin-top: 30px;
+        justify-content: space-between
+    }
+}

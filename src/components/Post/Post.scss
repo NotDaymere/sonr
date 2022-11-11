@@ -1,4 +1,4 @@
-@import "../../../../../../../assets/scss/vars";
+@import "../../assets/scss/vars";
 
 .Post {
     margin-bottom: 120px;
@@ -10,6 +10,11 @@
     &.little {
         width: 30%;
     }
+
+    &.middle {
+        width: 32%;
+    }
+    
 
     @media only screen and (max-width: $mobile) {
         margin-bottom: 60px;
@@ -35,6 +40,10 @@
         font-size: 26px;
     }
 
+    &.middle {
+        margin-top: 20px;
+    }
+
     @media only screen and (max-width: $mobile) {
         &, &.little {
             font-size: 30px;
@@ -58,6 +67,14 @@
         font-size: 13px;
     }
 
+    &.middle {
+        border: 0;
+
+        @media only screen and (max-width: $mobile) {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        }
+    }
+
     @media only screen and (max-width: $mobile) {
         &, &.little {
             font-size: 14px;
@@ -68,6 +85,14 @@
 //Post data
 .Post_data {
     margin: 20px 0;
+
+    &.middle {
+        display: none;
+
+        @media only screen and (max-width: $mobile) {
+            display: flex;
+        }
+    }
 }
 
 .Post_data_item {

@@ -1,5 +1,6 @@
 import './Blog.scss'
 
+//Elements
 import Title from './elements/Title/Title';
 import Posts from './elements/Posts/Posts';
 

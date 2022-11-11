@@ -1,0 +1,50 @@
+@import "../../../../../assets/scss/vars";
+
+.Title_title {
+    max-width: 80%;
+    color: #0B0A0A;
+    font-size: 100px;
+    font-family: $fontBranch;
+    line-height: 120%;
+
+    @media only screen and (max-width: $mobile) {
+        max-width: 100%;
+        font-size: 36px;
+    }
+}
+
+.Title_des {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 140px;
+
+    @media only screen and (max-width: $mobile) {
+        flex-wrap: wrap;
+        margin-top: 100px;
+    }
+}
+
+.Title_des_info {
+    display: flex;
+}
+
+.Title_des_social {
+    display: flex;
+
+    @media only screen and (max-width: $mobile) {
+        margin-top: 50px;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.Title_img {
+    width: 100%;
+    height: auto;
+    max-height: 820px;
+    margin-top: 80px;
+
+    object-fit: cover;
+    object-position: top
+}

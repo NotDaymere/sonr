@@ -1,7 +1,7 @@
 import './Post.scss'
 
-import Like from '../../../../../../../assets/img/Blog/Like';
-import Comment from '../../../../../../../assets/img/Blog/Comment';
+import Like from '../../assets/img/Blog/Like';
+import Comment from '../../assets/img/Blog/Comment';
 
 function Post (props) {
     return (
@@ -9,7 +9,7 @@ function Post (props) {
             
             <img className='Post_img' src={props.data.img} alt="" />
 
-            <div className="PostMini_data Post_data">
+            <div className={`PostMini_data Post_data ${props.data.className}`}>
                 <div className="PostMini_data_item Post_data_item">{props.data.author}</div>
                 <div className="PostMini_data_item Post_data_item">
                     <Like color='#292D32' />

@@ -10,7 +10,9 @@ import Header from "./components/Header/Header";
 //Pages
 import Home from "./components/Pages/Home/Home" 
 import Blog from "./components/Pages/Blog/Blog";
+import Article from "./components/Pages/Article/Article";
 
+//Animation
 import AOS from "aos";
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
                 <Routes>
                     <Route exact path='/' element={<Home />} />
                     <Route exact path='/blog' element={<Blog />} />
+                    <Route exact path='/article' element={<Article />} />
                 </Routes>
             </Router>
         </div>

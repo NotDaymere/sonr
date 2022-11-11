@@ -1,0 +1,36 @@
+@import "../../../../../assets/scss/vars";
+
+.Social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    border: 1px solid #0b0a0a47;
+    border-radius: 80px;
+
+    opacity: .4;
+
+    & + & {
+        margin-left: 20px;
+    }
+
+    & span {
+        margin-left: 7px;
+    }
+
+    &_text {
+        width: auto;
+        padding: 0 20px;
+    }
+
+    &.black {
+        opacity: .9;
+        color: $whiteLight_1;
+        border: 1px solid rgba(246, 246, 246, 0.28);
+    }
+}

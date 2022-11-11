@@ -14,7 +14,6 @@ import Blog from "./components/Pages/Blog/Blog";
 import AOS from "aos";
 
 function App() {
-
     useEffect(() => {
         AOS.init({
             once: true,

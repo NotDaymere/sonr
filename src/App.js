@@ -8,7 +8,7 @@ import Cards from "./components/Cards";
 import Steps from "./components/Steps";
 import AOS from "aos";
 
-function App() {
+function App() { 
 
     useEffect(() => {
         AOS.init({

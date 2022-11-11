@@ -1,0 +1,417 @@
+@import "../../../../../assets/scss/vars";
+
+.cards {
+  animation: block 1s;
+  padding: 0 0 92px;
+  position: relative;
+  @media only screen and (max-width: $desktop-l) {
+    padding: 0 0 get-vw(92px);
+  }
+  @media only screen and (max-width: $mobile) {
+    padding: 16px 0 50px;
+  }
+  &:after {
+    z-index: -1;
+    @include content;
+    background: url("../../../../../assets/img/Cards/line.svg") center center no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 1000px;
+    top: 2%;
+    left: 0;
+    animation: line 2s;
+    @media only screen and (max-width: $desktop-l) {
+      height: get-vw(1000px);
+    }
+    @media only screen and (max-width: $mobile) {
+      top: 788px;
+    }
+  }
+
+  &-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 300px;
+    &.aos-animate {
+      animation: block 2s;
+    }
+    @media only screen and (max-width: $desktop-l) {
+      padding-bottom: get-vw(300px);
+    }
+    @media only screen and (max-width: $mobile) {
+      flex-direction: column;
+      gap: 24px;
+      padding-bottom: 130px;
+    }
+  }
+
+  &-box {
+    transition: all .3s;
+    width: 33.3%;
+    min-width: 482px;
+    min-height: 614px;
+    padding: 60px 43px 43px 59px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    @media only screen and (max-width: $desktop-l) {
+      min-width: get-vw(482px);
+      min-height: get-vw(614px);
+      padding: get-vw(60px) get-vw(43px) get-vw(43px) get-vw(59px);
+    }
+    @media only screen and (max-width: $tablet) {
+      padding: 20px 20px 20px 30px;
+    }
+    @media only screen and (max-width: $mobile) {
+      padding: 32px 32px 16px;
+      min-width: 272px;
+      animation: none !important;
+    }
+    &:hover {
+      transform: scale(1.1);
+      .cards-box-link {
+        opacity: 1;
+        transform: rotate(-15.76deg) scale(1);
+      }
+    }
+
+    &.c-one {
+      background: #C1C7FF;
+      order: 2;
+      justify-content: flex-start;
+      z-index: 3;
+      .cards-description {
+        max-width: 227px;
+        @media only screen and (max-width: $desktop-l) {
+          max-width: get-vw(227px);
+        }
+        @media only screen and (max-width: $mobile) {
+          max-width: 250px;
+        }
+      }
+      .cards-box-link {
+        right: 90px;
+        top: 55px;
+        @media only screen and (max-width: $desktop-l) {
+          right: get-vw(90px);
+          top: get-vw(55px);
+        }
+      }
+    }
+
+    &.c-two {
+      background: #EFCBF5;
+      order: 1;
+      z-index: 2;
+      &.aos-animate {
+        transform: rotate(-9.13deg) translate(37px, 117px);
+        animation: cardTwo 2s;
+      }
+      .cards-description {
+        max-width: 314px;
+        @media only screen and (max-width: $desktop-l) {
+          max-width: get-vw(314px);
+        }
+        @media only screen and (max-width: $mobile) {
+          max-width: 250px;
+        }
+      }
+      @media only screen and (max-width: $desktop-l) {
+        transform: rotate(-12.13deg) translate(28px, 95px);
+      }
+      @media only screen and (max-width: $mobile) {
+        transform: none !important;
+        order: 2;
+        max-width: 216px;
+        padding: 32px;
+      }
+      .cards-box-link {
+        right: 67px;
+        top: 31px;
+        @media only screen and (max-width: $desktop-l) {
+          right: get-vw(67px);
+          top: get-vw(31px);
+        }
+      }
+      &:hover {
+        z-index: 5;
+        &.aos-animate {
+          transform: rotate(0) translate(37px, 117px) scale(1.1);
+        }
+      }
+    }
+
+    &.c-three {
+      background: #C9E5FF;
+      order: 3;
+      z-index: 2;
+      &.aos-animate {
+        transform: rotate(7deg) translate(-24px, 136px);
+        animation: cardThree 2s;
+      }
+      .cards-box-link {
+        top: 140px;
+        left: 62px;
+        @media only screen and (max-width: $desktop-l) {
+          top: get-vw(140px);
+          left: get-vw(62px);
+        }
+      }
+      @media only screen and (max-width: $tablet) {
+        transform: rotate(10deg) translate(-28px, 114px);
+      }
+      @media only screen and (max-width: $mobile) {
+        transform: none !important;
+        max-width: 198px;
+        padding: 32px;
+      }
+      &:hover {
+        z-index: 5;
+        &.aos-animate {
+          transform: rotate(0) translate(-24px, 136px) scale(1.1);
+        }
+      }
+    }
+  }
+
+  &-box-link {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    width: 116px;
+    height: 116px;
+    background: url("../../../../../assets/img/Cards/arrow_2.svg") center center no-repeat;
+    background-size: contain;
+    transform: rotate(-15.76deg) scale(0);
+    mix-blend-mode: difference;
+    text-decoration: none;
+    transition: all 0.3s;
+    z-index: 4;
+    @media only screen and (max-width: $desktop-l) {
+      width: get-vw(116px);
+      height: get-vw(116px);
+    }
+  }
+
+  &-title {
+    font-family: $font;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.2;
+    color: #131313;
+    margin-bottom: 23px;
+    @media only screen and (max-width: $desktop-l) {
+      margin-bottom: get-vw(23px);
+      font-size: get-vw(15px);
+    }
+    @media only screen and (max-width: $tablet) {
+      font-size: get-vw-td(15px);
+    }
+    @media only screen and (max-width: $mobile) {
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .h2 {
+    font-family: $fontBranch;
+    text-transform: uppercase;
+    margin-bottom: 29px;
+    @media only screen and (max-width: $desktop-l) {
+      margin-bottom: get-vw(29px);
+    }
+  }
+
+  &-description {
+    font-family: $font;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.2;
+    color: #73717C;
+    @media only screen and (max-width: $desktop-l) {
+      font-size: get-vw(15px);
+    }
+    @media only screen and (max-width: $tablet) {
+      font-size: get-vw-td(15px);
+    }
+    @media only screen and (max-width: $mobile) {
+      font-size: 12px;
+    }
+  }
+
+  &-index {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 48px 10px;
+    margin: 65px 0 85px;
+    @media only screen and (max-width: $desktop-l) {
+      gap: get-vw(48px) get-vw(10px);
+      margin: get-vw(65px) 0 get-vw(85px);
+    }
+    @media only screen and (max-width: $tablet) {
+      align-items: stretch;
+    }
+    @media only screen and (max-width: $mobile) {
+      margin: 32px 0;
+      align-items: flex-start;
+      gap: 32px 20px;
+    }
+  }
+
+  &-list {
+    width: 45%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    padding-top: 8px;
+    @media only screen and (max-width: $desktop-l) {
+      padding-bottom: get-vw(8px);
+    }
+    &:after {
+      @include content;
+      background: #3A37FF;
+      width: 28px;
+      height: 2px;
+      border-radius: 2px;
+      top: 0;
+      left: 0;
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(28px);
+      }
+      @media only screen and (max-width: $mobile) {
+        width: 16px;
+      }
+    }
+
+    &-item {
+      font-family: $font;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.2;
+      color: #73717C;
+      min-height: 18px;
+      @media only screen and (max-width: $desktop-l) {
+        font-size: get-vw(15px);
+      }
+      @media only screen and (max-width: $tablet) {
+        font-size: get-vw-td(15px);
+      }
+      @media only screen and (max-width: $mobile) {
+        font-size: 10px;
+        min-height: 1px;
+      }
+    }
+
+    &-title {
+      font-family: $font;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.2;
+      color: $blackLight;
+      @media only screen and (max-width: $desktop-l) {
+        font-size: get-vw(15px);
+      }
+      @media only screen and (max-width: $tablet) {
+        font-size: get-vw-td(15px);
+      }
+      @media only screen and (max-width: $mobile) {
+        font-size: 10px;
+      }
+    }
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    border-bottom: 1px solid #C1C7FF;
+    font-family: $fontOffBT;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.07;
+    text-transform: uppercase;
+    color: $blackLight;
+    margin-right: 20px;
+    margin-left: 28px;
+    position: relative;
+    @media only screen and (max-width: $desktop-l) {
+      font-size: get-vw(20px);
+      margin-right: get-vw(20px);
+      margin-left: get-vw(28px);
+    }
+    @media only screen and (max-width: $tablet) {
+      font-size: get-vw-td(15px);
+    }
+    @media only screen and (max-width: $mobile) {
+      margin: 32px 32px 0 0;
+      font-size: 20px;
+    }
+    &:hover {
+      border-color: $blackLight;
+    }
+    &:after {
+      @include content;
+      background: url("../../../../../assets/img/Cards/arrow.svg") center center no-repeat;
+      background-size: contain;
+      width: 24px;
+      height: 24px;
+      right: -25px;
+      top: 50%;
+      margin-top: -15px;
+      @media only screen and (max-width: $desktop-l) {
+        width: get-vw(24px);
+        height: get-vw(24px);
+        right: get-vw(-25px);
+        margin-top: get-vw(-15px);
+      }
+      @media only screen and (max-width: $mobile) {
+        width: 23px;
+        height: 31px;
+        right: -31px;
+        top: -6px;
+      }
+    }
+  }
+
+  .c-link {
+    cursor: pointer;
+    border-color: #F6F6F6;
+    &:hover {
+      border-color: $blackLight;
+    }
+  }
+}
+
+@keyframes block {
+  from { transform: translate(0, 100px)}
+  to {transform: translate(0, 0)}
+}
+
+@keyframes cardTwo {
+  from {transform: rotate(-6deg) translate(211px, 81px)}
+  to {transform: rotate(-9.13deg) translate(37px, 117px)}
+}
+
+@keyframes cardThree {
+  from {transform: rotate(6deg) translate(-329px, 93px)}
+  to {transform: rotate(7deg) translate(-24px, 136px)}
+}
+
+@keyframes line {
+  from {transform: scale(1, 0.2)}
+  to {transform: scale(1)}
+}

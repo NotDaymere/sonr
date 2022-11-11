@@ -1,0 +1,71 @@
+@import "../../../../../assets/scss/vars";
+
+.Posts {
+    padding-top: 70px;
+
+    @media only screen and (max-width: $mobile) {
+        padding-top: 30px;
+    }
+}
+
+.Posts_posts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 65px;
+}
+
+.Posts_more {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    @media only screen and (max-width: $mobile) {
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+}
+
+.Posts_more_text {
+    color: #090909;
+    font-size: 20px;
+    font-family: $fontOffBT;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $mobile) {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.Posts_more_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: auto;
+    width: 115px;
+    height: 115px;
+    margin-left: 22px;
+    padding: 0;
+
+    background-color: rgba(0, 0, 0, 0.95);
+
+    border: 0;
+    border-radius: 100%;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.95);
+        opacity: .8;
+    }
+
+    & img {
+        width: 30%;
+    }
+
+    @media only screen and (max-width: $mobile) {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 80px;
+        height: 80px;
+    }
+}

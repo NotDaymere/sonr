@@ -9,6 +9,11 @@
     padding: 20px 0;
   }
 
+  &.white {
+    background-color: $blackLight;
+    transition: all .3s;
+  }
+
   &-content {
     display: flex;
     align-items: flex-start;
@@ -80,8 +85,8 @@
       @media only screen and (max-width: $mobile) {
         height: 5px;
       }
-      &:after,
-      &:before{
+      &::after,
+      &::before{
         @include content;
         background: $black;
         width: 3px;
@@ -93,10 +98,10 @@
           height: 5px;
         }
       }
-      &:after {
+      &::after {
         left: 0;
       }
-      &:before {
+      &::before {
         right: 0;
       }
       &:nth-child(1) {
@@ -104,6 +109,15 @@
       }
       &:nth-child(2) {
         transform-origin: bottom left;
+      }
+
+      &.white {
+        background: transparent;
+
+        &::after,
+        &::before {
+          background: $white;
+        }
       }
     }
     // Open menu
@@ -118,6 +132,10 @@
           }
           &:nth-child(2) {
             transform: rotate(-45deg) translate(4px, 1px);
+          }
+
+          &.white {
+            background: $white;
           }
         }
       }
@@ -134,8 +152,7 @@
       z-index: 1000;
       width: 100vw;
       padding: 72px 20px 40px;
-      border-radius: 8px;
-      background: #F6F6F6;
+      background: $whiteLight_1;
       transition: all .3s;
       opacity: 0;
       visibility: hidden;
@@ -145,6 +162,10 @@
     &.open {
       opacity: 1;
       visibility: visible;
+    }
+
+    &.white.open {
+      background: $blackLight;
     }
 
     ul {
@@ -173,7 +194,7 @@
         a {
           transition: all .3s;
           text-decoration: none;
-          border-bottom: 1px solid #f6f6f6;
+          border-bottom: 1px solid transparent;
           font-family: $font;
           font-weight: 700;
           font-size: 15px;
@@ -197,6 +218,13 @@
               font-family: $fontOffBT;
             }
           }
+          &.white {
+            color: $whiteLight;
+          }
+
+          &.white:hover {
+            border-color: $whiteLight;
+          }
         }
       }
     }
@@ -210,10 +238,27 @@
       padding-right: 8px;
       .btn {
         padding: 20px 48px;
+
+        &.white {
+          background-color: $whiteLight;
+          border-color: $whiteLight;
+          color: $black;
+
+          &:hover {
+            color: $white;
+            background-color: $black;
+            border-color: $black;
+          }
+        }
       }
     }
     .c-link {
-      border-color: #f6f6f6;
+      border-color: $whiteLight_1;
+
+      &.white {
+        border-color: $blackLight;
+        color: $white;
+      }
     }
   }
 }

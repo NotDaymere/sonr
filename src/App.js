@@ -1,11 +1,16 @@
 import {useEffect} from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+//Styles
 import "./assets/scss/style.scss";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import Sonr from "./components/Sonr";
-import Cards from "./components/Cards";
-import Steps from "./components/Steps";
+
+//Components
+import Header from "./components/Header/Header";
+
+//Pages
+import Home from "./components/Pages/Home/Home" 
+import Blog from "./components/Pages/Blog/Blog";
+
 import AOS from "aos";
 
 function App() {
@@ -20,12 +25,13 @@ function App() {
 
     return (
         <div className="App">
-            <Header />
-            <Hero />
-            <Features />
-            <Sonr />
-            <Cards />
-            <Steps />
+            <Router>
+                <Header />
+                <Routes>
+                    <Route exact path='/' element={<Home />} />
+                    <Route exact path='/blog' element={<Blog />} />
+                </Routes>
+            </Router>
         </div>
     )
 }

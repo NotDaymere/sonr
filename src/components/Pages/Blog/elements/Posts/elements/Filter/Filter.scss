@@ -1,0 +1,176 @@
+@import "../../../../../../../assets/scss/vars";
+
+.Filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $mobile) {
+        flex-wrap: wrap;
+    }
+}
+
+.Filter_cat {
+    position: relative;
+    display: flex;
+    
+    @media only screen and (max-width: $mobile) {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+.Filter_cat_container {
+
+    @media only screen and (max-width: $mobile) {  
+        overflow: hidden;
+        width: 100%;
+        height: 0px;
+        padding: 0;
+        background-color: $whiteLight_1; 
+
+        transition: all .3s ease-in-out;
+
+        &.open {
+            padding: 20px 0 20px;
+            height: 330px;
+        }
+    }
+}
+
+.Filter_time {
+    @media only screen and (max-width: $mobile) {
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+
+.Filter_time_title {
+    display: flex;
+    align-items: center;
+
+    color: $blackLight;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: all .1s linear;
+
+    & img {
+        margin-left: 9px;
+
+        transition: all .1s linear;
+    }
+    
+    &:hover {
+        opacity: .8;
+    }
+
+    &.open {
+        & img {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.Filter_time_container {
+    overflow: hidden;
+    width: 100%;
+    height: 0px;
+    padding: 0;
+    background-color: $whiteLight_1; 
+
+    transition: all .3s ease-in-out;
+
+    &.open {
+        padding-top: 20px;
+        height: 100px;
+    }
+}
+
+.Filter_time_container_item {
+    color: $blackLight;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all .1s linear;
+
+    &:hover {
+        opacity: .8;
+    }
+
+    & + & {
+        margin-top: 5px;
+    }
+}
+
+//FilterCat
+.FilterCat {
+    min-width: auto;
+    padding: 25px 56px;
+
+    color: #0B0A0A;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: $font;
+
+    background-color: $whiteLight_1;
+
+    border: 1px solid #0B0A0A47;
+    border-radius: 80px;
+
+    transition: all .1s linear;
+
+    &:hover {
+        border-color: #EDEDED;
+        background-color: #EDEDED;
+    }
+
+    &.active {
+        border-color: #EDEDED;
+        background-color: #EDEDED;
+    }
+
+    &.hub {
+        display: none;
+        width: 100%;
+
+        & img {
+            margin-left: 10px;
+
+            transition: all .1s linear;
+        }
+
+        &.open {
+            & img {
+                transform: rotate(90deg);
+            }
+        }
+
+        @media only screen and (max-width: $mobile) {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+    }
+
+    & + & {
+        margin-left: 15px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+        padding: 20px 25px;
+    }
+    @media only screen and (max-width: $mobile) {
+        width: 100%;
+
+        & + & {
+            margin-left: 0px;
+            margin-top: 10px;
+        }
+    }
+}

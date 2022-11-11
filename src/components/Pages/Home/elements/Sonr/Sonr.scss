@@ -1,0 +1,295 @@
+@import "../../../../../assets/scss/vars";
+
+.sonr {
+  padding: 113px 0 30px;
+  @media only screen and (max-width: $desktop-l) {
+    padding: get-vw(113px) 0 get-vw(30px);
+  }
+  @media only screen and (max-width: $mobile) {
+    padding: 54px 0 29px;
+  }
+
+  &-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 63px 35px 10px;
+    @media only screen and (max-width: $desktop-l) {
+      padding: get-vw(63px) get-vw(35px) get-vw(10px);
+    }
+    @media only screen and (max-width: $mobile) {
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+  &-item {
+    animation: item 2s;
+    font-family: $fontOffBT;
+    font-weight: 400;
+    font-size: 476px;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: #0a0909;
+    position: relative;
+    @media only screen and (max-width: $desktop-l) {
+      font-size: get-vw(476px);
+    }
+    @media only screen and (max-width: $mobile) {
+      width: 50%;
+      font-size: 204px;
+      text-align: center;
+    }
+
+    &:after {
+      @include content;
+    }
+
+    span {
+      display: block;
+      animation: shake .6s infinite;
+      animation-iteration-count: infinite;
+    }
+
+    &.aos-animate {
+      &.s-one {
+        &:after {
+          animation: position 2s;
+        }
+      }
+      &.s-two {
+        span {
+          animation-delay: .3s;
+        }
+        &:after {
+          animation: show 2s;
+        }
+      }
+      &.s-three {
+        &:after {
+          animation: positionTwo 2s;
+        }
+      }
+    }
+
+    &.s-one {
+      &:after {
+        background: url("../../../../../assets/img/Sonr/earth.gif") center center no-repeat;
+        background-size: contain;
+        width: 240px;
+        height: 196px;
+        top: -26px;
+        right: -46px;
+        @media only screen and (max-width: $desktop-l) {
+          width: get-vw(240px);
+          height: get-vw(196px);
+          top: get-vw(-26px);
+          right: get-vw(-46px);
+        }
+        @media only screen and (max-width: $mobile) {
+          width: 103px;
+          height: 84px;
+          top: -12px;
+          right: 50%;
+          margin-right: -80px;
+        }
+      }
+    }
+
+    &.s-two {
+      z-index: 2;
+      &:after {
+        z-index: -1;
+        background: url("../../../../../assets/img/Sonr/Ellipse.svg") center center no-repeat;
+        background-size: contain;
+        width: 272px;
+        height: 315px;
+        top: -19px;
+        right: -21px;
+        @media only screen and (max-width: $desktop-l) {
+          width: get-vw(272px);
+          height: get-vw(315px);
+          top: get-vw(-19px);
+          right: -21px;
+        }
+        @media only screen and (max-width: $mobile) {
+          width: 110px;
+          height: 127px;
+          top: -10px;
+          right: 50%;
+          margin-right: -69px;
+        }
+      }
+    }
+
+    &.s-three {
+      &:after {
+        background: url("../../../../../assets/img/Sonr/earth.gif") center center no-repeat;
+        background-size: contain;
+        width: 228px;
+        height: 196px;
+        top: 50%;
+        transform: translate(-53%, -50%);
+        left: 50%;
+        @media only screen and (max-width: $desktop-l) {
+          width: get-vw(228px);
+          height: get-vw(196px);
+        }
+        @media only screen and (max-width: $mobile) {
+          width: 103px;
+          height: 84px;
+          top: 83px;
+          left: 50%;
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+
+  &-angles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    &.aos-animate {
+      .s-lt {
+        animation: lt 2s;
+      }
+      .s-rt {
+        animation: rt 2s;
+      }
+      .s-lb {
+        animation: lb 2s;
+      }
+      .s-rb {
+        animation: rb 2s;
+      }
+    }
+  }
+
+  &-angle {
+    position: absolute;
+    width: 44px;
+    height: 46px;
+    border: 8px solid $black;
+    @media only screen and (max-width: $desktop-l) {
+      width: get-vw(44px);
+      height: get-vw(46px);
+    }
+    @media only screen and (max-width: $mobile) {
+      width: 16px;
+      height: 17px;
+      border: 3px solid $black;
+    }
+
+    &.s-lt {
+      top: 0;
+      left: 0;
+      border-bottom: none;
+      border-right: none;
+      @media only screen and (max-width: $mobile) {
+        top: 5px;
+        left: 6px;
+      }
+    }
+
+    &.s-rt {
+      top: 0;
+      right: 0;
+      border-bottom: none;
+      border-left: none;
+      @media only screen and (max-width: $mobile) {
+        top: 5px;
+        right: 6px;
+      }
+    }
+
+    &.s-lb {
+      bottom: 0;
+      left: 0;
+      border-top: none;
+      border-right: none;
+      @media only screen and (max-width: $mobile) {
+        bottom: 22px;
+        left: 6px;
+      }
+    }
+
+    &.s-rb {
+      bottom: 0;
+      right: 0;
+      border-top: none;
+      border-left: none;
+      @media only screen and (max-width: $mobile) {
+        bottom: 22px;
+        right: 5px;
+      }
+    }
+  }
+}
+
+@keyframes shake {
+  0% { transform: skewY(-2deg) translateY(0); opacity: 1; }
+  5% { transform: skewY(2deg) translateY(5px); opacity: 0; }
+  10% { transform: skewY(-2deg) translateY(0); opacity: 1; }
+  15% { transform: skewY(2deg) translateY(5px); opacity: 0; }
+  20% { transform: skewY(0deg) translateY(0); opacity: 1; }
+  100% { transform: skewY(0deg) translateY(0); opacity: 1; }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0, 2px);
+  }
+  100% {
+    transform: translate(0, -2px) rotate3d(1, 1, 0);
+  }
+}
+
+@keyframes item {
+  from { transform: scale(0.6)}
+  to { transform: scale(1) }
+}
+
+@keyframes show {
+  from {transform: scale(0.4)}
+  to {transform: scale(1)}
+}
+
+@keyframes position {
+  from {transform: translate(-550px, -100px)}
+  to {transform: translate(0px, 0px)}
+}
+
+@keyframes positionTwo {
+  from {transform: translate(450px, 100px)}
+  to {transform: translate(-53%, -50%)}
+}
+
+@keyframes lt {
+  from {transform: translate(-150px, -100px)}
+  to {transform: translate(0, 0)}
+}
+
+@keyframes lb {
+  from {transform: translate(-150px, 100px)}
+  to {transform: translate(0, 0)}
+}
+
+@keyframes rt {
+  from {transform: translate(150px, -100px)}
+  to {transform: translate(0, 0)}
+}
+
+@keyframes rb {
+  from {transform: translate(150px, 100px)}
+  to {transform: translate(0, 0)}
+}

@@ -1,0 +1,9 @@
+@import "../../../assets/scss/vars";
+
+.Blog {
+    padding-bottom: 180px;
+
+    @media only screen and (max-width: $mobile) {
+        padding-bottom: 60px;
+    }
+}

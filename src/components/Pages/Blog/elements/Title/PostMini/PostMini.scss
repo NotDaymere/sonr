@@ -1,0 +1,68 @@
+@import "../../../../../../assets/scss/vars";
+
+.PostMini {
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #f6f6f633;
+
+    & + & {
+        margin-top: 25px;
+    }
+}
+
+.PostMini_title {
+    color: $whiteLight_1;
+    font-size: 20px;
+    font-weight: 500;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media only screen and (max-width: $mobile) {
+        font-size: 14px;
+    }
+}
+
+.PostMini_data {
+    display: flex;
+    margin-top: 10px;
+}
+
+.PostMini_data_item {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    color: $whiteLight_1;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    opacity: .5;
+
+    & svg {
+        margin-right: 5px;
+    }
+
+    & + & {
+        margin-left: 30px;
+    }
+
+    & + &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -15px;
+        transform: translateY(-50%);
+
+        width: 3px;
+        height: 3px;
+        background-color: #8B96FF;
+        border-radius: 100%;
+    }
+
+    @media only screen and (max-width: $mobile) {
+        font-size: 11px;
+    }
+}

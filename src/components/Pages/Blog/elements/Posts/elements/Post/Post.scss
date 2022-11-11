@@ -1,0 +1,75 @@
+@import "../../../../../../../assets/scss/vars";
+
+.Post {
+    margin-bottom: 120px;
+
+    &.big {
+        width: 60%;
+    }
+
+    &.little {
+        width: 30%;
+    }
+
+    @media only screen and (max-width: $mobile) {
+        margin-bottom: 60px;
+
+        &.big, &.little {
+            width: 100%;
+        }
+    }
+}
+
+.Post_img {
+    width: 100%;
+    height: auto;
+}
+
+.Post_title {
+    color: #0E0E0E;
+    font-size: 40px;
+    font-family: $fontBranch;
+    text-transform: uppercase;
+
+    &.little {
+        font-size: 26px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+        &, &.little {
+            font-size: 30px;
+        }
+    }
+}
+
+.Post_des {
+    margin-top: 10px;
+    padding-bottom: 55px;
+
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
+    opacity: .5;
+
+    &.little {
+        font-size: 13px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+        &, &.little {
+            font-size: 14px;
+        }
+    }
+}
+
+//Post data
+.Post_data {
+    margin: 20px 0;
+}
+
+.Post_data_item {
+    color: #000;
+}

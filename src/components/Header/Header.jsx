@@ -1,7 +1,7 @@
 import {useState, useMemo, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 
-import "./Header.scss";
+import "./header.scss";
 
 //Img
 import Logo from "../../assets/img/Logo/Black.svg";
@@ -9,7 +9,6 @@ import LogoWhite from "../../assets/img/Logo/White.svg";
 
 function Header (props) {
     let location = useLocation();
-
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const [theme, setTheme] = useState('black');
 

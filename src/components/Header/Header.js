@@ -1,5 +1,5 @@
 import {useState, useMemo} from "react";
-import "./header.scss";
+import "./Header.scss";
 
 //img
 import Logo from "../../assets/img/logo.svg";

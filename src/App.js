@@ -14,6 +14,7 @@ import Blog from "./components/Pages/Blog/Blog";
 import AOS from "aos";
 
 function App() {
+    console.log('deploy on vercel');
     useEffect(() => {
         AOS.init({
             once: true,

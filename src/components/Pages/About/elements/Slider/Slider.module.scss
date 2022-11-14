@@ -1,7 +1,7 @@
 @import "../../../../../assets/scss/vars";
 
 .Slider {
-    padding-top: 80px;
+    padding: 80px 0;
 }
 
 .Slider_arrows {
@@ -97,7 +97,14 @@
         transform: rotate(-8deg);
     }
     &_4 {
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+
         color: #000;
+        font-size: 144px;
+        text-align: center;
+        line-height: 130px;
     }
 }
 
@@ -135,6 +142,11 @@
         color: #fff;
     }
     &_4 {
+        top: 100px;
+        right: 110px;
+
+        max-width: 280px; 
+
         color: #000;
     }
 }
@@ -164,6 +176,16 @@
         color: #fff;
     }
     &_4 {
+        top: 100px;
+        left: 115px;
+
         color: #000;
     }
+}
+
+.Slider_box_item_icon {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
 }

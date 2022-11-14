@@ -1,0 +1,103 @@
+@import "../../../../../../../assets/scss/vars";
+
+.TimeLineItem {
+    width: 100%;
+
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+
+    & + & {
+        margin-top: 325px;
+    }
+}
+
+.TimeLineItem_header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.TimeLineItem_header_img {
+    position: absolute;
+    right: 205px;
+    top: 50%;
+    transform: translateY(-85%);
+}
+
+.TimeLineItem_header_year {
+    color: #fff;
+    font-size: 40px;
+    font-family: $fontBranch;
+}
+
+.TimeLineItem_header_title {
+    color: #000;
+    font-size: 285px;
+    font-family: $fontBranch;
+    text-transform: uppercase;
+
+    
+}
+
+.TimeLineItem_header_month {
+    margin-top: -170px;
+
+    color: #fff;
+    font-size: 500px;
+    font-family: $fontBranch;
+    text-transform: uppercase;
+}
+
+.TimeLineItem_content {
+    position: relative;
+    max-width: 390px;
+    margin-top: -100px;
+
+    &::before {
+        content: '///';
+        position: absolute;
+        left: -150px;
+        top: -20px;
+
+        color: #fff;
+        font-size: 50px;
+        font-family: $fontOffBT;
+
+        
+    }
+
+    &_footer {
+        margin-top: 0px;
+
+        &::before {
+            color: #000;
+        }
+    }
+}
+
+.TimeLineItem_content_title {
+    color: #fff;
+    font-size: 40px;
+    line-height: 48px;
+    font-family: $fontBranch;
+    text-transform: uppercase;
+
+    &_footer {
+        color: #000;
+    }
+}
+
+.TimeLineItem_content_des {
+    margin-top: 45px;
+
+    color: #A0A0A0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19px;
+
+    &_footer {
+        color: #000;
+    }
+}

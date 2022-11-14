@@ -1,0 +1,23 @@
+@import "../../../../../assets/scss/vars";
+
+.Footer {
+    overflow: hidden;
+}
+
+.Footer_container {
+    position: relative;
+    padding-bottom: 300px;
+    
+}
+
+.Footer_BG_sonr {
+    position: absolute;
+    top: 100%;
+    left: -600px;
+
+    width: 1500px;
+    
+    transform: translateY(-600px);
+    mix-blend-mode: darken;
+    z-index: -10;
+}

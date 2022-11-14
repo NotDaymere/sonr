@@ -1,0 +1,43 @@
+@import "../../../../../assets/scss/vars";
+
+.TimeLine {
+    overflow-x: clip;
+    position: relative;
+    margin-top: 400px;
+    padding-bottom: 160px;
+    background-color: #131313;
+}
+
+.TimeLine_bg {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(300px);
+    width: 120%;
+    height: 600px;
+    background-color: #131313;
+
+    border-radius: 50% 50% 49% 51% / 100% 100% 0% 0% ;
+
+    z-index: -10;
+}
+
+.TimeLine_title {
+    max-width: 90%;
+    margin: 0 auto;
+
+    color: #fff;
+    font-size: 120px;
+    font-family: $fontBranch;
+    line-height: 120px;
+    text-transform: uppercase;
+    text-align: center;
+
+    & span {
+        font-family: $fontOffBT;
+    }
+}
+
+.TimeLine_items {
+    margin-top: 250px;
+}

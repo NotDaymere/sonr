@@ -8,7 +8,7 @@ function Title () {
         <div className={style.Title}>
             <div className={`${style.Title_container} wr`}>
                 <div className={style.Title_bg}>
-                    <video className={style.Title_bg_sonr} src={Sonr} type="video/mp4" autoplay="autoplay" loop > </video>
+                    <video className={style.Title_bg_sonr} src={Sonr} type="video/mp4" autoplay="autoplay" loop />
                 </div>
 
                 <div className={style.Title_title}>Your digital <span>liberty</span> is <span>worth</span> fighting for</div>

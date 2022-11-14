@@ -1,6 +1,7 @@
 import style from './Slider.module.scss'
 
 import ArrowDown from '../../../../../assets/img/About/arrowDown.svg';
+import Eye from '../../../../../assets/img/About/eye.svg';
 
 import SlideBG1 from '../../../../../assets/img/About/slider/1.jpg';
 import SlideBG2 from '../../../../../assets/img/About/slider/2.png';
@@ -41,9 +42,10 @@ function Slider () {
                     </div>
                     <div className={style.Slider_box_item} >
                         <img className={style.Slider_box_item_bg} src={SlideBG4} alt="" />
-                        <div className={`${style.Slider_box_item_title} ${style.Slider_box_item_title_4}`} >UX First UX <span>First</span> UX First UX <span>First</span></div>
-                        <div className={`${style.Slider_box_item_des} ${style.Slider_box_item_des_4}`} >We solve complexity with simplicity: intuitive and innovative user interfaces, rooted in technically sound engineering.</div>
+                        <div className={`${style.Slider_box_item_title} ${style.Slider_box_item_title_4}`} ><span>Nobody</span><br />is Right...</div>
+                        <div className={`${style.Slider_box_item_des} ${style.Slider_box_item_des_4}`} >In a nascent industry, answering the right questions begins with questioning the right answers</div>
                         <div className={`${style.Slider_box_item_num} ${style.Slider_box_item_num_4}`} >04</div>
+                        <img className={style.Slider_box_item_icon} src={Eye} alt="" />
                     </div>
                 </div>
             </div>

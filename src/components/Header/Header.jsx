@@ -78,7 +78,7 @@ function Header (props) {
                                     data-aos-anchor-placement="bottom-center"
                                     data-aos-duration="1000"
                                 >
-                                    <a className={theme} href="#About">About</a>
+                                    <a className={theme} href="/About">About</a>
                                 </li>
                                 <li data-aos="fade-up"
                                     data-aos-anchor-placement="bottom-center"

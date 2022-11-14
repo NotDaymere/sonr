@@ -1,6 +1,6 @@
 import style from './Title.module.scss'
 
-import Sonr from '../../../../../assets/img/Sonr/earth.mp4';
+import Sonr from '../../../../../assets/img/About/earth.mp4';
 import ArrowUp from '../../../../../assets/img/About/arrowUp.svg';
 
 function Title () {

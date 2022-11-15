@@ -12,11 +12,10 @@ function CardItem (props) {
         <div 
             className={style.CardItem} 
             style={{zIndex : 50 - props.zIndex}}
-            
         >
             <div className={style.CardItem_container} ref={props.ref}>
                 <div className={style.CardItem_box}>
-                
+                    <img className={style.CardItem_img} src={props.img} alt="" />
                 </div>
             </div>
         </div>

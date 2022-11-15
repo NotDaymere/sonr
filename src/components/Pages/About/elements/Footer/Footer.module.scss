@@ -21,3 +21,38 @@
     mix-blend-mode: darken;
     z-index: -10;
 }
+
+@media (max-width : 1440px) {
+    .Footer_BG_sonr {
+        left: -400px;
+    }
+}
+
+@media (max-width : 1024px) {
+    .Footer_BG_sonr {
+        transform: translateY(-500px);
+    }
+}
+
+@media (max-width : 768px) {
+    .Footer_container {
+        padding-bottom: 200px;
+        
+    }
+
+    .Footer_BG_sonr {
+        left: -400px;
+        transform: translateY(-350px);
+    }
+}
+
+@media (max-width : 560px) {
+    .Footer_BG_sonr {
+        left: 0px;
+        transform: translateY(-200px);
+    }
+}
+
+@media (max-width : 375px) {
+    
+}

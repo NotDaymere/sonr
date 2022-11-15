@@ -4,7 +4,7 @@ function TimeLineItem (props) {
     return (
         <div className={style.TimeLineItem}>
             <div className={style.TimeLineItem_header}>
-                {props.img && <img className={style.TimeLineItem_header_img} style={{right : props.imgRight}} src={props.img} alt="" />}
+                {props.img && <img className={`${style.TimeLineItem_header_img} ${style['TimeLineItem_header_img_' + props.imgClass]}`} src={props.img} alt="" />}
                 {props.year && <div className={style.TimeLineItem_header_year}>{props.year}</div>}
                 {props.month && <div className={style.TimeLineItem_header_month}>{props.month}</div>}
                 {props.headerTitle && <div className={style.TimeLineItem_header_title}>{props.headerTitle}</div>}

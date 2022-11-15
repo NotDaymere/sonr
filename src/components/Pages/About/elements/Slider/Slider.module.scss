@@ -4,6 +4,11 @@
     padding: 80px 0;
 }
 
+.Slider_container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .Slider_arrows {
     display: flex;
     justify-content: center;
@@ -35,6 +40,10 @@
     &_2 {
         background-color: #C1C7FF;
     }
+
+    &_3 {
+        background-color: #000;
+    }
 }
 
 .Slider_box_item_bg {
@@ -53,6 +62,12 @@
         mix-blend-mode: difference;
 
         z-index: 100;
+    }
+
+    &_3 {
+        width: 100%;
+        height: auto;
+        
     }
 }
 
@@ -95,6 +110,9 @@
         color: #fff;
 
         transform: rotate(-8deg);
+    }
+    &_mob {
+        display: none;
     }
     &_4 {
         bottom: 60px;
@@ -188,4 +206,185 @@
     top: 150px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+@media (max-width : 1024px) {
+    .Slider_box_item_des {
+        &_4 {
+            top: 100px;
+            right: 30px;
+        }
+    }
+}
+
+@media (max-width : 768px) {
+    .Slider_box_item {
+        height: 500px;
+    }
+
+    .Slider_box_item_bg {
+        &_2 {
+            width: 200px;
+            height: auto;
+            top: 35px;
+            left: 50%;
+            transform: translate3d(-50%, 0, 0);
+        }
+    }
+
+    .Slider_box_item_title {
+        font-size: 48px;
+
+        &_1 {
+            left: -230px;
+            bottom: auto;
+            top: 30px;
+        }
+        &_2 {
+            top: 30px;
+            left: -152px;
+    
+            & div:nth-child(2) {
+                transform: translate3d(225px, -20px, 0);
+            }
+        }
+        &_3 {
+            top: 80px;
+            left: -30px;
+        }
+        &_desk {
+            display: none;
+        }
+        &_mob {
+            display: block;
+        }
+        &_4 {
+            bottom: auto;
+            left: 35px;
+            top: 50px;
+            transform: translateX(0);
+            text-align: center;
+            line-height: 40px;
+            & div:last-child {
+                margin-top: 5px;
+                transform: translateX(90px);
+            }
+        }
+    }
+    
+    .Slider_box_item_des {
+        &_1 {
+            top: auto;
+            right: 30px;
+            bottom: 30px;
+    
+            max-width: 220px;
+        }
+        &_2 {
+            bottom: 30px;
+            right: 25px;
+    
+            max-width: 260px;  
+        }
+        &_3 {
+            bottom: 25px;
+            right: 30px;
+    
+            max-width: 250px;  
+        }
+        &_4 {
+            top: auto;
+            right: 40px;
+            bottom: 25px;
+    
+            max-width: 230px; 
+        }
+    }
+    
+    .Slider_box_item_num {
+        &_1 {
+            top: auto;
+            right: auto;
+            bottom: 70px;
+            left: 30px;
+        }
+        &_2 {
+            bottom: 60px;
+            left: 30px;
+        }
+        &_3 {
+            bottom: 160px;
+            left: 30px;
+        }
+        &_4 {
+            top: auto;
+            bottom: 70px;
+            left: 30px;
+
+            
+        }
+    }
+
+    .Slider_box_item_icon {
+        top: 100px;
+        left: 30px;
+        transform: translateX(0);
+        
+        width: 60px;
+    }
+}
+
+@media (max-width : 375px) {
+    .Slider_box_item {
+        height: 350px;
+    }
+
+    .Slider_box_item_bg {
+        &_2 {
+            width: 150px;
+        }
+        &_3 {
+            
+        }
+    }
+
+    .Slider_box_item_title {
+        &_3 {
+            top: 50px;
+            left: -30px;
+        }
+    }
+
+    .Slider_box_item_des {
+        font-size: 14px;
+        &_1 {
+            max-width: 185px;
+        }
+        &_2 {
+            max-width: 185px;  
+        }
+        &_3 {
+            max-width: 200px;  
+        }
+        &_4 {
+            right: 0px;
+    
+            max-width: 185px; 
+        }
+    }
+
+    .Slider_box_item_num {
+        &_1 {
+            bottom: 75px;
+        }
+        &_2 {
+            bottom: 80px;
+        }
+        &_3 {
+            bottom: 140px;
+        }
+        &_4 {
+            bottom: 75px;
+        }
+    }
 }

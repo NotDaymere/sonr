@@ -12,7 +12,6 @@ import TimeLineImg4 from '../../../../../assets/img/About/timeLine/4.png';
 const dataTimeLineItems = [
     {
         img : TimeLineImg1,
-        imgRight : '420px',
         year : 2020,
         month : 'nov',
         title : 'Lightbulb',
@@ -20,7 +19,6 @@ const dataTimeLineItems = [
     },
     {
         img : TimeLineImg2,
-        imgRight : '420px',
         year : 2021,
         month : 'nov',
         title : '$5M Seed Round',
@@ -28,7 +26,6 @@ const dataTimeLineItems = [
     },
     {
         img : TimeLineImg3,
-        imgRight : '490px',
         year : 2021,
         month : 'dec',
         title : 'We’re Gonna Need a Bigger Boat',
@@ -36,7 +33,6 @@ const dataTimeLineItems = [
     },
     {
         img : TimeLineImg4,
-        imgRight : '205px',
         year : 2022,
         month : 'jan',
         title : 'An NFT in Space for Some Reason',
@@ -51,10 +47,10 @@ function TimeLine () {
             <div className={`${style.TimeLine_container} wr`}>
                 <div className={style.TimeLine_title}><span>How</span> on earth did <span>we get here</span>?</div>
                 <div className={style.TimeLine_items}>
-                    {dataTimeLineItems.map (item => (
+                    {dataTimeLineItems.map ((item, index) => (
                         <TimeLineItem 
                             img={item.img} 
-                            imgRight={item.imgRight} 
+                            imgClass={index+1} 
                             year={item.year} 
                             month={item.month} 
                             title={item.title} 

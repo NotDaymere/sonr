@@ -1,0 +1,26 @@
+@import "../../../../../../../../assets/scss/vars";
+
+.CardItem {
+    & + & {
+        margin-left: -100px;
+    }
+}
+
+.CardItem_container {
+    width: 250px;
+    height: 400px;
+    padding: 15px;
+
+    background-color: #ECEEFF;
+    transform: matrix(1, 0.58, 0, 0.89, 0, 0);
+
+    transition: all .1s linear;
+}
+
+.CardItem_box {
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    border-radius: 28px;
+}
+

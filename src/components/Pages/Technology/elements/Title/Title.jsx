@@ -3,6 +3,7 @@ import style from './Title.module.scss'
 import Sonr from '../../../../../assets/img/About/earth.gif'
 
 //Elements
+import Cards from './elements/Cards/Cards';
 
 function Title () {
     return (
@@ -19,6 +20,7 @@ function Title () {
                         Sonr leverages Cosmos’ Inter-Blockchain Communication protocol (IBC) and a decentralized identity mechanism to enable secure multichain peer-to-peer communication.
                     </div>
                 </div>
+                <Cards />
                 <img className={style.Title_sonr} src={Sonr} alt="" />
             </div>
         </div>

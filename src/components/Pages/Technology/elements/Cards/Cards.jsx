@@ -12,6 +12,7 @@ function Cards () {
 
     const [cardItemActive, setCardItemActive] = useState(null);
     const refCards = useRef([]);
+    const refCardsBox = useRef([]);
     const refCardsImg = useRef([]);
     const refCardsImgContainer = useRef();
 
@@ -35,19 +36,22 @@ function Cards () {
         setCardItemActive(index);
         let tl = gsap.timeline();
 
-        if(index == cardItemActive) {
-            tl.to(refCards.current[index], 
+        gsap.to(refCards.current[index], 
+            { maxWidth: 800, duration : 1, ease:"power2.inOut" }
+        )
+        gsap.to(refCardsBox.current[index], 
+            { opacity : 1, duration : 1, ease:"power2.inOut" }
+        )
+
+        tl.add(
+            gsap.to(refCards.current[index], 
                 { maxWidth: 800, duration : 1, ease:"power2.inOut" }
-            ).to(refCardsImg.current[index], 
-                { opacity : 1, width: '100%', height: '100%', duration : 1, ease:"expo.inOut" }
-            ).reverse(1);
-        } else {
-            tl.to(refCards.current[index], 
-                { maxWidth: 800, duration : 1, ease:"power2.inOut" }
-            ).to(refCardsImg.current[index], 
-                { opacity : 1, width: '100%', height: '100%', duration : 1, ease:"expo.inOut" }
-            );
-        }
+            ).to(refCardsBox.current[index], 
+                { opacity : 1, duration : 1, ease:"power2.inOut" }
+            )
+            , "<1" ).to(refCardsImg.current[index], 
+            { opacity : 1, width: '100%', height: '100%', duration : 1, ease:"expo.inOut" }
+        )
         
     }
 
@@ -63,7 +67,7 @@ function Cards () {
                     <div className={style.Cards_content_container}>
                         {dataCards.map((item, index) => (
                             <div className={style.Cards_item} ref={(el) => (refCards.current[index] = el)} data-index={index} onClick={CardActiveChange}>
-                                <div className={style.Cards_item_box}>
+                                <div className={style.Cards_item_box} ref={(el) => (refCardsBox.current[index] = el)}>
                                     <div className={style.Cards_item_num}>0{index+1}</div>
                                     <div className={style.Cards_item_title}>{item.title}</div>
                                     <div className={style.Cards_item_subtitle}>{item.des}</div>

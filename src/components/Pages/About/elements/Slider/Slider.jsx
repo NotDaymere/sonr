@@ -1,7 +1,7 @@
 import style from './Slider.module.scss'
 
 import ArrowDown from '../../../../../assets/img/About/arrowDown.svg';
-import Eye from '../../../../../assets/img/About/eye.svg';
+import Eye from '../../../../../assets/img/eye.svg';
 
 import SlideBG1 from '../../../../../assets/img/About/slider/1.jpg';
 import SlideBG2 from '../../../../../assets/img/About/slider/2.png';

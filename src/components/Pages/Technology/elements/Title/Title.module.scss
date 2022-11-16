@@ -2,7 +2,7 @@
 
 .Title_container {
     position: relative;
-    padding-bottom: 500px;
+    padding-bottom: 400px;
     overflow: hidden;
 
     &::before {
@@ -87,7 +87,7 @@
 
 .Title_sonr {
     position: absolute;
-    bottom: -200px;
+    bottom: -300px;
     left: 50%;
     transform: translateX(-50%);
 

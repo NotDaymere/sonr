@@ -1,0 +1,186 @@
+@import "../../../../../assets/scss/vars";
+
+.Build {
+    position: relative;
+    padding-bottom: 180px;
+
+    &::before {
+        content: '///';
+        position: absolute;
+        top: -110px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        color: #000;
+        font-size: 50px;
+        font-family: $fontOffBT;
+
+        z-index: 100;
+    }
+}
+
+.Build_title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    color: #000;
+    font-size: 120px;
+    line-height: 145px;
+    font-family: $fontBranch;
+    text-transform: uppercase;
+    text-align: center;
+
+    & span {
+        font-family: $fontOffBT;
+    }
+}
+
+.Build_container {
+    position: relative;
+    padding-top: 350px;
+}
+
+.Build_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+}
+
+.Build_menu_item {
+    position: relative;
+    display: block;
+
+    color: #28272F;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    opacity: .5;
+    cursor: pointer;
+    transition: all .1s linear;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 0%;
+        height: 1px;
+
+        background-color: #28272F;
+
+        transition: all .2s linear;
+    }
+
+    & + & {
+        margin-top: 15px;
+    }
+
+    &:hover {
+        opacity: .8;
+    }
+
+    &_active {
+        opacity: 1;
+
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+.Build_menu_icon {
+    position: absolute;
+    left: 0;
+    top: 2px;
+
+    width: 25px;
+
+    transition: all .3s ease-in-out;
+}
+
+.Build_content {
+    position: relative;
+    height: 360px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.Build_content_title {
+    padding-left: 80px;
+
+    color: #131313;
+    font-size: 65px;
+    line-height: 45px;
+    font-family: $fontBranch;
+    text-transform: uppercase;
+}
+
+.Build_content_video {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 450px;
+    width: auto;
+
+    mix-blend-mode: darken;
+    z-index: 120;
+}
+
+.Build_content_des {
+    max-width: 360px;
+    width: 100%;
+    padding-right: 60px;
+}
+
+.Build_content_des_item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: -15px;
+
+    & + & {
+        margin-top: 50px;
+    }
+}
+
+.Build_content_des_item_num {
+    color: #000;
+    font-size: 45px;
+    font-family: $fontOffBT;
+
+    opacity: .3;
+    transform: translateY(-10px);
+}
+
+.Build_content_des_item_text {
+    max-width: 190px;
+
+    color: #000;
+    font-size: 15px;
+    line-height: 17px;
+    font-weight: 500;
+
+    
+}
+
+.Build_angle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

@@ -39,8 +39,8 @@ function Title () {
             { x: 100, opacity : 0 }, 
             { x: 0, opacity : 1, duration : .5, ease:"expo.inOut" }
         );
-    
     }, []);
+
     return (
         <div className={style.Title}>
             <div className={`${style.Title_container} wr`}>

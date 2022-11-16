@@ -1,0 +1,142 @@
+@import "../../../../../assets/scss/vars";
+
+.Cards {
+    padding-top: 150px;
+    background-color: #131313;
+}
+
+.Cards_title {
+    color: #F6F6F6;
+    font-size: 65px;
+    line-height: 121.5%;
+    font-family: $fontBranch;
+    text-align: center;
+    text-transform: uppercase;
+
+    & span {
+        font-family: $fontOffBT;
+    }
+}
+
+.Cards_des_box {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    width: 100%;
+    margin: 55px auto 0;
+}
+
+.Cards_slashes {
+    color: #F6F6F6;
+    font-size: 50px;
+    font-family: $fontOffBT;
+
+    transform: translateY(-10px);
+}
+
+.Cards_des {
+    max-width: 230px;
+    width: 100%;
+
+    color: #F6F6F6;
+    font-size: 15px;
+    line-height: 17px;
+    font-family: 500;
+
+    opacity: .7;
+}
+
+.Cards_content {
+    margin-top: 105px;
+    display: flex;
+}
+
+.Cards_item {
+    position: relative;
+    max-width: 340px;
+    width: 100%;
+
+    padding: 20px 0 100px;
+
+    z-index: 100;
+
+    & + & {
+        margin-left: 55px;
+    }
+}
+
+.Cards_item_box {
+    max-width: 300px;
+
+    opacity: .5;
+
+    z-index: 90;
+
+    &.avtive {
+        opacity: 1;
+    }
+}
+
+.Cards_item_num {
+    color: #F6F6F6;
+    font-size: 200px;
+    line-height: 200px;
+    font-family: $fontOffBT;
+}
+
+.Cards_item_title {
+    margin-top: 30px;
+    color: #fff;
+    font-size: 40px;
+    line-height: 121.5%;
+    font-family: $fontBranch;
+}
+
+.Cards_item_subtitle {
+    margin-top: 20px;
+
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17px;
+}
+
+.Cards_item_border {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 1px;
+        height: 44%;
+        background-color: #fff;
+        opacity: .3;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+}
+
+.Cards_item_border_item {
+    width: 10px;
+    height: 10px;
+
+    transform-origin: center;
+    background: linear-gradient(90deg, #F8DBB8 0%, #CCBBE4 46.15%, #9187FF 100%);
+    transform: rotate(-45deg);
+}

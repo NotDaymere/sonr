@@ -1,6 +1,8 @@
 import style from './Build.module.scss'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
+
+import { gsap } from "gsap";
 
 import Stack from '../../../../../assets/img/Stack.mp4'
 
@@ -47,6 +49,10 @@ function Build () {
         ],
 
     ]
+    useEffect(() => {
+        refVideo.current.currentTime = 0.34
+    }, []);
+    
 
     const MenuChange = (e) => {
         const top = e.target.offsetTop + ((e.target.offsetHeight - refEye.current.clientHeight) / 2) + 'px';
@@ -56,11 +62,22 @@ function Build () {
         refEye.current.style.top = top;
         setMenuItemActive(e.target.dataset.index);
 
+
+        let tl = gsap.timeline();
+        tl.to(refVideo.current, 
+            {y : -30, opacity : 0, duration : 1, ease : 'expo.inOut'}
+        ).to(refVideo.current, 
+            {y : 0, opacity : 1, duration : 1, ease : 'expo.inOut'}
+        )
+
         const time = refVideo.current.duration / 6 * (Number(e.target.dataset.index) + 1)
         console.log(refVideo.current.duration);
         console.log(menuItemActive);
         console.log(time );
-        refVideo.current.currentTime = time
+        setTimeout(() => {
+            refVideo.current.currentTime = time
+        }, 1000)
+        
     }
 
     return (
@@ -76,7 +93,7 @@ function Build () {
                         <img className={style.Build_menu_icon} ref={refEye} src={Eye} alt="" />
                     </div>
                     <div className={style.Build_content_title}>{dataMenu[menuItemActive]}</div>
-                    <video className={style.Build_content_video} ref={refVideo} src={Stack} currentTime={.4}></video>
+                    <video className={style.Build_content_video} ref={refVideo} src={Stack} Time={0.34}></video>
                     <div className={style.Build_content_des}>
                         {dataDes[menuItemActive].map((item, index) => (
                             <div className={style.Build_content_des_item}>

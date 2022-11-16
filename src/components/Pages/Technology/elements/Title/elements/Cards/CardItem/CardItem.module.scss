@@ -22,5 +22,13 @@
     height: 100%;
     background: #FFFFFF;
     border-radius: 28px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.CardItem_img {
+    width: 69%;
+    height: 260px;
+    margin: 0 auto;
 }
 

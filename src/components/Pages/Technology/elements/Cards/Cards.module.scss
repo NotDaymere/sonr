@@ -67,7 +67,7 @@
     max-width: 340px;
     width: 100%;
 
-    padding-top: 20px;
+    padding: 20px 0 80px;
 
     z-index: 100;
 
@@ -153,6 +153,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    opacity: 0;
+}
+
+.Cards_item_btn_container {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+
+    bottom: -20px;
+    left: -215px;
+
+    transform: translateX();
+
+    opacity: 0;
+    mix-blend-mode: difference;
+}
+
+.Cards_item_btn {
+    min-width: 0;
+    width: 115px;
+    height: 115px;
+    margin-left: 30px;
+    padding: 0;
+
+    background-color: #fff;
+
+    border: 0;
+    border-radius: 100%;
+
+    mix-blend-mode: difference;
+}
+
+.Cards_item_btn_text {
+    color: #E2E2E2;
+    font-size: 20px;
+    font-family: $fontOffBT;
+    text-transform: uppercase;
 }
 
 .Cards_item_img {

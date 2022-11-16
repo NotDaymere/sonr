@@ -1,10 +1,11 @@
 import style from './Cards.module.scss'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 import { gsap } from "gsap";
 
 import IMG1 from '../../../../../assets/img/Technology/img1.png';
+import Arrow from '../../../../../assets/img/Cards/arrow_3.svg';
 
 //Elements
 
@@ -14,7 +15,9 @@ function Cards () {
     const refCards = useRef([]);
     const refCardsBox = useRef([]);
     const refCardsImg = useRef([]);
-    const refCardsImgContainer = useRef();
+    const refCardsBtn = useRef([]);
+    const refCardsImgContainer = useRef([]);
+    
 
     const dataCards = [
         {
@@ -31,28 +34,52 @@ function Cards () {
         }
     ]
 
-    const CardActiveChange = (e) => {
+    function CardActiveChange(e) {
         const index = e.currentTarget.dataset.index;
         setCardItemActive(index);
+
         let tl = gsap.timeline();
 
-        gsap.to(refCards.current[index], 
-            { maxWidth: 800, duration : 1, ease:"power2.inOut" }
-        )
-        gsap.to(refCardsBox.current[index], 
-            { opacity : 1, duration : 1, ease:"power2.inOut" }
-        )
+        if (index == cardItemActive) {
+            setCardItemActive(null);
 
-        tl.add(
-            gsap.to(refCards.current[index], 
-                { maxWidth: 800, duration : 1, ease:"power2.inOut" }
-            ).to(refCardsBox.current[index], 
+            tl.add(gsap.to(refCardsBtn.current[cardItemActive], 
+                { x : 0,  opacity : 0, duration : .5, ease:"expo.inOut" }
+            ),gsap.to(refCardsImg.current[cardItemActive], 
+                { opacity : 0, width: '0%', height: '0%', duration : 1, ease:"expo.inOut" }
+            ),gsap.to(refCards.current[cardItemActive], 
+                { maxWidth: 340, duration : 1, ease:"power2.inOut" }
+            ),gsap.to(refCardsBox.current[cardItemActive], 
+                { opacity : .5, duration : .8, ease:"power2.inOut" }
+            ),gsap.to(refCardsImgContainer.current[cardItemActive], 
+                { opacity: 0, duration : .8, ease:"power2.inOut" }
+            ))
+        } else {
+            tl.add(gsap.to(refCardsImgContainer.current[index], 
+                { opacity: 1, duration : .8, ease:"power2.inOut" }
+            ),gsap.to(refCards.current[index], 
+                { maxWidth: 800, duration : .8, ease:"power2.inOut" }
+            ),
+            gsap.to(refCardsBox.current[index], 
                 { opacity : 1, duration : 1, ease:"power2.inOut" }
+            )).to(refCardsImg.current[index], 
+                { opacity : 1, width: '100%', height: '100%', duration : 1, ease:"expo.inOut" }
+            ).to(refCardsBtn.current[index], 
+                { x : 20,  opacity : 1, duration : .5, ease:"expo.inOut" }
             )
-            , "<1" ).to(refCardsImg.current[index], 
-            { opacity : 1, width: '100%', height: '100%', duration : 1, ease:"expo.inOut" }
-        )
-        
+    
+            tl.add(gsap.to(refCardsBtn.current[cardItemActive], 
+                { x : 0,  opacity : 0, duration : .5, ease:"expo.inOut" }
+            ),gsap.to(refCardsImg.current[cardItemActive], 
+                { opacity : 0, width: '0%', height: '0%', duration : 1, ease:"expo.inOut" }
+            ),gsap.to(refCards.current[cardItemActive], 
+                { maxWidth: 340, duration : 1, ease:"power2.inOut" }
+            ),gsap.to(refCardsBox.current[cardItemActive], 
+                { opacity : .5, duration : .8, ease:"power2.inOut" }
+            ),gsap.to(refCardsImgContainer.current[cardItemActive], 
+                { opacity: 0, duration : .8, ease:"power2.inOut" }
+            ))
+        }
     }
 
     return (
@@ -75,7 +102,13 @@ function Cards () {
                                         <div className={style.Cards_item_border_item}></div>
                                     </div>
                                 </div>
-                                <div className={style.Cards_item_img_container} ref={refCardsImgContainer}>
+                                <div className={style.Cards_item_img_container} ref={(el) => (refCardsImgContainer.current[index] = el)}>
+                                    <div className={style.Cards_item_btn_container} ref={(el) => (refCardsBtn.current[index] = el)}>
+                                        <div className={style.Cards_item_btn_text} >learn more</div>
+                                        <button className={style.Cards_item_btn} >
+                                            <img src={Arrow} alt="" />
+                                        </button>
+                                    </div>
                                     <img className={style.Cards_item_img} ref={(el) => (refCardsImg.current[index] = el)} src={IMG1} alt="" />
                                 </div>
                             </div>

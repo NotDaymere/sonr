@@ -34,6 +34,41 @@ function Cards () {
         }
     ]
 
+    function CardActive(e) {
+        const index = e.currentTarget.dataset.index;
+
+        let tl = gsap.timeline();
+        tl.add(gsap.to(refCardsImgContainer.current[index], 
+            { opacity: 1, duration : .8, ease:"power2.inOut" }
+        ),gsap.to(refCards.current[index], 
+            { maxWidth: 800, duration : .8, ease:"power2.inOut" }
+        ),
+        gsap.to(refCardsBox.current[index], 
+            { opacity : 1, duration : 1, ease:"power2.inOut" }
+        )).to(refCardsImg.current[index], 
+            { opacity : 1, width: '100%', height: '100%', duration : 1, ease:"expo.inOut" }
+        ).to(refCardsBtn.current[index], 
+            { x : 20,  opacity : 1, duration : .5, ease:"expo.inOut" }
+        )
+    }
+
+    function CardDisable(e) {
+        const index = e.currentTarget.dataset.index;
+        
+        let tl = gsap.timeline();
+        tl.add(gsap.to(refCardsBtn.current[index], 
+            { x : 0,  opacity : 0, duration : .5, ease:"expo.inOut" }
+        ),gsap.to(refCardsImg.current[index], 
+            { opacity : 0, width: '0%', height: '0%', duration : 1, ease:"expo.inOut" }
+        ),gsap.to(refCards.current[index], 
+            { maxWidth: 340, duration : 1, ease:"power2.inOut" }
+        ),gsap.to(refCardsBox.current[index], 
+            { opacity : .5, duration : .8, ease:"power2.inOut" }
+        ),gsap.to(refCardsImgContainer.current[index], 
+            { opacity: 0, duration : .8, ease:"power2.inOut" }
+        ))
+    }
+
     function CardActiveChange(e) {
         const index = e.currentTarget.dataset.index;
         setCardItemActive(index);
@@ -93,7 +128,13 @@ function Cards () {
                 <div className={style.Cards_content}>
                     <div className={style.Cards_content_container}>
                         {dataCards.map((item, index) => (
-                            <div className={style.Cards_item} ref={(el) => (refCards.current[index] = el)} data-index={index} onClick={CardActiveChange}>
+                            <div 
+                                className={style.Cards_item} 
+                                ref={(el) => (refCards.current[index] = el)} 
+                                data-index={index} 
+                                onMouseEnter={CardActive}
+                                onMouseLeave={CardDisable}
+                            >
                                 <div className={style.Cards_item_box} ref={(el) => (refCardsBox.current[index] = el)}>
                                     <div className={style.Cards_item_num}>0{index+1}</div>
                                     <div className={style.Cards_item_title}>{item.title}</div>

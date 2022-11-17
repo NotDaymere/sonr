@@ -1,6 +1,6 @@
 import style from './Cards.module.scss'
 
-import {useRef, createRef} from 'react'
+import {useRef, createRef, useEffect} from 'react'
 
 //Elements
 import CardItem from './CardItem/CardItem';
@@ -13,28 +13,52 @@ import SVG3 from '../../../../../../../assets/img/Technology/Cards/figure_3.svg'
 function Cards () {
 
     const CardItemContainer = createRef(null);
+    const CardItems = useRef([]);
 
-    const CardItemHover = () => {
-        console.log(1);
-        CardItemContainer.current.style.transform = 'translateY(-50px)'
-    };
+    useEffect(() => {
+        console.log(CardItems);
+    }, [])
 
     const dataCards = [
         {
-            img : SVG1
+            colors : {
+                bg : '#ECEEFF',
+                fill : '#FFFFFF'
+            },
+            img : SVG1,
+            title : '30%',
+            subtitle : 'Faster Transmission'
         },
         {
-            img : SVG2
-        },
-        {
-            img : SVG3
+            colors : {
+                bg : '#FFFFFF',
+                fill : '#ECEEFF'
+            },
+            img : SVG2,
+            title : '11 Mb',
+            subtitle : 'Lightweight Motor Node'
+        },{
+            colors : {
+                bg : '#DAFFFA',
+                fill : '#FFFFFF'
+            },
+            img : SVG3,
+            title : '11 Mb',
+            subtitle : 'Lightweight Motor Node'
         }
     ]
 
     return (
-        <div className={style.Cards} onMouseEnter={CardItemHover}>
+        <div className={style.Cards} >
             {dataCards.map((item, index) => (
-                <CardItem zIndex={index} ref={CardItemContainer} img={item.img} />
+                <CardItem 
+                    ref={(el) => CardItems.current[index] = el}
+                    zIndex={index} 
+                    colors={item.colors} 
+                    img={item.img} 
+                    title={item.title} 
+                    subtitle={item.subtitle}  
+                />
             ))}
         </div>
     )

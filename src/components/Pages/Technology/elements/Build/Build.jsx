@@ -28,24 +28,24 @@ function Build () {
 
     const dataDes = [
         [
-            '1Canonical storage for grouping of associated content identifiers (CIDs).',
-            '1Configurable access control across unlimited number of parties.'
+            'Canonical storage for grouping of associated content identifiers (CIDs).',
+            'Configurable access control across unlimited number of parties.'
         ],
         [
-            '2Canonical storage for grouping of associated content identifiers (CIDs).',
-            '2Configurable access control across unlimited number of parties.'
+            'Canonical storage for grouping of associated content identifiers (CIDs).',
+            'Configurable access control across unlimited number of parties.'
         ],
         [
-            '3Canonical storage for grouping of associated content identifiers (CIDs).',
-            '3Configurable access control across unlimited number of parties.'
+            'Canonical storage for grouping of associated content identifiers (CIDs).',
+            'Configurable access control across unlimited number of parties.'
         ],
         [
-            '4Canonical storage for grouping of associated content identifiers (CIDs).',
-            '4Configurable access control across unlimited number of parties.'
+            'Canonical storage for grouping of associated content identifiers (CIDs).',
+            'Configurable access control across unlimited number of parties.'
         ],
         [
-            '5Canonical storage for grouping of associated content identifiers (CIDs).',
-            '5Configurable access control across unlimited number of parties.'
+            'Canonical storage for grouping of associated content identifiers (CIDs).',
+            'Configurable access control across unlimited number of parties.'
         ],
 
     ]

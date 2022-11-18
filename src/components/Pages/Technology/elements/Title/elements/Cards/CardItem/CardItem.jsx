@@ -1,7 +1,5 @@
 import style from './CardItem.module.scss'
 
-
-
 //Elements
 
 function CardItem (props) {

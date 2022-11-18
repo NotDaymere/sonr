@@ -5,3 +5,65 @@
     justify-content: center;
     margin-top: 100px;
 }
+
+
+
+
+
+
+
+
+
+
+.CardItem {
+    transition: margin-left .4s cubic-bezier(.55,-0.02,.57,.98), margin-right .4s cubic-bezier(.55,-0.02,.57,.98);
+
+    & + & {
+        margin-left: -150px;
+    }
+}
+
+.CardItem_container {
+    width: 300px;
+    padding: 15px;
+    margin: 0px;
+
+    transform: matrix(1.00,0.50,0.00,1.00,0,0);
+
+    transition: all .1s linear;
+}
+
+.CardItem_box {
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 40px;
+
+    border-radius: 28px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.CardItem_img {
+    width: 69%;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.CardItem_title {
+    width: 100%;
+
+    color: #28272F;
+    font-size: 95px;
+    font-family: $fontBranch;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.CardItem_subtitle {
+    width: 100%;
+
+    color: #73717C;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}

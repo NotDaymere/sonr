@@ -1,6 +1,6 @@
 import style from './Cards.module.scss'
 
-import {useRef, createRef, useEffect} from 'react'
+import {useRef, useState, createRef, useEffect} from 'react'
 
 //Elements
 import CardItem from './CardItem/CardItem';
@@ -48,17 +48,80 @@ function Cards () {
         }
     ]
 
+    const CardHover = (e) => {
+        console.log(e.currentTarget, e.nativeEvent.layerY);
+
+        CardItems.current.map((e, i) => {
+            e.style = `
+            z-index : ${50 - i};
+            transition: margin-left .4s cubic-bezier(.55,-0.02,.57,.98), margin-right .4s cubic-bezier(.55,-0.02,.57,.98);
+        `
+            console.log(e)
+        })
+
+        let index = e.currentTarget.dataset.index;
+        let posY = e.nativeEvent.layerY;
+        let posX = e.nativeEvent.layerX;
+        let sizeH = e.currentTarget.offsetHeight;
+        let sizeW = e.currentTarget.offsetWidth;
+
+        
+        let marginTop = posY * -50 / sizeH
+        let marginRight = posX * 150 / sizeW
+        
+        if(posY < sizeH) {
+            e.currentTarget.style = `
+                z-index : ${50 - index};
+                margin-left : -40px;
+                margin-right : ${marginRight}px;
+                transform: translateY(${marginTop}px);
+                transition: margin-left .4s cubic-bezier(.55,-0.02,.57,.98), margin-right 0 cubic-bezier(.55,-0.02,.57,.98);
+            `
+        }
+        
+    }
+
+    const CardZero = (e) => {
+        CardItems.current.map((e, i) => {
+            e.style = `
+            z-index : ${50 - i};
+            transition: margin-left .4s cubic-bezier(.55,-0.02,.57,.98), margin-right .4s cubic-bezier(.55,-0.02,.57,.98);
+        `
+        })
+    }
+
     return (
-        <div className={style.Cards} >
+        <div 
+            className={style.Cards}
+            onMouseLeave={CardZero}
+        >
             {dataCards.map((item, index) => (
-                <CardItem 
-                    ref={(el) => CardItems.current[index] = el}
-                    zIndex={index} 
-                    colors={item.colors} 
-                    img={item.img} 
-                    title={item.title} 
-                    subtitle={item.subtitle}  
-                />
+                // <CardItem 
+                //     ref={(el) => CardItems.current[index] = el}
+                //     zIndex={index} 
+                //     colors={item.colors} 
+                //     img={item.img} 
+                //     title={item.title} 
+                //     subtitle={item.subtitle}  
+                // />
+                <div 
+                    className={style.CardItem} 
+                    ref={(el) => (CardItems.current[index] = el)}
+                    style={{zIndex : 50 - index}}
+                    data-index={index}
+                    onMouseMove={CardHover}
+                >
+                    <div 
+                        className={style.CardItem_container} 
+                        style={{backgroundColor : item.colors.bg}}
+                    >
+                        <div className={style.CardItem_box} style={{backgroundColor : item.colors.fill}}>
+                            <img className={style.CardItem_img} src={item.img} alt="" />
+                            <div className={style.CardItem_title}>{item.title}</div>
+                            <div className={style.CardItem_subtitle}>{item.subtitle}</div>
+                        </div>
+                    </div>
+                </div>
             ))}
         </div>
     )

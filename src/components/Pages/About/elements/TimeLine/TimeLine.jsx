@@ -1,5 +1,7 @@
 import style from './TimeLine.module.scss'
 
+import { useEffect } from 'react';
+
 //Elements
 import TimeLineItem from './elements/TimeLineItem/TimeLineItem';
 
@@ -8,6 +10,9 @@ import TimeLineImg1 from '../../../../../assets/img/About/timeLine/1.png';
 import TimeLineImg2 from '../../../../../assets/img/About/timeLine/2.png';
 import TimeLineImg3 from '../../../../../assets/img/About/timeLine/3.png';
 import TimeLineImg4 from '../../../../../assets/img/About/timeLine/4.png';
+
+//Animation
+import AOS from 'aos';
 
 const dataTimeLineItems = [
     {
@@ -41,6 +46,11 @@ const dataTimeLineItems = [
 ]
 
 function TimeLine () {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
+    
     return (
         <div className={style.TimeLine}>
             <div className={style.TimeLine_bg} />

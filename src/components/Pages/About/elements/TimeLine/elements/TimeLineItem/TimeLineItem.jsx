@@ -1,12 +1,30 @@
 import style from './TimeLineItem.module.scss'
 
+import { useEffect } from 'react';
+
+//Animation
+import AOS from 'aos';
+
 function TimeLineItem (props) {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     return (
         <div className={style.TimeLineItem}>
             <div className={style.TimeLineItem_header}>
                 {props.img && <img className={`${style.TimeLineItem_header_img} ${style['TimeLineItem_header_img_' + props.imgClass]}`} src={props.img} alt="" />}
                 {props.year && <div className={style.TimeLineItem_header_year}>{props.year}</div>}
-                {props.month && <div className={style.TimeLineItem_header_month}>{props.month}</div>}
+                {props.month && <div 
+                    className={style.TimeLineItem_header_month}
+                >
+                    {props.month.split().map((item) => (
+                        <div
+                            data-aos="slide-up"
+                            data-aos-duration="3000"
+                        >{item}</div>
+                    ))}
+                </div>}
                 {props.headerTitle && <div className={style.TimeLineItem_header_title}>{props.headerTitle}</div>}
             </div>
             

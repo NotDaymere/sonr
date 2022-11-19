@@ -100,8 +100,8 @@ function Cards () {
         let LandslideR = posX * 70 / sizeW
         let LandslideL = posX * 100 / sizeW / 2 * -1 - 80
 
-        let deathZoneLeft = sizeW - (sizeW - (sizeW / 100 * 10))
-        let deathZoneRight = sizeW - (sizeW / 100 * 10)
+        let deathZoneLeft = sizeW - (sizeW - (sizeW / 100 * 5))
+        let deathZoneRight = sizeW - (sizeW / 100 * 5)
         
         if(posY < sizeH && deathZoneLeft < posX && deathZoneRight > posX) {
 

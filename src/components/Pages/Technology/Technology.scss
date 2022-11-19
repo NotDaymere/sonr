@@ -17,6 +17,7 @@
     background: linear-gradient(90deg, #F8DBB8 0%, #CCBBE4 46.15%, #9187FF 100%);
     opacity: 0.2;
     filter: blur(269.84px);
+    pointer-events: none;
     z-index: 30;
 }
 

@@ -161,7 +161,7 @@
 
 @media(max-width : 560px) {
     .Title_container {
-        padding: 30px 30px 250px;
+        padding: 30px 30px 180px;
     }
     
     .Title_subtitle {
@@ -183,7 +183,7 @@
     }
 
     .Title_sonr {
-        bottom: -50px;
+        bottom: -100px;
     }
 }
 
@@ -212,5 +212,9 @@
 
     .Title_des {
         font-size: 14px;
+    }
+
+    .Title_sonr {
+        bottom: -50px;
     }
 }

@@ -1,13 +1,57 @@
 import style from './Cards.module.scss'
+import './Slider.css'
 
 import { useState, useRef, useEffect } from 'react'
 
 import { gsap } from "gsap";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import IMG1 from '../../../../../assets/img/Technology/img1.png';
 import Arrow from '../../../../../assets/img/Cards/arrow_3.svg';
 
-//Elements
+
+const settings = {
+    arrows: false,
+    settings:  'unslick',
+    responsive: [
+        {
+            breakpoint: 19200,
+            settings:  'unslick'
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
+            }
+        }
+    ]
+};
+
+const dataCards = [
+    {
+        title : 'HNS Backed Top-Level Domain',
+        des : 'Sonr leverages Handshake, making Sonr aliases universally resolvable as top-level domains across the Sonr Network.',
+        img : IMG1
+    },
+    {
+        title : 'Out-of-Box Filecoin & IPFS Support',
+        des : 'Native integrations with Filecoin and IPFS enable low-cost decentralized data storage for all Sonr users.',
+        img : IMG1
+    },
+    {
+        title : 'W3C & Fido Compliant',
+        des : 'Sonr’s blockchain comes with a built-in fully compliant decentralized identity implementation, enabling on-chain verification between the nodes within the Sonr network.',
+        img : IMG1
+    }
+]
 
 function Cards () {
 
@@ -17,22 +61,10 @@ function Cards () {
     const refCardsImg = useRef([]);
     const refCardsBtn = useRef([]);
     const refCardsImgContainer = useRef([]);
+
     
 
-    const dataCards = [
-        {
-            title : 'HNS Backed Top-Level Domain',
-            des : 'Sonr leverages Handshake, making Sonr aliases universally resolvable as top-level domains across the Sonr Network.'
-        },
-        {
-            title : 'Out-of-Box Filecoin & IPFS Support',
-            des : 'Native integrations with Filecoin and IPFS enable low-cost decentralized data storage for all Sonr users.'
-        },
-        {
-            title : 'W3C & Fido Compliant',
-            des : 'Sonr’s blockchain comes with a built-in fully compliant decentralized identity implementation, enabling on-chain verification between the nodes within the Sonr network.'
-        }
-    ]
+    
 
     function CardActive(e) {
         const index = e.currentTarget.dataset.index;
@@ -41,14 +73,14 @@ function Cards () {
         tl.add(gsap.to(refCardsImgContainer.current[index], 
             { opacity: 1, duration : .8, ease:"power2.inOut" }
         ),gsap.to(refCards.current[index], 
-            { maxWidth: 800, duration : .8, ease:"power2.inOut" }
+            { maxWidth: '80em', duration : .8, ease:"power2.inOut" }
         ),
         gsap.to(refCardsBox.current[index], 
             { opacity : 1, duration : 1, ease:"power2.inOut" }
         )).to(refCardsImg.current[index], 
             { opacity : 1, width: '100%', height: '100%', duration : 1, ease:"expo.inOut" }
         ).to(refCardsBtn.current[index], 
-            { x : 20,  opacity : 1, duration : .5, ease:"expo.inOut" }
+            { x : '2em',  opacity : 1, duration : .5, ease:"expo.inOut" }
         )
     }
 
@@ -61,7 +93,7 @@ function Cards () {
         ),gsap.to(refCardsImg.current[index], 
             { opacity : 0, width: '0%', height: '0%', duration : 1, ease:"expo.inOut" }
         ),gsap.to(refCards.current[index], 
-            { maxWidth: 340, duration : 1, ease:"power2.inOut" }
+            { maxWidth: '34em', duration : 1, ease:"power2.inOut" }
         ),gsap.to(refCardsBox.current[index], 
             { opacity : .5, duration : .8, ease:"power2.inOut" }
         ),gsap.to(refCardsImgContainer.current[index], 
@@ -83,7 +115,7 @@ function Cards () {
             ),gsap.to(refCardsImg.current[cardItemActive], 
                 { opacity : 0, width: '0%', height: '0%', duration : 1, ease:"expo.inOut" }
             ),gsap.to(refCards.current[cardItemActive], 
-                { maxWidth: 340, duration : 1, ease:"power2.inOut" }
+                { maxWidth: '34em', duration : 1, ease:"power2.inOut" }
             ),gsap.to(refCardsBox.current[cardItemActive], 
                 { opacity : .5, duration : .8, ease:"power2.inOut" }
             ),gsap.to(refCardsImgContainer.current[cardItemActive], 
@@ -93,14 +125,14 @@ function Cards () {
             tl.add(gsap.to(refCardsImgContainer.current[index], 
                 { opacity: 1, duration : .8, ease:"power2.inOut" }
             ),gsap.to(refCards.current[index], 
-                { maxWidth: 800, duration : .8, ease:"power2.inOut" }
+                { maxWidth: '80em', duration : .8, ease:"power2.inOut" }
             ),
             gsap.to(refCardsBox.current[index], 
                 { opacity : 1, duration : 1, ease:"power2.inOut" }
             )).to(refCardsImg.current[index], 
                 { opacity : 1, width: '100%', height: '100%', duration : 1, ease:"expo.inOut" }
             ).to(refCardsBtn.current[index], 
-                { x : 20,  opacity : 1, duration : .5, ease:"expo.inOut" }
+                { x : '2em',  opacity : 1, duration : .5, ease:"expo.inOut" }
             )
     
             tl.add(gsap.to(refCardsBtn.current[cardItemActive], 
@@ -108,7 +140,7 @@ function Cards () {
             ),gsap.to(refCardsImg.current[cardItemActive], 
                 { opacity : 0, width: '0%', height: '0%', duration : 1, ease:"expo.inOut" }
             ),gsap.to(refCards.current[cardItemActive], 
-                { maxWidth: 340, duration : 1, ease:"power2.inOut" }
+                { maxWidth: '34em', duration : 1, ease:"power2.inOut" }
             ),gsap.to(refCardsBox.current[cardItemActive], 
                 { opacity : .5, duration : .8, ease:"power2.inOut" }
             ),gsap.to(refCardsImgContainer.current[cardItemActive], 
@@ -150,12 +182,25 @@ function Cards () {
                                             <img src={Arrow} alt="" />
                                         </button>
                                     </div>
-                                    <img className={style.Cards_item_img} ref={(el) => (refCardsImg.current[index] = el)} src={IMG1} alt="" />
+                                    <img className={style.Cards_item_img} ref={(el) => (refCardsImg.current[index] = el)} src={item.img} alt="" />
                                 </div>
                             </div>
                         ))}
                     </div>
+                    
                 </div>
+                <div className={style.Cards_content_mob}>
+                        <Slider {...settings}>
+                            {dataCards.map((item, index) => (
+                                <div className={style.Cards_item_mob}>
+                                    <img className={style.Cards_item_mob_img} src={item.img} alt="" />
+                                    <div className={style.Cards_item_mob_num}>0{index+1}</div>
+                                    <div className={style.Cards_item_mob_title}>{item.title}</div>
+                                    <div className={style.Cards_item_mob_des}>{item.des}</div>
+                                </div>
+                                )) }
+                        </Slider>
+                    </div>
                 <div className={style.Cards_container_rings}>
                     <svg width="754" height="571" viewBox="0 0 754 571" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.06456 518.931C8.81175 524.239 14.9411 527.732 23.2614 529.474C31.585 531.217 42.063 531.199 54.4353 529.512C79.1787 526.14 111.389 516.113 148.857 500.343C223.786 468.808 319.64 414.354 418.652 344.451C517.664 274.548 601.062 202.449 655.858 142.398C683.259 112.369 703.489 85.3732 714.949 63.1858C720.679 52.0916 724.204 42.2241 725.347 33.7971C726.491 25.3737 725.251 18.4288 721.504 13.1212C717.757 7.81362 711.627 4.32092 703.307 2.57864C694.983 0.835641 684.505 0.85391 672.133 2.54014C647.39 5.91243 615.18 15.9398 577.711 31.7091C502.783 63.2444 406.928 117.699 307.916 187.602C208.904 257.505 125.506 329.604 70.7102 389.655C43.3092 419.683 23.079 446.679 11.6191 468.867C5.8889 479.961 2.36451 489.828 1.22092 498.255C0.077766 506.679 1.31738 513.624 5.06456 518.931Z" stroke="#D5D5D5" stroke-opacity="0.18"/>

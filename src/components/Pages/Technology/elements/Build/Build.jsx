@@ -15,6 +15,7 @@ import AngleRight from '../../../../../assets/img/Technology/angle/right.svg'
 function Build () {
 
     const [menuItemActive, setMenuItemActive] = useState(0);
+    const refMenuItem = useRef([]);
     const refEye = useRef(null);
     const refVideo = useRef(null);
 
@@ -52,14 +53,34 @@ function Build () {
     useEffect(() => {
         refVideo.current.currentTime = 0.34
     }, []);
+
+    const screenWidth = window.innerWidth;
+
+    useEffect(() => {
+        console.log(refMenuItem.current[menuItemActive]);
+
+        if (screenWidth <= 768) {
+            const left = refMenuItem.current[menuItemActive].offsetLeft + ((refMenuItem.current[menuItemActive].offsetWidth - refEye.current.clientWidth) / 2) + 'px';
+            refEye.current.style.left = left;
+            refEye.current.style.top = 0;
+        } else {
+            const top = refMenuItem.current[menuItemActive].offsetTop + ((refMenuItem.current[menuItemActive].offsetHeight - refEye.current.clientHeight) / 2) + 'px';
+            refEye.current.style.left = 0;
+            refEye.current.style.top = top;
+        }
+    }, screenWidth);
     
 
     const MenuChange = (e) => {
-        const top = e.target.offsetTop + ((e.target.offsetHeight - refEye.current.clientHeight) / 2) + 'px';
-        
-        console.log(refVideo);
-        
-        refEye.current.style.top = top;
+        if (screenWidth <= 768) {
+            const left = e.target.offsetLeft + ((e.target.offsetWidth - refEye.current.clientWidth) / 2) + 'px';
+            refEye.current.style.left = left;
+            refEye.current.style.top = 0;
+        } else {
+            const top = e.target.offsetTop + ((e.target.offsetHeight - refEye.current.clientHeight) / 2) + 'px';
+            refEye.current.style.left = 0;
+            refEye.current.style.top = top;
+        }
         setMenuItemActive(e.target.dataset.index);
 
 
@@ -87,13 +108,19 @@ function Build () {
                 <div className={style.Build_content}>
                     <div className={style.Build_menu}>
                         {dataMenu.map((item, index) => (
-                            <div className={`${style.Build_menu_item} ${index == menuItemActive && style.Build_menu_item_active}`} data-index={index} onClick={MenuChange}>{item}</div>
+                            <div 
+                                className={`${style.Build_menu_item} ${index == menuItemActive && style.Build_menu_item_active}`} 
+                                ref = {(e) => (refMenuItem.current[index] = e)}
+                                data-index={index} 
+                                onClick={MenuChange}>
+                                {item}
+                            </div>
                         ))}
 
                         <img className={style.Build_menu_icon} ref={refEye} src={Eye} alt="" />
                     </div>
-                    <div className={style.Build_content_title}>{dataMenu[menuItemActive]}</div>
                     <video className={style.Build_content_video} ref={refVideo} src={Stack} Time={0.34}></video>
+                    <div className={style.Build_content_title}>{dataMenu[menuItemActive]}</div>
                     <div className={style.Build_content_des}>
                         {dataDes[menuItemActive].map((item, index) => (
                             <div className={style.Build_content_des_item}>

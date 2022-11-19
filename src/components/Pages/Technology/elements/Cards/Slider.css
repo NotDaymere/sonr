@@ -1,0 +1,19 @@
+.slick-dots {
+    height: 0;
+    bottom: 0;
+}
+.slick-dots li {
+    width: 33.3%;
+    margin: 0;
+}
+.slick-dots li button {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.slick-dots li button:before {
+    content: "";
+    border-bottom: 1px solid #f7f7f7;
+    width: 100%;
+    height: 0;
+}

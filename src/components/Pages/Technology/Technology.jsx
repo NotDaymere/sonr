@@ -8,6 +8,7 @@ import Cards from './elements/Cards/Cards';
 function Technology () {
     return (
         <div className="Technology">
+            <div className="Technology_bg" />
             <Title />
             <Build />
             <Cards />

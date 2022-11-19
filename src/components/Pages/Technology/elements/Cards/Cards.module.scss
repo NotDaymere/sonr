@@ -5,6 +5,10 @@
     background-color: #131313;
 }
 
+.Cards_container {
+    position: relative;
+}
+
 .Cards_title {
     color: #F6F6F6;
     font-size: 65px;
@@ -207,4 +211,14 @@
     transform-origin: center;
     background: linear-gradient(90deg, #F8DBB8 0%, #CCBBE4 46.15%, #9187FF 100%);
     transform: rotate(-45deg);
+}
+
+.Cards_container_rings {
+    position: absolute;
+    top: -335px;
+    right: 85px;
+    
+    z-index: 100;
+    pointer-events: none;
+    mix-blend-mode: difference;
 }

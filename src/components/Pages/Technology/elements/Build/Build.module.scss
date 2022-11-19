@@ -2,7 +2,7 @@
 
 .Build {
     position: relative;
-    padding-bottom: 180px;
+    padding-bottom: 200px;
 
     &::before {
         content: '///';
@@ -20,16 +20,11 @@
 }
 
 .Build_title {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
     width: 100%;
 
     color: #000;
     font-size: 120px;
-    line-height: 145px;
+    line-height: 121.5%;
     font-family: $fontBranch;
     text-transform: uppercase;
     text-align: center;
@@ -41,7 +36,7 @@
 
 .Build_container {
     position: relative;
-    padding-top: 350px;
+    margin-top: 20px;
 }
 
 .Build_menu {
@@ -135,6 +130,7 @@
     height: 450px;
     width: auto;
 
+    pointer-events: none;
     mix-blend-mode: darken;
     z-index: 120;
 }
@@ -183,4 +179,30 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+@media(max-width : 1440px) {
+    .Build_title {
+        font-size: 70px;
+    }
+}
+
+@media(max-width : 1024px) {
+    .Build_title {
+        font-size: 50px;
+    }
+}
+
+@media(max-width : 768px) {
+    .Build_title {
+        font-size: 40px;
+    }
+}
+
+@media(max-width : 560px) {
+
+}
+
+@media(max-width : 375px) {
+
 }

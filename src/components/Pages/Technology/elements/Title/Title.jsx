@@ -13,7 +13,7 @@ function Title () {
                     <div className={style.Title_subtitle}>Build on the first user-owned interoperable blockchain network</div>
                     <div className={style.Title_title}>
                         <div>The <span>revolution</span></div>
-                        <div>will not be</div>
+                        <div><div>will not be</div><span className={style.Title_slash}>///</span></div>
                         <div>centralized</div>
                     </div>
                     <div className={style.Title_des}>

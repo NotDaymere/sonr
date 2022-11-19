@@ -17,8 +17,9 @@
 
 .CardItem {
     position: relative;
-    height: 450px;
-    width: 300px;
+    font-size: 10px;
+    height: 45em;
+    width: 30em;
     // transition: margin-left .4s cubic-bezier(.55,-0.02,.57,.98), margin-right .4s cubic-bezier(.55,-0.02,.57,.98);
 
 }
@@ -32,20 +33,20 @@
 }
 
 .CardItem_hover_item_box {
-    height: 450px;
-    width: 300px;
+    height: 45em;
+    width: 30em;
 }
 
 .CardItem_hover_item {
     position: relative;
-    height: 450px;
-    width: 300px;
+    height: 45em;
+    width: 30em;
 }
 
 .CardItem_container {
     position: absolute;
-    width: 300px;
-    padding: 15px;
+    width: 30em;
+    padding: 1.5em;
 
     transform: matrix(1.00,0.50,0.00,1.00,0,0);
     transition: all .1s linear;
@@ -54,16 +55,16 @@
 .CardItem_box {
     width: 100%;
     height: 100%;
-    padding: 10px 10px 40px;
+    padding: 1em 1em 4em;
 
-    border-radius: 28px;
+    border-radius: 2.8em;
     display: flex;
     flex-wrap: wrap;
 }
 
 .CardItem_img {
     width: 69%;
-    height: 200px;
+    height: 20em;
     margin: 0 auto;
 }
 
@@ -71,7 +72,7 @@
     width: 100%;
 
     color: #28272F;
-    font-size: 95px;
+    font-size: 9.5em;
     font-family: $fontBranch;
     text-align: center;
     text-transform: uppercase;
@@ -81,7 +82,33 @@
     width: 100%;
 
     color: #73717C;
-    font-size: 15px;
+    font-size: 1.5em;
     font-weight: 500;
     text-align: center;
+}
+
+@media (max-width : 768px) {
+    .Cards {
+        margin-top: 100px;
+    }
+
+    .CardItem {
+        font-size: 8px;
+    }
+}
+
+@media (max-width : 560px) {
+    .Cards {
+        margin-top: 70px;
+    }
+
+    .CardItem {
+        font-size: 5px;
+    }
+}
+
+@media (max-width : 375px) {
+    .CardItem {
+        font-size: 4px;
+    }
 }

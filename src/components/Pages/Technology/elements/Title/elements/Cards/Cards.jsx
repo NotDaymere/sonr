@@ -19,8 +19,9 @@ function Cards () {
 
     useEffect(() => {
         console.log(CardItems);
-        CardItems.current[0].style.left = '100px'
-        CardItems.current[2].style.left = '-100px'
+        CardItems.current[0].style.left = '10em'
+        CardItems.current[1].style.left = '-2em'
+        CardItems.current[2].style.left = '-14em'
     }, [])
 
     const dataCards = [

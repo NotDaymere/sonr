@@ -1,14 +1,12 @@
 @import "../../../../../assets/scss/vars";
 
-.Title_container {
+.Title {
     position: relative;
-    padding-bottom: 400px;
-    overflow: hidden;
 
     &::before {
         content: '';
         position: absolute;
-        bottom: 0;
+        bottom: -10px;
         left: 0;
 
         width: 100%;
@@ -17,6 +15,12 @@
 
         z-index: 20;
     }
+}
+
+.Title_container {
+    position: relative;
+    padding-bottom: 400px;
+    overflow: hidden;
 }
 
 .Title_header {
@@ -28,6 +32,7 @@
 
     color: #28272F;
     font-size: 20px;
+    line-height: 107.5%;
     font-family: $fontOffBT;
     text-transform: uppercase;
     text-align: center;
@@ -53,15 +58,12 @@
         }
         &:nth-child(2) {
             position: relative;
-            &::after {
-                content: '///';
-                position: absolute;
-                right: 0;
-                bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
 
-                height: 100px;
-
-                color: #000;
+            & .Title_slash {
+                margin-bottom: -15px;
                 font-size: 50px;
                 font-family: $fontOffBT;
             }
@@ -94,4 +96,121 @@
     width: 90%;
 
     z-index: 10;
+}
+
+@media(max-width : 1440px) {
+    .Title_title {
+        font-size: 100px;
+    }
+}
+
+@media(max-width : 1024px) {
+    .Title_container {
+        padding-bottom: 400px;
+    }
+
+    .Title_title {
+        font-size: 80px;
+    }
+    .Title_des {
+        position: relative;
+        max-width: 100%;
+        margin-top: 40px;
+
+        text-align: center;
+    }
+
+    .Title_sonr {
+        bottom: -150px;
+    }
+}
+
+@media(max-width : 768px) {
+    .Title_container {
+        padding: 30px 30px 200px;
+    }
+
+    .Title_title {
+        margin-top: 30px;
+
+        font-size: 69px;
+    
+        & div {
+            &:nth-child(1) {
+                text-align: left;
+            }
+
+            &:nth-child(2) {
+                & .Title_slash {
+                    margin-bottom: -10px;
+                    font-size: 40px;
+                    font-family: $fontOffBT;
+                }
+            }
+
+            &:nth-child(3) {
+                text-align: left;
+            }
+        }
+    }
+
+    .Title_sonr {
+        bottom: -100px;
+    }
+}
+
+@media(max-width : 560px) {
+    .Title_container {
+        padding: 30px 30px 250px;
+    }
+    
+    .Title_subtitle {
+        font-size: 18px;
+    }
+
+    .Title_title {
+        font-size: 40px;
+
+        & div {
+            &:nth-child(2) {
+                & .Title_slash {
+                    margin-bottom: -10px;
+                    font-size: 30px;
+                    font-family: $fontOffBT;
+                }
+            }
+        }
+    }
+
+    .Title_sonr {
+        bottom: -50px;
+    }
+}
+
+@media(max-width : 375px) {
+    .Title_container {
+        padding: 30px 30px 100px;
+    }
+    
+    .Title_subtitle {
+        font-size: 14px;
+    }
+
+    .Title_title {
+        font-size: 34px;
+
+        & div {
+            &:nth-child(2) {
+                & .Title_slash {
+                    margin-bottom: -5px;
+                    font-size: 25px;
+                    font-family: $fontOffBT;
+                }
+            }
+        }
+    }
+
+    .Title_des {
+        font-size: 14px;
+    }
 }

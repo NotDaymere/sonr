@@ -1,5 +1,28 @@
 @import "../../../assets/scss/vars";
 
 .Technology {
+    position: relative;
     overflow: hidden;
+}
+
+.Technology_bg {
+    position: absolute;
+    width: 891px;
+    height: 891px;
+    left: -74px;
+    top: 362px;
+
+    /* Gradient */
+
+    background: linear-gradient(90deg, #F8DBB8 0%, #CCBBE4 46.15%, #9187FF 100%);
+    opacity: 0.2;
+    filter: blur(269.84px);
+    z-index: 30;
+}
+
+@media(max-width : 768px) {
+    .Technology_bg {
+        left: -590px;
+        top: 140px;
+    }
 }

@@ -1,0 +1,14 @@
+@import "../../../../../../assets/scss/vars";
+
+.Label {
+    display: inline-flex;
+    padding: 25px 56px;
+
+    color: #0B0A0A;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 152.3%;
+
+    border: 1px solid rgba(11, 10, 10, 0.28);
+    border-radius: 82px;
+}

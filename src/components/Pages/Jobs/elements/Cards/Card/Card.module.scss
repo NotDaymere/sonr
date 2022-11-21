@@ -1,0 +1,94 @@
+@import "../../../../../../assets/scss/vars";
+
+.Card {
+    position: relative;
+    max-width: 370px;
+    min-height: 500px;
+
+    transition: all .1s linear;
+
+    &_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: #090909;
+
+        transition: all .1s linear;
+        z-index: -10;
+    }
+
+    &:hover {
+
+        .Card_container {
+            transform: rotate(5.5deg);
+        }
+
+        .Card_bg {
+            transform: rotate(-5.5deg);
+        }
+
+        .Card_btn {
+            background-color: #fff;
+        }
+    }
+}
+
+.Card_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 30px 20px;
+
+    transition: all .1s linear;
+}
+
+.Card_num {
+    color: #131313;
+    font-size: 64px;
+    line-height: 100%;
+    font-family: $fontOffBT;
+    text-transform: uppercase;
+}
+
+.Card_text {
+    color: #28272F;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 121.5%;
+    text-transform: uppercase;
+}
+
+.Card_btn {
+    position: absolute;
+    bottom: 75px;
+    right: 50px;
+
+    min-width: auto;
+    width: 115px;
+    height: 115px;
+    padding: 0;
+
+    background-color: #000;
+
+    border: 0;
+    border-radius: 100%;
+
+    opacity: 1;
+    mix-blend-mode: difference;
+}
+
+.Card_icon {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    width: 250px;
+    height: 250px;
+}

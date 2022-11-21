@@ -10,9 +10,10 @@ import Header from "./components/Header/Header";
 //Pages
 import Home from "./components/Pages/Home/Home" 
 import About from "./components/Pages/About/About";
+import Technology from "./components/Pages/Technology/Technology";
 import Blog from "./components/Pages/Blog/Blog";
 import Article from "./components/Pages/Article/Article";
-import Technology from "./components/Pages/Technology/Technology";
+import Jobs from "./components/Pages/Jobs/Jobs";
 
 //Animation
 import AOS from "aos";
@@ -37,6 +38,7 @@ function App() {
                     <Route exact path='/technology' element={<Technology />} />
                     <Route exact path='/blog' element={<Blog />} />
                     <Route exact path='/article' element={<Article />} />
+                    <Route exact path='/jobs' element={<Jobs />} />
                 </Routes>
             </Router>
         </div>

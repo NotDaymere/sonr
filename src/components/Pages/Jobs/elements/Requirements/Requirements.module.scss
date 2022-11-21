@@ -1,0 +1,20 @@
+@import "../../../../../assets/scss/vars";
+
+.Requirements {
+    margin-top: 260px;
+}
+
+.Requirements_title {
+    color: #000;
+    font-size: 120px;
+    line-height: 107.5%;
+    font-family: $fontBranch;
+    text-transform: uppercase;
+}
+
+.Requirements_box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    row-gap: 40px;
+}

@@ -1,0 +1,23 @@
+@import "../../../../../assets/scss/vars";
+
+.Restrictions {
+    margin-top: 260px;
+}
+
+.Restrictions_title {
+    width: 100%;
+
+    color: #000;
+    font-size: 65px;
+    line-height: 107.5%;
+    font-family: $fontBranch;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.Restrictions_box {
+    display: flex;
+    margin-top: 80px;
+    row-gap: 40px;
+    column-gap: 40px;
+}

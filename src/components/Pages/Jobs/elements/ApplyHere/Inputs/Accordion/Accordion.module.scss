@@ -1,0 +1,67 @@
+@import "../../../../../../../assets/scss/vars";
+
+.Accordion {
+    width: 100%;
+    margin-top: 70px;
+}
+
+.Input_title {
+    display: flex;
+    align-items: center;
+}
+
+.Input_title_text {
+    color: #F6F6F6;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 121.5%;
+    text-transform: uppercase;
+}
+
+.Input_title_icon {
+    position: relative;
+    margin-left: 15px;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 15px;
+        height: 2px;
+
+        background-color: #F6F6F6;
+
+        border-radius: 1px;
+
+        transform-origin: center;
+        transition: all .2s cubic-bezier(.37,.03,.56,.9);
+    }
+
+    &::before {
+        transform: rotate(90deg);
+    }
+
+    &_active::before {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+}
+
+.Accordion_content {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    width: 100%;
+    overflow: hidden;
+    height: 0px;
+
+    opacity: 0;
+    transition: all .3s cubic-bezier(.37,.03,.56,.9);
+
+    &_active {
+        margin-top: 70px;
+        opacity: 1;
+    }
+}

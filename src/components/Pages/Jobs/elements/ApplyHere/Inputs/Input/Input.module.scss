@@ -1,0 +1,41 @@
+@import "../../../../../../../assets/scss/vars";
+
+.Input {
+    width: 100%;
+}
+
+.Input_title {
+    width: 100%;
+
+    color: #F6F6F6;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 152.3%;
+
+    & span {
+        margin-left: 10px;
+        opacity: .6;
+    }
+}
+
+.Input_input {
+    width: 100%;
+    margin-top: 20px;
+    padding: 25px 55px;
+
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 152.3%;
+
+    background-color: transparent;
+
+    border: 1px solid #f6f6f647;
+    border-radius: 82px;
+
+    outline: none;
+
+    &::placeholder {
+        opacity: 0.4;
+    }
+}

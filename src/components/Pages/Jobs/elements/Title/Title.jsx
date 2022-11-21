@@ -6,6 +6,14 @@ import Label from './Label/Label';
 //IMG
 import IMG from "../../../../../assets/img/Jobs/title.jpg";
 
+const dataLabels = [
+    'Design & User Experience',
+    'Full-time',
+    'Brooklyn, NY',
+    'Remote friendly',
+    '90K - 125K USD a year'
+]
+
 function Title () {
     return (
         <div className={style.Title}>
@@ -14,11 +22,10 @@ function Title () {
                 <div className={style.Title_title}>Lead Designer</div>
 
                 <div className={style.Title_label_container}>
-                    <Label title='Design & User Experience' />
-                    <Label title='Full-time' />
-                    <Label title='Brooklyn, NY' />
-                    <Label title='Remote friendly' />
-                    <Label title='90K - 125K USD a year' />
+                    {dataLabels.map(item => (
+                        <Label title={item} />
+                    ))}
+                    
                 </div>
 
                 <img className={style.Title_img} src={IMG} alt="" />

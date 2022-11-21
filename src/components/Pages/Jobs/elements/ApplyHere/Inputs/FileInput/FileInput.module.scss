@@ -1,0 +1,55 @@
+@import "../../../../../../../assets/scss/vars";
+
+.FileInput {
+    width: 100%;
+}
+
+.FileInput_title {
+    width: 100%;
+
+    color: #F6F6F6;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 152.3%;
+
+    & span {
+        margin-left: 10px;
+        opacity: .6;
+    }
+}
+
+.Input_input {
+    display: none;
+}
+
+.Link_input_box {
+    margin-top: 20px;
+}
+
+.Link_clip {
+    display: inline-flex;
+    align-items: center;
+    padding: 25px 35px;
+
+    color: #131313;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 152.3%;
+
+    background-color: #F6F6F6;
+
+    border-radius: 80px;
+
+    opacity: 0.9;
+
+    & img {
+        margin-right: 10px;
+    }
+}
+
+@media(max-width: 560px) {
+    .Link_clip {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -3,9 +3,9 @@
 .Card {
     position: relative;
     max-width: 370px;
-    min-height: 500px;
+    height: 500px;
 
-    transition: all .1s linear;
+    transition: all .2s cubic-bezier(.37,.03,.56,.9);
 
     &_bg {
         position: absolute;
@@ -17,7 +17,7 @@
 
         background-color: #090909;
 
-        transition: all .1s linear;
+        transition: all .2s cubic-bezier(.37,.03,.56,.9);
         z-index: -10;
     }
 
@@ -91,4 +91,23 @@
 
     width: 250px;
     height: 250px;
+}
+
+@media(max-width: 560px) {
+    .Card {
+        height: 400px;
+    }
+
+    .Card_text {
+        font-size: 20px;
+    }
+
+    .Card_icon {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    
+        width: 200px;
+        height: 200px;
+    }
 }

@@ -19,8 +19,6 @@
     line-height: 121.5%;
     text-decoration-line: underline;
     text-transform: uppercase;
-
-    
 }
 
 .Requirement_text {
@@ -31,4 +29,19 @@
     font-weight: 500;
     line-height: 121.5%;
     text-transform: uppercase;
+}
+
+@media(max-width: 768px) {
+    .Requirement {
+        flex-wrap: wrap;
+        row-gap: 70px;
+    }
+
+    .Requirement_num {
+        width: 100%;
+    }
+
+    .Requirement_text {
+        width: 100%;
+    }
 }

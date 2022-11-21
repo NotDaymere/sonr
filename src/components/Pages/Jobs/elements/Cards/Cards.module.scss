@@ -15,7 +15,6 @@
     text-align: center;
 }
 
-
 .Cards_box {
     width: 100%;
     display: flex;
@@ -24,4 +23,24 @@
     row-gap: 45px;
     column-gap: 45px;
     margin-top: 80px;
+}
+
+@media(max-width: 768px) {
+    .Cards_title {
+        font-size: 80px;
+    }
+}
+
+@media(max-width: 560px) {
+    .Cards {
+        margin-top: 150px;
+    }
+
+    .Cards_title {
+        font-size: 45px;
+    }
+
+    .Cards_box {
+        margin-top: 50px;
+    }
 }

@@ -18,3 +18,25 @@
     margin-top: 80px;
     row-gap: 40px;
 }
+
+@media(max-width: 768px) {
+    .Requirements_title {
+        font-size: 80px;
+    }
+}
+
+@media(max-width: 560px) {
+    .Requirements {
+        margin-top: 150px;
+    }
+
+    .Requirements_title {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .Requirements_box {
+        margin-top: 100px;
+        row-gap: 100px;
+    }
+}

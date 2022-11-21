@@ -21,3 +21,19 @@
     row-gap: 40px;
     column-gap: 40px;
 }
+
+@media(max-width: 768px) {
+    .Restrictions_box {
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 560px) {
+    .Restrictions {
+        margin-top: 150px;
+    }
+
+    .Restrictions_title {
+        font-size: 35px;
+    }
+}

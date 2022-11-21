@@ -1,0 +1,71 @@
+@import "../../../../../../../assets/scss/vars";
+
+.Link {
+    width: 100%;
+}
+
+.Link_title {
+    width: 100%;
+
+    color: #F6F6F6;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 152.3%;
+
+    & span {
+        margin-left: 10px;
+        opacity: .6;
+    }
+}
+
+.Link_input_box {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+
+    border: 1px solid #f6f6f647;
+    border-radius: 82px;
+}
+
+.Link_link {
+    padding: 25px 35px;
+
+    color: #131313;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 152.3%;
+
+    background-color: #F6F6F6;
+
+    border-radius: 80px;
+
+    opacity: 0.9;
+}
+
+.Link_input {
+    width: 100%;
+    padding: 25px 25px;
+
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 152.3%;
+
+    background-color: transparent;
+
+    border: 0;
+
+    outline: none;
+
+    &::placeholder {
+        opacity: 0.4;
+    }
+    
+}
+
+@media(max-width: 560px) {
+    .Link_link {
+        display: none;
+    }
+}

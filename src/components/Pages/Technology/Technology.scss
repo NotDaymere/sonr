@@ -9,13 +9,14 @@
     position: absolute;
     width: 891px;
     height: 891px;
-    left: -74px;
     top: 362px;
+    left: 50%;
+    transform: translateX(-100%);
 
     /* Gradient */
 
     background: linear-gradient(90deg, #F8DBB8 0%, #CCBBE4 46.15%, #9187FF 100%);
-    opacity: 0.2;
+    opacity: 0.3;
     filter: blur(269.84px);
     pointer-events: none;
     z-index: 30;

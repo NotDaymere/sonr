@@ -62,24 +62,25 @@ function Cards () {
     const refCardsBtn = useRef([]);
     const refCardsImgContainer = useRef([]);
 
-    
-
-    
-
     function CardActive(e) {
         const index = e.currentTarget.dataset.index;
 
         let tl = gsap.timeline();
-        tl.add(gsap.to(refCardsImgContainer.current[index], 
+        tl.add(gsap.fromTo(refCardsImgContainer.current[index], 
+            { opacity: 0},
             { opacity: 1, duration : .8, ease:"power2.inOut" }
-        ),gsap.to(refCards.current[index], 
+        ),gsap.fromTo(refCards.current[index], 
+            { maxWidth: '34em' },
             { maxWidth: '80em', duration : .8, ease:"power2.inOut" }
         ),
-        gsap.to(refCardsBox.current[index], 
+        gsap.fromTo(refCardsBox.current[index], 
+            { opacity : .5 },
             { opacity : 1, duration : 1, ease:"power2.inOut" }
-        )).to(refCardsImg.current[index], 
+        )).fromTo(refCardsImg.current[index], 
+            { opacity : 0, width: '0%', height: '0%'},
             { opacity : 1, width: '100%', height: '100%', duration : 1, ease:"expo.inOut" }
-        ).to(refCardsBtn.current[index], 
+        ).fromTo(refCardsBtn.current[index], 
+            { x : '0em',  opacity : 0},
             { x : '2em',  opacity : 1, duration : .5, ease:"expo.inOut" }
         )
     }

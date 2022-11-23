@@ -1,7 +1,7 @@
 import style from './Category.module.scss'
 
 //SVG
-import Arrow from '../../../../../../assets/img/Jobs/arrow.svg'
+import Arrow from '../../../../../../assets/img/Job/arrow.svg'
 
 function Category (props) {
     return (

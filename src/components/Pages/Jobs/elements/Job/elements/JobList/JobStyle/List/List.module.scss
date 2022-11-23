@@ -1,0 +1,37 @@
+@import "../../../../../../../../../assets/scss/vars";
+
+.List {
+    width: 100%;
+}
+
+.List_title {
+    width: 100%;
+    display: flex;
+    padding: 0 25px 35px;
+
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 107.5%;
+    text-transform: uppercase;
+
+    border-bottom: 2px solid rgba(255, 255, 255, 0.20);
+
+    opacity: .7;
+}
+
+.List_title_category {
+    width: 50%;
+}
+
+.List_title_location {
+    width: 25%;
+}
+
+.List_title_visit {
+    width: 15%;
+}
+
+.List_title_link {
+    width: 10%;
+}

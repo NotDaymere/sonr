@@ -1,6 +1,6 @@
 import style from './Card.module.scss'
 
-import Arrow from "../../../../../../assets/img/Jobs/CardsIcon/arrow.svg";
+import Arrow from "../../../../../../assets/img/Job/CardsIcon/arrow.svg";
 
 function Card (props) {
     return (

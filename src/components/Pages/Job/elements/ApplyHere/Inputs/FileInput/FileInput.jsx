@@ -3,7 +3,7 @@ import style from './FileInput.module.scss'
 import { useEffect, useState } from 'react';
 
 //SVG
-import Clip from '../../../../../../../assets/img/Jobs/clip.svg'
+import Clip from '../../../../../../../assets/img/Job/clip.svg'
 
 
 

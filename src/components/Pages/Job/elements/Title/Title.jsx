@@ -4,7 +4,7 @@ import style from './Title.module.scss'
 import Label from './Label/Label';
 
 //IMG
-import IMG from "../../../../../assets/img/Jobs/title.jpg";
+import IMG from "../../../../../assets/img/Job/title.jpg";
 
 const dataLabels = [
     'Design & User Experience',

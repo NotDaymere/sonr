@@ -1,0 +1,113 @@
+@import "../../../../../../../../../../assets/scss/vars";
+
+.ListItem {
+    width: 100%;
+    display: flex;
+    padding: 30px 25px;
+
+    border-bottom: 2px solid rgba(255, 255, 255, 0.20);
+}
+
+.ListItem_category {
+    width: 50%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ListItem_category_position {
+    width: 100%;
+
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 121.5%;
+    font-family: $fontBranch;
+    text-transform: uppercase;
+}
+
+.ListItem_category_schedule {
+    margin-top: 10px;
+
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 115%;
+    font-family: $fontBasicGP;
+
+    opacity: .7;
+}
+
+.ListItem_location {
+    width: 25%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 115%;
+    font-family: $fontBasicGP;
+
+    opacity: .7;
+}
+
+.ListItem_location_item {
+    width: 100%;
+}
+
+
+.ListItem_visit {
+    width: 15%;
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 115%;
+    font-family: $fontBasicGP;
+
+    opacity: .7;
+}
+
+.ListItem_link {
+    width: 10%;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 115%;
+    font-family: $fontBasicGP;
+
+    cursor: pointer;
+    opacity: .9;
+    transition: all .1s linear;
+
+    &:hover {
+        opacity: 1;
+
+        & .ListItem_link_icon {
+            width: 10px;
+            margin-left: 4px;
+        }        
+    }
+}
+
+.ListItem_link_icon {
+    width: 0px;
+    margin-left: 0px;
+    overflow: hidden;
+
+    transition: all .1s linear;
+}
+
+
+

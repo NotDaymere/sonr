@@ -10,7 +10,7 @@ import TextArea from './Inputs/TextArea/TextArea';
 
 //Source
 import Sonr from '../../../../../assets/img/About/earth.mp4'
-import Arrow from '../../../../../assets/img/Jobs/arrowUp.svg'
+import Arrow from '../../../../../assets/img/Job/arrowUp.svg'
 
 const dataInputs1 = [
     {

@@ -7,9 +7,9 @@ import Requirements from './elements/Requirements/Requirements';
 import Restrictions from './elements/Restrictions/Restrictions';
 import ApplyHere from './elements/ApplyHere/ApplyHere';
 
-function Jobs () {
+function Job () {
     return (
-        <div className="Jobs">
+        <div className="Job">
             <Title />
             <Cards />
             <Requirements />
@@ -19,4 +19,4 @@ function Jobs () {
     )
 }
 
-export default Jobs;
+export default Job;

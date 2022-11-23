@@ -4,12 +4,12 @@ import style from './Cards.module.scss'
 import Card from './Card/Card';
 
 //SVG
-import SVG1 from "../../../../../assets/img/Jobs/CardsIcon/svg1.svg"
-import SVG2 from "../../../../../assets/img/Jobs/CardsIcon/svg2.svg"
-import SVG3 from "../../../../../assets/img/Jobs/CardsIcon/svg3.svg"
-import SVG4 from "../../../../../assets/img/Jobs/CardsIcon/svg4.svg"
-import SVG5 from "../../../../../assets/img/Jobs/CardsIcon/svg5.svg"
-import SVG6 from "../../../../../assets/img/Jobs/CardsIcon/svg6.svg"
+import SVG1 from "../../../../../assets/img/Job/CardsIcon/svg1.svg"
+import SVG2 from "../../../../../assets/img/Job/CardsIcon/svg2.svg"
+import SVG3 from "../../../../../assets/img/Job/CardsIcon/svg3.svg"
+import SVG4 from "../../../../../assets/img/Job/CardsIcon/svg4.svg"
+import SVG5 from "../../../../../assets/img/Job/CardsIcon/svg5.svg"
+import SVG6 from "../../../../../assets/img/Job/CardsIcon/svg6.svg"
 
 const dataCards = [
     {

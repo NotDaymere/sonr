@@ -28,6 +28,7 @@
 }
 
 .Title_subtitle {
+    overflow: hidden;
     width: 100%;
 
     color: #28272F;
@@ -53,28 +54,37 @@
     }
 
     & div {
+        overflow: hidden;
+
         &:nth-child(1) {
             text-align: center;
         }
         &:nth-child(2) {
             position: relative;
-            display: flex;
-            justify-content: space-between;
-            align-items: end;
+            
 
-            & .Title_slash {
-                margin-bottom: -15px;
-                font-size: 50px;
-                font-family: $fontOffBT;
+            & div {
+                display: flex;
+                justify-content: space-between;
+                align-items: end;
+
+                & .Title_slash {
+                    margin-bottom: -15px;
+                    font-size: 50px;
+                    font-family: $fontOffBT;
+                }
             }
         }
         &:nth-child(3) {
-            text-align: right;
+            & div {
+                text-align: right;
+            }
         }
     }
 }
 
 .Title_des {
+    overflow: hidden;
     position: absolute;
     left: 0;
     bottom: 20px;
@@ -85,6 +95,11 @@
     font-size: 15px;
     font-weight: 500;
     line-height: 17px;
+}
+
+.Title_Cards_container {
+    position: relative;
+    z-index: 100;
 }
 
 .Title_sonr {

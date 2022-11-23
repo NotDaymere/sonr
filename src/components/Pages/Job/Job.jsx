@@ -1,4 +1,4 @@
-import './Jobs.scss'
+import './Job.scss'
 
 //Elements
 import Title from './elements/Title/Title';

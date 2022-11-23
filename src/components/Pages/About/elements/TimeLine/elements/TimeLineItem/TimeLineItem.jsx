@@ -28,6 +28,8 @@ function TimeLineItem (props) {
                             className={style.TimeLineItem_header_month_item}
                             data-aos="slide-up"
                             data-aos-duration={1000 + 500 * index}
+                            data-aos-delay="500"
+                            data-aos-offset="200"
                         >{item}</div>
                     ))}
                 </div>}

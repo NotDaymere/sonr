@@ -3,8 +3,11 @@ import "aos/dist/aos.css";
 
 import { useRef, useEffect } from 'react'
 
+//Source
 import Sonr from '../../../../../assets/img/About/earth.mp4';
 import ArrowUp from '../../../../../assets/img/About/arrowUp.svg';
+import CometWhite from '../../../../../assets/img/About/cometWhite.svg';
+import CometBlack from '../../../../../assets/img/About/cometBlack.svg';
 
 //Animate
 import { gsap } from "gsap";
@@ -20,11 +23,14 @@ function Title () {
 
 
     const refSonr = useRef(null);
+    const refCometWhite = useRef(null);
+    const refCometBlack = useRef(null);
     const refTitle = useRef(null);
     const refDes = useRef(null);
     const refBtn = useRef(null);
 
     useEffect(() => {
+        
         let tl = gsap.timeline();
         tl.fromTo(refSonr.current, 
             { y: -600 }, 
@@ -39,7 +45,20 @@ function Title () {
             { x: 100, opacity : 0 }, 
             { x: 0, opacity : 1, duration : .5, ease:"expo.inOut" }
         );
+
+        tl.to(refCometWhite.current, {
+            motionPath: {
+                path: "#path",
+                align: "#path",
+                alignOrigin: [0.5, 0.5],
+                autoRotate: true
+            },
+            duration: 5,
+            ease: "power1.inOut"
+        });
     }, []);
+
+    
 
     return (
         <div className={style.Title}>

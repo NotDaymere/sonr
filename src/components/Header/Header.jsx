@@ -37,7 +37,7 @@ function Header (props) {
             theme: 'black'
         },
         {
-            pathname: '/jobs',
+            pathname: '/job',
             theme: 'black'
         }
     ]

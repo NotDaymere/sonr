@@ -13,7 +13,7 @@ import About from "./components/Pages/About/About";
 import Technology from "./components/Pages/Technology/Technology";
 import Blog from "./components/Pages/Blog/Blog";
 import Article from "./components/Pages/Article/Article";
-import Jobs from "./components/Pages/Jobs/Jobs";
+import Job from "./components/Pages/Job/Job";
 
 //Animation
 import AOS from "aos";
@@ -38,7 +38,7 @@ function App() {
                     <Route exact path='/technology' element={<Technology />} />
                     <Route exact path='/blog' element={<Blog />} />
                     <Route exact path='/article' element={<Article />} />
-                    <Route exact path='/jobs' element={<Jobs />} />
+                    <Route exact path='/job' element={<Job />} />
                 </Routes>
             </Router>
         </div>

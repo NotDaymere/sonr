@@ -48,6 +48,9 @@
     width: 30em;
     padding: 1.5em;
 
+    box-shadow:  13px 0px 26px hsla(0, 0%, 40%, 0.2),
+             -13px -13px 26px rgba(235, 235, 235, 0.3);
+
     transform: matrix(1.00,0.50,0.00,1.00,0,0);
     transition: all .1s linear;
 }

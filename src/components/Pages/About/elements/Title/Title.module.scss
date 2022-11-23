@@ -33,6 +33,7 @@
     width: 800px;
 
     mix-blend-mode: difference;
+    z-index: 10;
 }
 
 .Title_bg_sonr {
@@ -114,8 +115,17 @@
 
     transition: all .1s linear;
 
+    & img {
+        transition: all .2s cubic-bezier(.37,.03,.56,.9);
+    }
+
     &:hover {
         background-color: #0bb3e2;
+
+        & img {
+            
+            transform: rotate(180deg);
+        }
     }
 
     grid-area: 1 / 2 / 2 / 3;

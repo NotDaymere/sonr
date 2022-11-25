@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-.ListItem_category_position {
+.ListItem_position {
     width: 100%;
 
     color: #FFFFFF;
@@ -26,9 +26,13 @@
     text-transform: uppercase;
 }
 
-.ListItem_category_schedule {
+.ListItem_schedule {
+    display: flex;
+    column-gap: 10px;
     margin-top: 10px;
+}
 
+.ListItem_schedule_item {
     color: #FFFFFF;
     font-size: 15px;
     font-weight: 400;
@@ -81,23 +85,27 @@
     justify-content: end;
     align-items: center;
 
-    color: #FFFFFF;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 115%;
-    font-family: $fontBasicGP;
-
-    cursor: pointer;
-    opacity: .9;
-    transition: all .1s linear;
-
-    &:hover {
-        opacity: 1;
-
-        & .ListItem_link_icon {
-            width: 10px;
-            margin-left: 4px;
-        }        
+    & a {
+        display: flex;
+        
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 115%;
+        font-family: $fontBasicGP;
+        text-decoration: none;
+    
+        opacity: .7;
+        transition: all .1s linear;
+    
+        &:hover {
+            opacity: 1;
+    
+            & .ListItem_link_icon {
+                width: 10px;
+                margin-left: 4px;
+            }        
+        }
     }
 }
 

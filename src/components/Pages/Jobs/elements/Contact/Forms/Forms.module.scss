@@ -1,0 +1,257 @@
+@import "../../../../../../assets/scss/vars";
+
+.Forms {
+    margin-top: 80px;
+}
+
+.Forms_need_title {
+    color: #28272F;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 152.3%;
+    font-family: $fontBasicGP;
+    
+    opacity: 0.5;
+    transition: all .1s linear;
+
+    &.required {
+        color: #FF6666;
+        opacity: 1;
+    }
+}
+
+.Forms_need_select {
+    display: flex;
+    margin-top: 15px;
+    column-gap: 15px;
+}
+
+.Forms_need_select_item {
+    padding: 21px 41px;
+
+    color: #28272F;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 152.3%;
+    font-family: $fontBasicGP;
+
+    border: 1px solid rgba(40, 39, 47, 0.28);
+    border-radius: 82px;
+
+    cursor: pointer;
+    transition: all .1s linear;
+
+    &:hover {
+        background-color: rgba(40, 39, 47, 0.2);
+    }
+
+    &.active {
+        color: #fff;
+        background-color: #131313;
+    }
+}
+
+.Forms_inputs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 90px;
+    gap: 40px;
+}
+
+.Forms_inputs_box {
+    display: flex;
+    width: 100%;
+
+    gap: 76px;
+}
+
+.Forms_inputs_box_item {
+    width: 100%;
+}
+
+.Forms_inputs_box {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        color: #FF6666;
+        font-size: 15px;
+        font-weight: 500;
+        font-family: $fontBasicGP;
+
+        opacity: 0;
+        transition: all .1s linear;
+    }
+
+    &:nth-child(1){
+        &::after {
+            content: 'Please fill your name';
+        }
+    }
+    &:nth-child(2){
+        &::after {
+            content: 'Please fill your email';
+        }
+    }
+    &:nth-child(3){
+        &::after {
+            content: 'Please fill your question';
+        }
+    }
+
+    &.required::after {
+        opacity: 1;
+    }
+}
+
+.Forms_inputs_input {
+    position: relative;
+    width: 100%;
+    padding-bottom: 7px;
+
+    color: #28272F;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 152.3%;
+    font-family: $fontBasicGP;
+
+    background-color: transparent;
+
+    border: 0;
+    border-bottom: 2px solid rgba(40, 39, 47, 0.2);
+
+    outline: none;
+    resize: none;
+    overflow: hidden;
+
+    transition: all .1s linear;
+
+    &::placeholder {
+        opacity: .2;
+    }
+
+    
+
+    &.required {
+        border-color: #FF6666;
+    }
+
+    
+}
+
+.Forms_fileInput {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+.Forms_fileInput_files {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.Forms_fileInput_files_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #28272F;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: $fontBasicGP;
+}
+
+.Forms_fileInput_files_item_icon {
+    position: relative;
+    height: 15px;
+    width: 15px;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+
+        transform-origin: center;
+
+        width: 16px;
+        height: 2px;
+
+        background-color: #28272F;
+
+        border-radius: 2px;
+    }
+
+    &::before {
+        transform: translate3d(-50%, -50%, 0) rotate(45deg);
+    }
+
+    &::after {
+        transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+    }
+}
+
+.Forms_policy {
+    margin-top: 55px;
+
+    color: #CDCDCE;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 152.3%;
+    font-family: $fontBasicGP;
+
+    & span {
+        color: #28272F;
+    }
+}
+
+.Forms_btn_box {
+    display: flex;
+    justify-content: center;
+    margin-top: 96px;
+}
+
+.Forms_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+    min-width: 0;
+    padding: 30px 36px 26px;
+
+    background-color: #28272F;
+
+    border: 0;
+    border-radius: 82px;
+
+    transition: all .1s linear;
+
+    &:hover {
+        background-color: #28272F;
+
+        opacity: .7;
+    }
+}
+
+.Forms_btn_text {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 107.5%;
+    font-family: $fontBasicGP;
+    text-transform: uppercase;
+}
+
+.Forms_btn_icon {
+    width: 10px;
+    height: 10px;
+
+    background-color: #F6F6F6;
+    border-radius: 100%;
+}

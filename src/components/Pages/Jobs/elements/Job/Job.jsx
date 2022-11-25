@@ -15,6 +15,7 @@ function Job () {
                 <JobFilter />
                 <JobList />
             </div>
+            <div className={style.Job_bg} />
         </div>
     )
 }

@@ -1,0 +1,39 @@
+@import "../../../../../../../assets/scss/vars";
+
+.FileInput {
+    width: inherit;
+}
+
+.Link_clip {
+    display: inline-flex;
+    align-items: center;
+    padding: 21px 41px;
+
+    color: #131313;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 152.3%;
+    white-space: nowrap;
+
+    background-color: #F6F6F6;
+
+    border: 1px solid rgba(40, 39, 47, 0.28);
+    border-radius: 80px;
+
+    opacity: 0.9;
+
+    & img {
+        margin-right: 10px;
+    }
+}
+
+.Input_input {
+    display: none;
+}
+
+@media(max-width: 560px) {
+    .Link_clip {
+        width: 100%;
+        justify-content: center;
+    }
+}

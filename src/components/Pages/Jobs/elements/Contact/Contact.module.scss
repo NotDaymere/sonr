@@ -1,0 +1,36 @@
+@import "../../../../../assets/scss/vars";
+
+.Contact {
+    padding: 50px 0;
+}
+
+.Contact_container {
+    max-width: 860px;
+}
+
+.Contact_img_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Contact_subtitle {
+    margin-top: 60px;
+
+    color: #28272F;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: $fontOffBT101;
+    line-height: 107.5%;
+    text-transform: uppercase;
+}
+
+.Contact_title {
+    margin-top: 25px;
+
+    color: #28272F;
+    font-size: 65px;
+    line-height: 107.5%;
+    font-family: $fontBranch;
+    text-transform: uppercase;
+}

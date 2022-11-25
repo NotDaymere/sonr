@@ -1,5 +1,6 @@
 import style from './JobList.module.scss'
 
+import { useRef, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux' 
 
 //Elements
@@ -7,11 +8,18 @@ import JobsList from './JobStyle/List/List';
 import JobsBox from './JobStyle/Box/Box';
 
 //Source
+import Arrow from '../../../../../../../assets/img/Jobs/arrowDown.svg';
+
+//Animate
+import { gsap } from "gsap";
 
 const dataJobs = [
     {
         title: 'Lead Designer',
-        schedule: 'Full-time 90K - 125K USD a year',
+        schedule: [
+            'Full-time',
+            '90K - 125K USD a year'
+        ],
         location: [
             'Remote friendly',
             'Brooklyn, NY'
@@ -20,7 +28,9 @@ const dataJobs = [
         link: '#'
     },{
         title: 'Developer Advocate (Flutter)',
-        schedule: 'Contract',
+        schedule: [
+            'Contract'
+        ],
         location: [
             'Remote friendly'
         ],
@@ -28,7 +38,10 @@ const dataJobs = [
         link: '#'
     },{
         title: 'Application Ecosystem Development Manager',
-        schedule: 'Full-time 120K - 150K USD a year',
+        schedule: [
+            'Full-time',
+            '120K - 150K USD a year'
+        ],
         location: [
             'Remote friendly'
         ],
@@ -36,7 +49,9 @@ const dataJobs = [
         link: '#'
     },{
         title: 'Senior Engineer - Applied Cryptography',
-        schedule: 'Full-time',
+        schedule: [
+            'Full-time'
+        ],
         location: [
             'Remote friendly',
             'Brooklyn, NY'
@@ -45,7 +60,9 @@ const dataJobs = [
         link: '#'
     },{
         title: 'Senior System Design Architect',
-        schedule: 'Full-time',
+        schedule: [
+            'Full-time'
+        ],
         location: [
             'Remote friendly'
         ],
@@ -53,7 +70,9 @@ const dataJobs = [
         link: '#'
     },{
         title: 'Executive Assistant to CEO',
-        schedule: 'Full-time',
+        schedule: [
+            'Full-time'
+        ],
         location: [
             'Remote friendly',
             'Austin, TX'
@@ -64,8 +83,17 @@ const dataJobs = [
 ]
 
 function JobList () {
+    const refArrow = useRef([]);
 
     const styleView = useSelector(state => state.jobs.styleView)
+
+    useEffect(() => {
+        let tl = gsap.timeline({repeat: -1, repeatDelay: .5});
+        tl.fromTo(refArrow.current[0], {opacity : .2}, {opacity : 0, duration : .4, ease:"expo.inOut" }
+        ).fromTo(refArrow.current[1], {opacity : .5}, {opacity : 0, duration : .4, ease:"expo.inOut" }
+        ).fromTo(refArrow.current[2], {opacity : 1}, {opacity : 0, duration : .4, ease:"expo.inOut" }
+        )
+    }, []);
 
     return (
         <div className={style.JobList}>
@@ -75,6 +103,12 @@ function JobList () {
                     1: <JobsBox jobs={dataJobs} />
                 }[styleView]
             }
+
+        <div className={style.JobList_arrows}  >
+            <img src={Arrow} alt="" ref={e => refArrow.current[0] = e} />
+            <img src={Arrow} alt="" ref={e => refArrow.current[1] = e} />
+            <img src={Arrow} alt="" ref={e => refArrow.current[2] = e} />
+        </div>
         </div>
     )
 }

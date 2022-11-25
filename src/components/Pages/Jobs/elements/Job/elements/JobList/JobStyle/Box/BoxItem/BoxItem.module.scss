@@ -1,2 +1,109 @@
 @import "../../../../../../../../../../assets/scss/vars";
 
+.BoxItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 380px;
+    width: 100%;
+    min-height: 245px;
+    padding: 35px 40px;
+
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+}
+
+.BoxItem_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.BoxItem_position {
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 121.5%;
+    font-family: $fontBranch;
+    text-transform: uppercase;
+}
+
+.BoxItem_visit {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 115%;
+    font-family: $fontBasicGP;
+
+    opacity: .7;
+}
+
+.BoxItem_middle {
+    margin-top: 20px;
+}
+
+.BoxItem_schedule {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5px;
+}
+
+.BoxItem_schedule_item {
+    width: 100%;
+
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 115%;
+    font-family: $fontBasicGP;
+
+    opacity: .7;
+}
+
+.BoxItem_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 33px;
+}
+
+.BoxItem_location_item {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 115%;
+    font-family: $fontBasicGP;
+
+    opacity: .7;
+}
+
+.BoxItem_link {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 115%;
+    font-family: $fontBasicGP;
+    text-decoration: none;
+
+    opacity: .8;
+    transition: all .1s linear;
+
+    &:hover {
+        opacity: 1;
+
+        & .BoxItem_link_icon {
+            width: 10px;
+            margin-left: 4px;
+        }        
+    }
+}
+
+.BoxItem_link_icon {
+    width: 0px;
+    margin-left: 0px;
+    overflow: hidden;
+
+    transition: all .1s linear;
+}

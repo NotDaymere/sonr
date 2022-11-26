@@ -12,15 +12,29 @@ const data = [
         title: 'Secure Your Digital Liberty',
         text: 'Simpler and more secure than passwords or key phrases. Access your apps and data using only your device.',
         icon: Figure
-    },
-    {
+    }, {
         title: 'Native Compatibility',
         text: 'Sonr apps are interoperable by design. Each new app creates exponential opportunity.',
         icon: Figure
-    },
-    {
+    }, {
         title: 'Cross-Chain and IBC Enabled',
-        text: 'Sonr supports communication with hundreds of other blockchains for streamlined development and superior user experience.'
+        text: 'Sonr supports communication with hundreds of other blockchains for streamlined development and superior user experience.',
+        icon: Figure
+    }, {
+        title: 'Realtime Data-Streams',
+        text: 'Build interconnected realtime experiences P2P Messaging across sonr accounts, enabled   out-of-the-boxTransport Agnostic, runs on BLE, QUIC, UDP, TCP, WebRTC, or what ever available transport',
+        icon: Figure
+    }, {
+        title: 'Robust Light Node',
+        text: 'All-in-one client interface for identity usage, wallet interactions, and gateway to the Sonr Network. Designed to be offline and mobile first Available for iOS, macOS, and Android using our Flutter SDK Setup Authorization and Configure your first App in >5min',
+        icon: Figure
+    }, {
+        title: 'Cosmos Blockchain',
+        text: 'IBC Enabled - freely exchange assets and data across sovereign blockchains without traditional bridge vulnerabilities 99% lower carbon footprint from a DPoS consensus mechanism Fast transactions, only 7 seconds to finality Low Gas Fees, around $0.01 per Tx',
+        icon: Figure
+    }, {
+        title: 'Rust Smart Contracts',
+        text: 'Use a mature, safe language with plenty of libraries and IDE support to build contracts Secure architecture of CosmWasm is designed to avoid all attack vectors present in Ethereum Robust tooling for developing and testing smart contracts'
     }
 ]
 

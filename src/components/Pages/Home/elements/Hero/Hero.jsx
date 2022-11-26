@@ -2,7 +2,6 @@ import "./Hero.scss";
 //img
 import Earth from "../../../../../assets/img/Hero/earth.svg";
 import Arrow from "../../../../../assets/img/Hero/arrow.svg";
-import Eye from "../../../../../assets/img/Hero/eye2.gif";
 import White from "../../../../../assets/img/White.svg";
 
 function Hero() {
@@ -41,9 +40,6 @@ function Hero() {
                             <div className="b-title-text" data-aos="fade-down" data-aos-delay="500">
                                 you <span className="b-text-underline">deserve</span>
                             </div>
-                        </div>
-                        <div className="hero-eye" data-aos="fade-left" data-aos-delay="500">
-                            <img src={Eye} alt="#" />
                         </div>
                     </div>
 

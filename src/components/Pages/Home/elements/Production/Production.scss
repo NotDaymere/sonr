@@ -1,0 +1,141 @@
+@import "../../../../../assets/scss/vars";
+
+.Production {
+  background-color: #131313;
+}
+
+.Production_title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 120px;
+  line-height: 107.5%;
+  font-family: $fontBranch;
+  text-align: center;
+  text-transform: uppercase;
+
+  & .color {
+    color: #7265FF;
+  }
+
+  & .offBit {
+    font-family: $fontOffBT;
+  }
+
+  & .last {
+    position: relative;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      bottom: 30px;
+
+      width: 26px;
+      height: 26px;
+
+      background: #FFFFFF;
+
+      border-radius: 100%;
+    }
+
+    &::before {
+      right: -30px;
+    }
+
+    &::after {
+      right: -70px;
+    }
+  }
+}
+
+.Production_des {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; 
+
+  position: relative;
+  max-width: 700px;
+  margin: 15px auto 0;
+}
+
+.Production_des_text {
+  grid-area: 1 / 1 / 2 / 2;
+
+  max-width: 290px;
+
+  color: #A0A0A0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 19px;
+  font-family: $fontPlusJD;
+}
+
+.Production_des_btn_container {
+  grid-area: 1 / 2 / 2 / 3;
+
+  position: relative;
+}
+
+.Production_des_btn_box {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: 1fr;
+  grid-column-gap: 55px;
+  grid-row-gap: 0px;
+
+  position: absolute;
+  top: -55px;
+  right: -135px;
+  align-items: end;
+  mix-blend-mode: difference;
+}
+
+.Production_des_btn_text {
+  grid-area: 1 / 1 / 2 / 2;
+
+  color: #E2E2E2;
+  font-size: 20px;
+  line-height: 107.5%;
+  font-family: $fontOffBT;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.Production_des_btn {
+  grid-area: 1 / 2 / 2 / 3;
+
+  min-width: unset;
+  width: 115px;
+  height: 115px;
+  padding: 0;
+
+  background-color: #fff;
+
+  border: unset;
+  border-radius: 100%;
+
+  & img {
+    width: 35%;
+    transition: all .1s linear;
+  }
+
+  &:hover {
+    & img {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.Production_des_point {
+  position: absolute;
+  bottom: -35px;
+  left: -100px;
+}
+
+.Production_items {
+  margin-top: 240px;
+}

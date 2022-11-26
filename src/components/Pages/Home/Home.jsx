@@ -7,6 +7,7 @@ import Features from "./elements/Features/Features";
 import Sonr from "./elements/Sonr/Sonr";
 import Cards from "./elements/Cards/Cards";
 import Steps from "./elements/Steps/Steps";
+import Production from "./elements/Production/Production";
 
 function Home () {
     return (
@@ -16,6 +17,7 @@ function Home () {
             <Sonr />
             <Cards />
             <Steps />
+            <Production />
         </div>
     )
 }

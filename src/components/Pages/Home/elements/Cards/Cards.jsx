@@ -50,28 +50,32 @@ function Cards () {
                                 <a className="cards-link" href="#">read docs</a>
                             </div>
                         </div>
-                        <div className="cards-box c-two" data-aos="fade">
-                            <a href="#" className="cards-box-link" />
-                            <div className="cards-top">
-                                <div className="cards-title">
-                                    FRONTEND PLUGINS
+                        <div className="cards-box-container two" data-aos="fade">
+                            <div className="cards-box c-two" >
+                                <a href="#" className="cards-box-link" />
+                                <div className="cards-top">
+                                    <div className="cards-title">
+                                        FRONTEND PLUGINS
+                                    </div>
+                                    <div className="h2">Motor SDK</div>
                                 </div>
-                                <div className="h2">Motor SDK</div>
-                            </div>
-                            <div className="cards-description">
-                                Streamline connectivity, authorization and cross-platform compatibility into a single workflow. Integrate with Sonr’s Motor plugins to automatically secure peer-to-peer networking from any device.
+                                <div className="cards-description">
+                                    Streamline connectivity, authorization and cross-platform compatibility into a single workflow. Integrate with Sonr’s Motor plugins to automatically secure peer-to-peer networking from any device.
+                                </div>
                             </div>
                         </div>
-                        <div className="cards-box c-three" data-aos="fade">
-                            <a href="#" className="cards-box-link" />
-                            <div className="cards-top">
-                                <div className="cards-title">
-                                    COMING SOON
+                        <div className="cards-box-container three" data-aos="fade">
+                            <div className="cards-box c-three">
+                                <a href="#" className="cards-box-link" />
+                                <div className="cards-top">
+                                    <div className="cards-title">
+                                        COMING SOON
+                                    </div>
+                                    <div className="h2">Smart Contracts</div>
                                 </div>
-                                <div className="h2">Smart Contracts</div>
-                            </div>
-                            <div className="cards-description">
-                                Plug-and-play: seamlessly integrate smart contracts into your dApp with just a few clicks.
+                                <div className="cards-description">
+                                    Plug-and-play: seamlessly integrate smart contracts into your dApp with just a few clicks.
+                                </div>
                             </div>
                         </div>
                     </div>

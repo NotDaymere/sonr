@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //Styles
 import "./assets/scss/style.scss";
 
+//Animation
+import AOS from "aos";
+
 //Components
 import Header from "./components/Header/Header";
 
@@ -15,9 +18,6 @@ import Blog from "./components/Pages/Blog/Blog";
 import Article from "./components/Pages/Article/Article";
 import Job from "./components/Pages/Job/Job";
 import Jobs from "./components/Pages/Jobs/Jobs";
-
-//Animation
-import AOS from "aos";
 
 function App() {
     console.log('deploy on vercel');

@@ -83,6 +83,7 @@
       order: 2;
       justify-content: flex-start;
       z-index: 3;
+      
       .cards-description {
         max-width: 227px;
         @media only screen and (max-width: $desktop-l) {
@@ -106,10 +107,9 @@
       background: #EFCBF5;
       order: 1;
       z-index: 2;
-      &.aos-animate {
-        transform: rotate(-9.13deg) translate(37px, 117px);
-        animation: cardTwo 2s;
-      }
+      transform: rotate(-9.13deg) translate3d(37px, 117px, 200px);
+      animation: cardTwo 2s;
+
       .cards-description {
         max-width: 314px;
         @media only screen and (max-width: $desktop-l) {
@@ -120,7 +120,7 @@
         }
       }
       @media only screen and (max-width: $desktop-l) {
-        transform: rotate(-12.13deg) translate(28px, 95px);
+        transform: rotate(-12.13deg) translate(28px, 95px, 200px);
       }
       @media only screen and (max-width: $mobile) {
         transform: none !important;
@@ -137,21 +137,25 @@
         }
       }
       &:hover {
-        z-index: 5;
-        &.aos-animate {
-          transform: rotate(0) translate(37px, 117px) scale(1.1);
-        }
+        z-index: 15;
+        transform: rotate(0) translate(37px, 117px) scale(1.1);
       }
     }
 
     &.c-three {
+      display: flex;
       background: #C9E5FF;
       order: 3;
       z-index: 2;
-      &.aos-animate {
-        transform: rotate(7deg) translate(-24px, 136px);
-        animation: cardThree 2s;
-      }
+      
+      // &.aos-animate {
+      //   transform: rotate(7deg) translate3d(-24px, 136px, 200px);
+      //   animation: cardThree 2s;
+      // }
+
+      transform: rotate(7deg) translate3d(-24px, 136px, 200px);
+      animation: cardThree 2s;
+
       .cards-box-link {
         top: 140px;
         left: 62px;
@@ -170,10 +174,39 @@
       }
       &:hover {
         z-index: 5;
+        transform: rotate(0) translate(-24px, 136px) scale(1.1);
+      }
+    }
+
+    &-container {
+      position: relative;
+
+      &.two {
+        order: 1;
+
         &.aos-animate {
-          transform: rotate(0) translate(-24px, 136px) scale(1.1);
+          transform: rotate(7deg) translate3d(-24px, 136px, 200px);
+          animation: aosCardTwo 2s;
+        }
+
+        &:hover {
+          z-index: 20;
         }
       }
+
+      &.three {
+        order: 3;
+
+        &.aos-animate {
+          animation: aosCardThree 2s;
+        }
+
+        &:hover {
+          z-index: 20;
+        }
+      }
+
+      
     }
   }
 
@@ -409,6 +442,16 @@
 @keyframes cardThree {
   from {transform: rotate(6deg) translate(-329px, 93px)}
   to {transform: rotate(7deg) translate(-24px, 136px)}
+}
+
+@keyframes aosCardTwo {
+  from {transform: rotate(6deg) translate(150px, 40px)}
+  to {transform: rotate(0deg) translate(0px, 0px)}
+}
+
+@keyframes aosCardThree {
+  from {transform: rotate(-1deg) translate(-150px, 40px)}
+  to {transform: rotate(0deg) translate(0px, 0px)}
 }
 
 @keyframes line {

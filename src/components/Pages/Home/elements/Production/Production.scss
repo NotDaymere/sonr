@@ -1,9 +1,26 @@
 @import "../../../../../assets/scss/vars";
 
 .Production {
+  position: relative;
+  overflow-x: clip;
+  margin-top: 300px;
   padding-bottom: 150px;
-  
+
   background-color: #131313;
+}
+
+.Production_bg {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(300px);
+  width: 120%;
+  height: 600px;
+  background-color: #131313;
+
+  border-radius: 50% 50% 49% 51% / 100% 100% 0% 0% ;
+
+  z-index: -10;
 }
 
 .Production_title {

@@ -21,6 +21,7 @@ const dataProduction = [
 function Production() {
     return (
         <div className="Production">
+            <div className="Production_bg"/>
             <div className="wr">
                 <div className="Production_title"><span className="color offBit">&#123;</span> Get to <span className="color offBit">&#125;</span> <span className="offBit">Production</span> <span className="offBit">&#8727;</span> <span className="color last">Yesterday</span></div>
                 <div className="Production_des">

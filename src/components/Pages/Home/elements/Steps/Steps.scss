@@ -1,6 +1,7 @@
 @import "../../../../../assets/scss/vars";
 
 .steps {
+  overflow-x: clip;
   padding: 186px 0 125px;
   @media only screen and (max-width: $desktop-l) {
     padding: get-vw(186px) 0 get-vw(125px);

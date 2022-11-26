@@ -81,26 +81,7 @@ function Header (props) {
                             {[1, 2].map((item) => <span className={theme} key={item} />)}
                         </button>
                         <div className={`header-nav ${classOpenMenu} ${theme}`}>
-                            <ul>
-                                <li data-aos="fade-up"
-                                    data-aos-anchor-placement="bottom-center"
-                                    data-aos-duration="1000"
-                                >
-                                    <a className={theme} href="/About">About</a>
-                                </li>
-                                <li data-aos="fade-up"
-                                    data-aos-anchor-placement="bottom-center"
-                                    data-aos-duration="1200"
-                                >
-                                    <a className={theme} href="/Technology">Technology</a>
-                                </li>
-                                <li data-aos="fade-up"
-                                    data-aos-anchor-placement="bottom-center"
-                                    data-aos-duration="1500"
-                                >
-                                    <a className={theme} href="#Documentation">Documentation</a>
-                                </li>
-                            </ul>
+                            
                             <div className="cards-button">
                                 <button className={`btn ${theme}`}>register for beta</button>
                                 <a className={`cards-link c-link ${theme}`}>read docs</a>

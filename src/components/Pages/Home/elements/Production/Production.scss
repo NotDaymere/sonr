@@ -3,7 +3,7 @@
 .Production {
   position: relative;
   overflow-x: clip;
-  margin-top: 300px;
+  margin-top: get-vw(300px);
   padding-bottom: 150px;
 
   background-color: #131313;
@@ -13,9 +13,9 @@
   position: absolute;
   bottom: 100%;
   left: 50%;
-  transform: translateX(-50%) translateY(300px);
+  transform: translateX(-50%) translateY(get-vw(300px));
   width: 120%;
-  height: 600px;
+  height: get-vw(600px);
   background-color: #131313;
 
   border-radius: 50% 50% 49% 51% / 100% 100% 0% 0% ;
@@ -29,7 +29,7 @@
   justify-content: center;
   align-items: center;
   color: #FFFFFF;
-  font-size: 120px;
+  font-size: get-vw(120px);
   line-height: 107.5%;
   font-family: $fontBranch;
   text-align: center;
@@ -49,10 +49,10 @@
     &::before, &::after {
       content: '';
       position: absolute;
-      bottom: 30px;
+      bottom: get-vw(30px);
 
-      width: 26px;
-      height: 26px;
+      width: get-vw(26px);
+      height: get-vw(26px);
 
       background: #FFFFFF;
 
@@ -157,6 +157,10 @@
 
 .Production_items {
   margin-top: 240px;
+
+  &_mob {
+    display: none;
+  }
 }
 
 .Production_item {
@@ -222,4 +226,14 @@
   font-size: 15px;
   line-height: 19px;
   font-family: $fontPlusJD;
+}
+
+@media (max-width: 768px) {
+  .Production_items {
+    display: none;
+  
+    &_mob {
+      display: block;
+    }
+  }
 }

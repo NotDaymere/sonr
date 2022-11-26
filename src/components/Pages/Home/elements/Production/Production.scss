@@ -1,6 +1,8 @@
 @import "../../../../../assets/scss/vars";
 
 .Production {
+  padding-bottom: 150px;
+  
   background-color: #131313;
 }
 
@@ -138,4 +140,69 @@
 
 .Production_items {
   margin-top: 240px;
+}
+
+.Production_item {
+  display: flex;
+  padding-bottom: 50px;
+  gap: 180px;
+
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+
+  opacity: .2;
+  transition: all .1s linear;
+
+  & + & {
+    margin-top: 80px;
+  }
+
+  &:hover {
+    opacity: 1;
+
+    .Production_item_title {
+      & span {
+        color: #7265FF;
+      }
+    }
+  }
+}
+
+.Production_item_num {
+  color: #FFFFFF;
+  font-size: 120px;
+  line-height: 107.5%;
+  font-family: $fontBranch;
+  text-transform: uppercase;
+
+  & span {
+    font-family: $fontOffBT;
+  }
+}
+
+.Production_item_text {
+  max-width: 315px;
+}
+
+.Production_item_title {
+  color: #fff;
+  font-size: 40px;
+  line-height: 121.5%;
+  font-family: $fontBranch;
+  text-transform: uppercase;
+
+  & span {
+    color: #fff;
+    font-family: $fontOffBT;
+
+    transition: all .1s linear;
+  }
+}
+
+.Production_item_subtitle {
+  margin-top: 25px;
+
+  color: #73717C;
+  font-size: 15px;
+  line-height: 19px;
+  font-family: $fontPlusJD;
 }

@@ -4,6 +4,20 @@ import "./Production.scss";
 import Arrow from '../../../../../assets/img/Production/arrowDown.svg'
 import Point from '../../../../../assets/img/Production/pointWhite.png'
 
+
+const dataProduction = [
+    {
+        title : 'Built in IPFS/FileCoin',
+        subtitle : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+    },{
+        title : 'Handshake Resolver',
+        subtitle : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+    },{
+        title : 'Embedded Lite Node',
+        subtitle : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+    },
+]
+
 function Production() {
     return (
         <div className="Production">
@@ -22,7 +36,16 @@ function Production() {
                     <img className="Production_des_point" src={Point} alt="" />
                 </div>
                 <div className="Production_items">
-                    <div className="Production_item">safssafssafssafssafssafssafs</div>
+                    {dataProduction.map((e, i) => (
+                        <div className="Production_item">
+                            <div className="Production_item_num"><span>/</span>0{i+1}</div>
+                            <div className="Production_item_text">
+                                <div className="Production_item_title"><span>&#60;</span> {e.title} <span>&#62;</span></div>
+                                <div className="Production_item_subtitle">{e.subtitle}</div>
+                            </div>
+                        </div>
+                    ))}
+                    
                 </div>
             </div>
         </div>

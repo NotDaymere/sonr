@@ -30,7 +30,6 @@ function Footer () {
             setAnimateActive(!animateActive)
             tl.play(true)
         }
-        
     }
 
     window.addEventListener('scroll', scrollEvent);

@@ -16,6 +16,38 @@
     transition: all .3s;
   }
 
+  &-point {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+
+    transform: translate3d(-6px, -8px, 0);
+
+    width: 10px;
+    height: 10px;
+
+    background-color: #28272F;
+    border-radius: 100%;
+
+    pointer-events: none;
+    z-index: 10000;
+
+    transition: all .02s linear, width .1s linear, height .1s linear;
+
+    & span {
+      color: #FFFFFF;
+      font-size: 36px;
+      line-height: 107.5%;
+      font-family: $OffBitTrialSquare;
+      text-transform: uppercase;
+
+      transform: rotate(-15.56deg);
+    }
+  }
+
   &-content {
     display: flex;
     align-items: flex-start;
@@ -51,8 +83,6 @@
   }
 
   &-btn {
-    width: 12px;
-    height: 12px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -62,17 +92,14 @@
     border: none;
     z-index: 101;
     outline: none;
-    cursor: none;
     min-width: 1px;
-    pointer-events: none;
     margin: 4px 12px;
-    @media only screen and (max-width: $mobile) {
-      cursor: pointer;
-      margin: 0;
-      pointer-events: auto;
-      width: 24px;
-      height: 24px;
-    }
+    cursor: pointer;
+    margin: 0;
+    pointer-events: auto;
+    width: 24px;
+    height: 24px;
+
     span {
       top: 0;
       background: $black;
@@ -123,22 +150,20 @@
       }
     }
     // Open menu
-    @media only screen and (max-width: $mobile) {
-      &.open {
-        span {
-          background: $black;
-          height: 2px;
-          width: 110%;
-          &:nth-child(1) {
-            transform: rotate(45deg) translate(3px, -1px);
-          }
-          &:nth-child(2) {
-            transform: rotate(-45deg) translate(4px, 1px);
-          }
+    &.open {
+      span {
+        background: $black;
+        height: 2px;
+        width: 110%;
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(3px, -1px);
+        }
+        &:nth-child(2) {
+          transform: rotate(-45deg) translate(4px, 1px);
+        }
 
-          &.white {
-            background: $white;
-          }
+        &.white {
+          background: $white;
         }
       }
     }
@@ -146,19 +171,42 @@
 
   &-nav {
     align-items: stretch;
-    @media only screen and (max-width: $mobile) {
-      position: absolute;
-      right: 0;
-      top: 72px;
-      height: calc(100vh - 72px);
-      z-index: 1000;
-      width: 100vw;
-      padding: 72px 20px 40px;
-      background: $whiteLight_1;
-      transition: all .3s;
-      opacity: 0;
-      visibility: hidden;
-      overflow: auto;
+    position: absolute;
+    right: 0;
+    top: 72px;
+    height: calc(100vh - 72px);
+    z-index: 1000;
+    width: 100vw;
+    padding: 72px 20px 40px;
+    background: $whiteLight_1;
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+    overflow: auto;
+
+    &-item {
+      display: flex;
+      justify-content: center;
+
+      & + & {
+        margin-top: 45px;
+      }
+
+      &-a {
+        color: #28272F;
+        font-size: 100px;
+        line-height: 107.5%;
+        font-family: $fontBranch;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover {
+          color: #7265FF;
+          font-family: $OffBitTrialSquare;
+
+          border-bottom: 1px solid #7265FF;
+        }
+      }
     }
 
     &.open {
@@ -233,34 +281,31 @@
   }
 
   .cards-button {
-    display: none;
-    @media only screen and (max-width: $mobile) {
-      display: flex;
-      padding-top: 98px;
-      padding-right: 8px;
-      .btn {
-        padding: 20px 48px;
+    display: flex;
+    padding-top: 98px;
+    padding-right: 8px;
+    .btn {
+      padding: 20px 48px;
 
-        &.white {
-          background-color: $whiteLight;
-          border-color: $whiteLight;
-          color: $black;
+      &.white {
+        background-color: $whiteLight;
+        border-color: $whiteLight;
+        color: $black;
 
-          &:hover {
-            color: $white;
-            background-color: $black;
-            border-color: $black;
-          }
+        &:hover {
+          color: $white;
+          background-color: $black;
+          border-color: $black;
         }
       }
     }
-    .c-link {
-      border-color: $whiteLight_1;
+  }
+  .c-link {
+    border-color: $whiteLight_1;
 
-      &.white {
-        border-color: $blackLight;
-        color: $white;
-      }
+    &.white {
+      border-color: $blackLight;
+      color: $white;
     }
   }
 }

@@ -49,10 +49,10 @@
     &::before, &::after {
       content: '';
       position: absolute;
-      bottom: get-vw(30px);
+      bottom: 30px;
 
-      width: get-vw(26px);
-      height: get-vw(26px);
+      width: 26px;
+      height: 26px;
 
       background: #FFFFFF;
 

@@ -140,7 +140,7 @@ function Header (props) {
                     </div>
                 </div>
             </div>
-            <div className="header-point" ref={refPoint} >
+            <div className={`header-point ${classOpenMenu}`} ref={refPoint} >
                 <span ref={refPointNum}></span>
             </div>
         </header>

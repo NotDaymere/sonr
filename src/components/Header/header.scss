@@ -35,7 +35,7 @@
     pointer-events: none;
     z-index: 10000;
 
-    transition: all .02s linear, width .1s linear, height .1s linear;
+    transition: all .02s linear, width .2s linear, height .2s linear;
 
     &.open {
       display: flex;
@@ -44,7 +44,7 @@
     & span {
       color: #FFFFFF;
       font-size: 36px;
-      line-height: 107.5%;
+      line-height: 0px;
       font-family: $OffBitTrialSquare;
       text-transform: uppercase;
 
@@ -191,12 +191,15 @@
     &-item {
       display: flex;
       justify-content: center;
+      height: 110px;
 
       & + & {
         margin-top: 45px;
       }
 
       &-a {
+        height: 100%;
+
         color: #28272F;
         font-size: 100px;
         line-height: 107.5%;

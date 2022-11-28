@@ -5,16 +5,30 @@
 
     font-size: get-vw(7px);
 
-    @media (max-width: $desktop-l) {
-        font-size: get-vw(10px);
-    }
-
     &_1 {
         transform: translateY(-16em);
+
+        @media (max-width: $mobile) {
+            transform: translateY(0);
+        }
     }
 
     &_2 {
         transform: translateY(-20em);
+
+        @media (max-width: $mobile) {
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: $desktop-l) {
+        font-size: get-vw(10px);
+    }
+
+    @media (max-width: $mobile) {
+        width: 100%;
+        font-size: get-vw(30px);
+        padding-bottom: 30em;
     }
 }
 
@@ -35,6 +49,11 @@
     
         width: 47.5em;
         height: 28em;
+
+        @media (max-width: $mobile) {
+            width: 100%;
+            right: 0;
+        }
     }
 
     &_2 {
@@ -44,16 +63,31 @@
         width: 28.5em;
         height: 17em;
 
+        @media (max-width: $mobile) {
+            top: 18.4em;
+        }
+
         &_2 {
             top: 22em;
             right: 25.5em;
             height: 15em;
+
+            @media (max-width: $mobile) {
+                right: 0;
+                left: 50%;
+                transform: translateX(-60%);
+            }
         }
 
         &_3 {
             top: -7.5em;
             right: -6em;
             height: 15em;
+
+            @media (max-width: $mobile) {
+                right: 0;
+                top: 40em;
+            }
         }
     }
 }
@@ -188,6 +222,23 @@
 
         width: 27.8em;
         height: 23.6em;
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
+
+        &_mob {
+            display: none;
+
+            @media (max-width: $mobile) {
+                display: block;
+                width: 17.5em;
+                height: 20em;
+
+                left: -5em;
+                top: 9.3em;
+            }
+        }
     }
 
     &_2 {
@@ -196,6 +247,14 @@
 
         width: 28.1em;
         height: 20.4em;
+
+        @media (max-width: $mobile) {
+            width: 18.1em;
+            height: 10.4em;
+
+            right: -12em;
+            bottom: -6.6em;
+        }
     }
 
     &_3 {
@@ -204,6 +263,14 @@
 
         width: 33.6em;
         height: 22.1em;
+
+        @media (max-width: $mobile) {
+            width: 23.6em;
+            height: 12.1em;
+
+            top: -9.1em;
+            left: -13.9em;
+        }
     }
 }
 

@@ -4,6 +4,8 @@
   background: #131313;
   padding: 128px 0 104px;
   position: relative;
+  overflow-x: clip;
+  
   @media only screen and (max-width: $desktop-l) {
     padding: get-vw(128px) 0 get-vw(104px);
   }

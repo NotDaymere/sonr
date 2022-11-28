@@ -4,7 +4,7 @@
   position: relative;
   overflow-x: clip;
   margin-top: get-vw(300px);
-  padding-bottom: 150px;
+  padding-bottom: 15em;
 
   font-size: 10px;
 
@@ -73,6 +73,10 @@
       right: -.60em;
     }
   }
+
+  @media (max-width: $mobile) {
+    font-size: 18em;
+  }
 }
 
 .Production_des {
@@ -85,6 +89,14 @@
   position: relative;
   max-width: 70em;
   margin: 1.5em auto 0;
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr); 
+
+    max-width: 100%;
+    margin: 5em auto 0;
+  }
 }
 
 .Production_des_text {
@@ -97,12 +109,29 @@
   font-weight: 500;
   line-height: 1.3em;
   font-family: $fontPlusJD;
+
+  @media (max-width: $mobile) {
+    grid-area: 2 / 1 / 3 / 2;
+
+    max-width: 100%;
+    margin-top: 3em;
+
+    font-size: 6em;
+    text-align: center;
+  }
 }
 
 .Production_des_btn_container {
   grid-area: 1 / 2 / 2 / 3;
 
   position: relative;
+
+  @media (max-width: $mobile) {
+    grid-area: 1 / 1 / 2 / 2;
+
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .Production_des_btn_box {
@@ -117,6 +146,15 @@
   right: -13.5em;
   align-items: end;
   mix-blend-mode: difference;
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2); 
+
+    position: relative;
+    right: 0;
+    top: 0;
+  }
 }
 
 .Production_des_btn_text {
@@ -128,6 +166,14 @@
   font-family: $fontOffBT;
   text-transform: uppercase;
   text-align: right;
+
+  @media (max-width: $mobile) {
+    grid-area: 2 / 1 / 3 / 2;
+
+    margin-top: 1em;
+    font-size: 7em;
+    text-align: center;
+  }
 }
 
 .Production_des_btn {
@@ -154,6 +200,19 @@
       transform: rotate(0deg);
     }
   }
+
+  @media (max-width: $mobile) {
+    grid-area: 1 / 1 / 2 / 2;
+
+    width: 6em;
+    height: 6em;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-s) {
+    width: 3.5em;
+    height: 3.5em;
+  }
 }
 
 .Production_des_point {
@@ -163,7 +222,7 @@
 }
 
 .Production_items {
-  margin-top: 240px;
+  margin-top: 24em;
 
   &_mob {
     display: none;
@@ -204,6 +263,22 @@
   @media (max-width: $desktop-l) {
     font-size: get-vw(10px);
   }
+
+  &_mob {
+    margin-top: 10em;
+
+    .Production_item_title {
+      & span {
+        color: #7265FF;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      font-size: get-vw(20px);
+    }
+  }
+
+  
 }
 
 .Production_item_num {
@@ -216,6 +291,10 @@
 
   & span {
     font-family: $fontOffBT;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 69px;
   }
 }
 
@@ -236,6 +315,10 @@
 
     transition: all .1s linear;
   }
+
+  @media (max-width: $mobile) {
+    font-size: 6em;
+  }
 }
 
 .Production_item_subtitle {
@@ -245,6 +328,12 @@
   font-size: 1.5em;
   line-height: 1.3em;
   font-family: $fontPlusJD;
+
+  @media (max-width: $mobile) {
+    font-size: 3em;
+
+    padding-bottom: 2em;
+  }
 }
 
 .Production_item_window {

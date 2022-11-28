@@ -85,12 +85,15 @@
     border: 0;
     border-radius: 82px;
 
-    transform: rotate(-35.35deg);
-    transition: all .1s linear;
+    transition: all .2s ease-in-out;
 
     &:hover {
         color: #fff;
         background-color: #4d4c57;
+    }
+
+    &:focus {
+        transform: rotate(-35.35deg);
     }
 }
 

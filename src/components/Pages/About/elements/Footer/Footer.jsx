@@ -21,7 +21,7 @@ function Footer () {
     tl.to(refSonr.current,
         { y: -600, duration : 2, ease:"back.inOut" }
     ).to(refDifference.current, 
-        { backgroundColor: '#fff', duration : 2, ease:"back.inOut" }
+        { backgroundColor: 'rgb(227, 227, 227)', duration : 2, ease:"back.inOut" }
     )
 
     const scrollEvent = () => {

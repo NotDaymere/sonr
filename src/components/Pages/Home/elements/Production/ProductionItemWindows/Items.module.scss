@@ -1,0 +1,214 @@
+@import "../../../../../../assets/scss/vars";
+
+.Item {
+    position: relative;
+
+    font-size: get-vw(7px);
+
+    @media (max-width: $desktop-l) {
+        font-size: get-vw(10px);
+    }
+
+    &_1 {
+        transform: translateY(-16em);
+    }
+
+    &_2 {
+        transform: translateY(-20em);
+    }
+}
+
+.window {
+    position: absolute;
+    padding: 1.8em 2.4em;
+
+    background-color: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(193, 199, 255, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+
+    &_1 {
+        position: relative;
+        top: 0;
+        right: 3em;
+    
+        width: 47.5em;
+        height: 28em;
+    }
+
+    &_2 {
+        top: 18em;
+        right: 0;
+
+        width: 28.5em;
+        height: 17em;
+
+        &_2 {
+            top: 22em;
+            right: 25.5em;
+            height: 15em;
+        }
+
+        &_3 {
+            top: -7.5em;
+            right: -6em;
+            height: 15em;
+        }
+    }
+}
+
+.ControlButtons {
+    width: 100%;
+    display: flex;
+    gap: .6em;
+
+    &_item {
+        width: 1.2em;
+        height: 1.2em;
+
+        border-radius: 100%;
+    }
+}
+
+.comment {
+    margin-top: 1.3em;
+
+    color: #585858;
+    font-size: 1.4em;
+    line-height: 145%;
+    font-family: $fontPlusJD;
+}
+
+.code {
+    color: #fff;
+    font-size: 1.4em;
+    line-height: 145%;
+}
+
+.l1 {
+    padding-left: 1em;
+}
+
+.l2 {
+    padding-left: 2.5em;
+}
+
+.l3 {
+    padding-left: 3.4em;
+}
+
+.purple {
+    color: #5F52EC;
+}
+
+.pink {
+    color: #E2B7F6;
+}
+
+.blue {
+    color: #C9E5FF;
+}
+
+.file {
+    display: flex;
+    align-items: center;
+    margin-top: .8em;
+
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 145%;
+
+    & span {
+        margin-right: .33em;
+
+        color: #FFFFFF;
+        font-size: 3.6em;
+        line-height: 145%;
+        font-family: $fontOffBT;
+    }
+}
+
+.blocks {
+    display: flex;
+    margin-top: .8em;
+    gap: .5em;
+}
+
+.block {
+    width: 1.1em;
+    height: 2em;
+
+    &_purple {
+        background-color: rgba(95, 82, 236, 0.15);
+        border: 1px solid #5F52EC;
+    }
+
+    &_pink {
+        background-color: rgba(226, 183, 246, 0.15);
+        border: 1px solid #E2B7F6;
+    }
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: .8em;
+    padding-left: 1.6em;
+
+    &_icon {
+        width: 4em;
+        height: 4em;
+    }
+
+    &_text {
+        width: 90%;
+        color: #FFFFFF;
+        font-size: 1.4em;
+        line-height: 100%;
+    }
+
+    & + & {
+        margin-top: 2em;
+    }
+}
+
+.svg {
+    position: absolute;
+
+    &_1 {
+        bottom: -16.6em;
+        left: -18.7em;
+
+        width: 27.8em;
+        height: 23.6em;
+    }
+
+    &_2 {
+        bottom: -13em;
+        right: -23em;
+
+        width: 28.1em;
+        height: 20.4em;
+    }
+
+    &_3 {
+        top: -16.1em;
+        left: -27.9em;
+
+        width: 33.6em;
+        height: 22.1em;
+    }
+}
+
+.bg {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-45%);
+
+    width: 9.8em;
+    height: 13.4em;
+}

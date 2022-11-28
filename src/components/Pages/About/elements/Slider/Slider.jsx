@@ -18,11 +18,14 @@ function Slider () {
     const refSlider = useRef([]);
 
     useEffect(() => {
+        const dur = .3;
         let tl = gsap.timeline({repeat: -1, repeatDelay: .5});
-        tl.fromTo(refArrow.current[0], {opacity : .2}, {opacity : 0, duration : .4, ease:"expo.inOut" }
-        ).fromTo(refArrow.current[1], {opacity : .5}, {opacity : 0, duration : .4, ease:"expo.inOut" }
-        ).fromTo(refArrow.current[2], {opacity : 1}, {opacity : 0, duration : .4, ease:"expo.inOut" }
-        )
+        tl.to(refArrow.current[0], {opacity : .2, duration : dur, ease:"expo.inOut" })
+        .to(refArrow.current[1], {opacity : .5, duration : dur, ease:"expo.inOut" })
+        .to(refArrow.current[2], {opacity : 1, duration : dur, ease:"expo.inOut" })
+        .to(refArrow.current[0], {opacity : 0, duration : dur, ease:"expo.inOut" })
+        .to(refArrow.current[1], {opacity : 0, duration : dur, ease:"expo.inOut" })
+        .to(refArrow.current[2], {opacity : 0, duration : dur, ease:"expo.inOut" })
     }, []);
 
     const scrollEvent = () => {

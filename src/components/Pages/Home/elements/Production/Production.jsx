@@ -9,6 +9,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Arrow from '../../../../../assets/img/Production/arrowDown.svg'
 import Point from '../../../../../assets/img/Production/pointWhite.png'
 
+//ProductionItemWindows
+import Item1 from "./ProductionItemWindows/Item1";
+import Item2 from "./ProductionItemWindows/Item2";
+import Item3 from "./ProductionItemWindows/Item3";
+
 
 const settings = {
     arrows: false,
@@ -34,14 +39,17 @@ const settings = {
 
 const dataProduction = [
     {
-        title : 'Built in IPFS/FileCoin',
-        subtitle : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+        title: 'Built in IPFS/FileCoin',
+        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        window: <Item1 />
     },{
-        title : 'Handshake Resolver',
-        subtitle : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+        title: 'Handshake Resolver',
+        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        window: <Item2 />
     },{
-        title : 'Embedded Lite Node',
-        subtitle : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+        title: 'Embedded Lite Node',
+        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        window: <Item3 />
     },
 ]
 
@@ -76,6 +84,8 @@ function Production() {
                                 <div className="Production_item_title"><span>&#60;</span> {e.title} <span>&#62;</span></div>
                                 <div className="Production_item_subtitle">{e.subtitle}</div>
                             </div>
+                            <div className="Production_item_window">{e.window}</div>
+                            
                         </div>
                     ))}
                 </div>
@@ -83,11 +93,12 @@ function Production() {
                         <Slider {...settings}>
                             {dataProduction.map((e, i) => (
                                 <div className="Production_item_mob">
+                                    {e.window}
                                     <div className="Production_item_num"><span>/</span>0{i+1}</div>
                                     <div className="Production_item_title"><span>&#60;</span> {e.title} <span>&#62;</span></div>
                                     <div className="Production_item_subtitle">{e.subtitle}</div>
                                 </div>
-                                )) }
+                            ))}
                         </Slider>
                     </div>
             </div>

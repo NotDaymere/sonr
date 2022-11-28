@@ -50,6 +50,8 @@
 }
 
 .TimeLineItem_header_title {
+    display: flex;
+    overflow: hidden;
     margin: 0 auto;
 
     color: #000;
@@ -101,6 +103,11 @@
 }
 
 .TimeLineItem_content_title {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 12px;
+    overflow: hidden;
+
     color: #fff;
     font-size: 40px;
     line-height: 48px;
@@ -112,7 +119,16 @@
     }
 }
 
+.TimeLineItem_content_title_inner {
+    display: flex;
+    overflow: hidden;
+}
+
 .TimeLineItem_content_des {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    column-gap: 6px;
     margin-top: 45px;
 
     color: #A0A0A0;
@@ -123,6 +139,11 @@
     &_footer {
         color: #000;
     }
+}
+
+.TimeLineItem_content_des_inner {
+    display: flex;
+    overflow: hidden;
 }
 
 @media (max-width : 1440px) {

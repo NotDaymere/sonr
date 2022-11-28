@@ -132,7 +132,6 @@
     height: 100%;
     border: 1px solid #4e4e4e64;
     border-radius: 80px;
-    z-index: 100;
     pointer-events: none;
 }
 
@@ -185,8 +184,17 @@
     cursor: pointer;
     z-index: 90;
 
+    & img {
+        width: 30%;
+        transition: all .1s linear;
+    }
+
     &:hover {
         opacity: .6;
+
+        & img {
+            transform: rotate(180deg);
+        }
     }
 
     @media only screen and (max-width: $mobile) {
@@ -195,13 +203,7 @@
 
         right: 0px;
         top: 50%;
-        transform: translateY(-50%);
-
-        z-index: 100;
-
-        & img {
-            width: 30%;
-        }
+        transform: translateY(-50%); 
     }
 }
 

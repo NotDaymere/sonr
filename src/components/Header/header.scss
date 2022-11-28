@@ -3,17 +3,22 @@
 .header {
   position: relative;
   padding: 30px 0;
+
+  background-color: rgba(255, 255, 255, 0);
+
   z-index: 100;
+  transition: all .2s;
+
   @media only screen and (max-width: $desktop-l) {
     padding: get-vw(30px) 0;
   }
   @media only screen and (max-width: $tablet) {
     padding: 20px 0;
+    font-size: get-vw(10px);
   }
 
   &.white {
     background-color: $blackLight;
-    transition: all .3s;
   }
 
   &-point {
@@ -35,11 +40,7 @@
     pointer-events: none;
     z-index: 10000;
 
-    transition: all .02s linear, width .2s linear, height .2s linear;
-
-    &.open {
-      display: flex;
-    }
+    transition: width .2s ease-in-out, height .2s ease-in-out;
 
     & span {
       color: #FFFFFF;
@@ -50,6 +51,34 @@
 
       transform: rotate(-15.56deg);
     }
+
+    
+    
+    &.white {
+      background-color: #FFFFFF;
+
+      & span {
+        color: #28272F;
+        font-size: 36px;
+        line-height: 0px;
+        font-family: $OffBitTrialSquare;
+        text-transform: uppercase;
+  
+        transform: rotate(-15.56deg);
+      }
+    }
+
+    &.open {
+      display: flex;
+      top: -120px;
+      left: -120px;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    
   }
 
   &-content {
@@ -178,34 +207,60 @@
     position: absolute;
     right: 0;
     top: 72px;
-    height: calc(100vh - 72px);
+    height: 0px;
     z-index: 1000;
     width: 100vw;
-    padding: 72px 20px 40px;
+    padding: 0px;
     background: $whiteLight_1;
-    transition: all .3s;
-    opacity: 0;
+    transition: all .5s ease-in-out;
+    opacity: 1;
     visibility: hidden;
     overflow: auto;
 
     &-item {
       display: flex;
       justify-content: center;
-      height: 110px;
+      overflow: hidden;
+      height: 11em;
+
+      font-size: 10px;
+
+      @media (max-width: $desktop-l) {
+        font-size: get-vw(10px);
+      }
+
+      @media (max-width: $mobile-s) {
+        font-size: get-vw(13px);
+      }
 
       & + & {
-        margin-top: 45px;
+        margin-top: 4.5em;
+
+        @media (max-width: $mobile-s) {
+          margin-top: 10em;
+        }
       }
 
       &-a {
         height: 100%;
 
         color: #28272F;
-        font-size: 100px;
+        font-size: 10em;
         line-height: 107.5%;
         font-family: $fontBranch;
         text-transform: uppercase;
         text-decoration: none;
+
+        transform: translateY(-1.1em);
+        transition: all .2s ease-in-out, transform .5s ease-in-out;
+        
+        &.white {
+          color: #fff;
+        }
+
+        &.open {
+          transform: translateY(0px);
+        }
 
         &:hover {
           color: #7265FF;
@@ -216,14 +271,22 @@
       }
     }
 
-    &.open {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    &.white.open {
+    &.white {
       background: $blackLight;
     }
+
+    &.open {
+      padding: 7.2em 2em 4em;
+      height: calc(100vh - 72px);
+      opacity: 1;
+      visibility: visible;
+
+      @media (max-width: $mobile-s) {
+        padding: 1.2em 2em 4em;
+      }
+    }
+
+    
 
     ul {
       display: flex;
@@ -289,8 +352,7 @@
 
   .cards-button {
     display: flex;
-    padding-top: 98px;
-    padding-right: 8px;
+    padding-top: 9.8em;
     .btn {
       padding: 20px 48px;
 
@@ -315,4 +377,9 @@
       color: $white;
     }
   }
+}
+
+@keyframes menuText {
+  from {transform: translateY(-110px);}
+  to {transform: translateY(0px);}
 }

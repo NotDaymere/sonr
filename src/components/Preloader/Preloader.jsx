@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react'
 import { useSpring, animated } from 'react-spring'
 
 //Media
-import Sonr from '../../assets/img/earth.gif'
+import Sonr from '../../assets/img/Preloader/earth.png'
 import Ellipse from '../../assets/img/Preloader/ellipse.svg'
 import EllipseMob from '../../assets/img/Preloader/ellipseMob.svg'
 

@@ -105,14 +105,19 @@
 
   &-left {
     width: 62%;
-    position: relative;
+    height: 870px;
+    position: sticky;
+    top: 0;
     z-index: 1;
     margin-left: -30px;
     @media only screen and (max-width: $desktop-l) {
+      height: get-vw(900px);
       margin-left: 30px;
     }
     @media only screen and (max-width: $mobile) {
+      position: relative;
       width: calc(100% + 30px);
+      height: 600px;
       min-height: 538px;
       margin: -70px -15px 0;
       padding: 70px 15px 0;

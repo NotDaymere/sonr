@@ -120,9 +120,9 @@ function Header (props) {
                         </button>
                         <div className={`header-nav ${classOpenMenu} ${theme}`}>
                             {dataMenuItems.map((e, i) => (
-                                <div className={`header-nav-item ${theme}`} >
+                                <div className={`header-nav-item`} >
                                     <a 
-                                        className='header-nav-item-a' 
+                                        className={`header-nav-item-a ${classOpenMenu} ${theme}`} 
                                         href={e.link}
                                         index={i+1}
                                         onMouseEnter={mouseMenuEnter}
@@ -140,7 +140,7 @@ function Header (props) {
                     </div>
                 </div>
             </div>
-            <div className={`header-point ${classOpenMenu}`} ref={refPoint} >
+            <div className={`header-point ${classOpenMenu} ${theme}`} ref={refPoint} >
                 <span ref={refPointNum}></span>
             </div>
         </header>

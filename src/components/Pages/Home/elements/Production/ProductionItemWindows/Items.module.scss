@@ -73,6 +73,7 @@
 
 .comment {
     margin-top: 1.3em;
+    padding-bottom: .7em;
 
     color: #585858;
     font-size: 1.4em;
@@ -84,6 +85,7 @@
     color: #fff;
     font-size: 1.4em;
     line-height: 145%;
+    font-family: $ChakraPetch;
 }
 
 .l1 {
@@ -119,6 +121,7 @@
     font-weight: 500;
     font-size: 1.4em;
     line-height: 145%;
+    font-family: $ChakraPetch;
 
     & span {
         margin-right: .33em;
@@ -168,6 +171,7 @@
         color: #FFFFFF;
         font-size: 1.4em;
         line-height: 100%;
+        font-family: $ChakraPetch;
     }
 
     & + & {

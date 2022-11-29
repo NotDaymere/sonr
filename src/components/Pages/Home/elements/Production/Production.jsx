@@ -1,5 +1,6 @@
 import "./Production.scss";
 
+import { useRef } from 'react'
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -14,6 +15,8 @@ import Item1 from "./ProductionItemWindows/Item1";
 import Item2 from "./ProductionItemWindows/Item2";
 import Item3 from "./ProductionItemWindows/Item3";
 
+//Animate
+import { gsap } from "gsap";
 
 const settings = {
     arrows: false,
@@ -54,6 +57,36 @@ const dataProduction = [
 ]
 
 function Production() {
+
+    const refWindows = useRef([])
+
+    const animateWindow = (e, reverse) => {
+        let tl = gsap.timeline();
+        if(reverse) {
+            tl.fromTo(e,
+                { right: 50, opacity: 0 },
+                { right: 0, opacity: 1, duration : 1, ease:"expo.inOut" }
+            ).reverse(0)
+        } else {
+            tl.fromTo(e,
+                { right: 50, opacity: 0 },
+                { right: 0, opacity: 1, duration : 1, ease:"expo.inOut" }
+            )
+        }
+        
+    }
+
+    const prodItemEnter = (e) => {
+        const index = e.currentTarget.attributes.index.value;
+        animateWindow(refWindows.current[index])
+    }
+
+    const prodItemLeave = (e) => {
+        console.log(1)
+        const index = e.currentTarget.attributes.index.value;
+        animateWindow(refWindows.current[index], true)
+    }
+
     return (
         <div className="Production">
             <div className="Production_bg"/>
@@ -78,13 +111,13 @@ function Production() {
                 </div>
                 <div className="Production_items">
                     {dataProduction.map((e, i) => (
-                        <div className="Production_item">
+                        <div className="Production_item" index={i} onMouseEnter={prodItemEnter} onMouseLeave={prodItemLeave}>
                             <div className="Production_item_num"><span>/</span>0{i+1}</div>
                             <div className="Production_item_text">
                                 <div className="Production_item_title"><span>&#60;</span> {e.title} <span>&#62;</span></div>
                                 <div className="Production_item_subtitle">{e.subtitle}</div>
                             </div>
-                            <div className="Production_item_window">{e.window}</div>
+                            <div className="Production_item_window" ref={el => refWindows.current[i] = el}>{e.window}</div>
                             
                         </div>
                     ))}

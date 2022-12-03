@@ -64,7 +64,7 @@ function Title () {
         <div className={style.Title}>
             <div className={`${style.Title_container} wr`}>
                 <div className={`${style.Title_bg}`} >
-                    <video className={`${style.Title_bg_sonr}`} ref={refSonr} src={Sonr} type="video/mp4" autoplay="autoplay" loop />
+                    <video className={`${style.Title_bg_sonr}`} ref={refSonr} src={Sonr} type="video/mp4" muted playsInline autoPlay='autoplay' loop  />
                 </div>
 
                 <div className={style.Title_title} ref={refTitle}>Your digital <span>liberty</span> is <span>worth</span> fighting for</div>

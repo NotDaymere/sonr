@@ -54,7 +54,7 @@ function Hero() {
                             </a>
                         </div>
                         <div className="hero-block-right" data-aos="fade-left">
-                            A robust, rapid-scaling platform for interconnected apps, and total digital autonomy
+                            A peer-to-peer identity and asset management system that uses Decentralized Standards to make simple self-custody a reality.
                         </div>
                     </div>
                 </div>

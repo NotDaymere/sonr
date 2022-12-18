@@ -1,4 +1,5 @@
 import "./Hero.scss";
+
 //img
 import Earth from "../../../../../assets/img/Hero/earth.svg";
 import Arrow from "../../../../../assets/img/Hero/arrow.svg";

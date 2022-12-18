@@ -9,32 +9,63 @@ import Arrow from "../../../../../assets/img/Features/arrow.svg";
 
 const data = [
     {
-        title: 'Secure Your Digital Liberty',
-        text: 'Simpler and more secure than passwords or key phrases. Access your apps and data using only your device.',
+        title: 'Universal Identity',
+        text: [
+            'Fully compliant W3C DID implementation powered by MPC Technology, eliminating seed phrases — reducing user onboarding friction',
+            'Fully compliant with W3C’s DID specification',
+            'Meets latest Apple Web3 Guidelines (first of its kind)'
+        ],
         icon: Figure
-    }, {
-        title: 'Native Compatibility',
-        text: 'Sonr apps are interoperable by design. Each new app creates exponential opportunity.',
+    },{
+        title: 'Interoperable Data Models',
+        text: [
+            'On-Chain definitions based on IPLD Definitions',
+            'Works cross-protocol in every environment',
+            'NFT Support'
+        ],
         icon: Figure
-    }, {
-        title: 'Cross-Chain and IBC Enabled',
-        text: 'Sonr supports communication with hundreds of other blockchains for streamlined development and superior user experience.',
+    },{
+        title: 'True User Ownership',
+        text: [
+            'User application data is stored in secure permissioned buckets',
+            'Provision and Delegate Access to other peers and Applications',
+            'Backed by IPFS, with a Planned FileCoin Bridge'
+        ],
         icon: Figure
-    }, {
+    },{
         title: 'Realtime Data-Streams',
-        text: 'Build interconnected realtime experiences P2P Messaging across sonr accounts, enabled   out-of-the-boxTransport Agnostic, runs on BLE, QUIC, UDP, TCP, WebRTC, or what ever available transport',
+        text: [
+            'Build interconnected realtime experiences',
+            'P2P Messaging across sonr accounts, enabled out-of-the-box',
+            'Transport Agnostic, runs on BLE, QUIC, UDP, TCP, WebRTC, or whatever available transport'
+        ],
         icon: Figure
-    }, {
+    },{
         title: 'Robust Light Node',
-        text: 'All-in-one client interface for identity usage, wallet interactions, and gateway to the Sonr Network. Designed to be offline and mobile first Available for iOS, macOS, and Android using our Flutter SDK Setup Authorization and Configure your first App in >5min',
+        text: [
+            'All-in-one client interface for identity usage, wallet interactions, and gateway to the Sonr Network.',
+            'Designed to be offline and mobile first',
+            'Available for iOS, macOS, and Android using our Flutter SDK',
+            'Setup Authorization and Configure your first App in >5min'
+        ],
         icon: Figure
-    }, {
+    },{
         title: 'Cosmos Blockchain',
-        text: 'IBC Enabled - freely exchange assets and data across sovereign blockchains without traditional bridge vulnerabilities 99% lower carbon footprint from a DPoS consensus mechanism Fast transactions, only 7 seconds to finality Low Gas Fees, around $0.01 per Tx',
+        text: [
+            'IBC Enabled - freely exchange assets and data across sovereign blockchains without traditional bridge vulnerabilities',
+            '99% lower carbon footprint from a DPoS consensus mechanism',
+            'Fast transactions, only 7 seconds to finality',
+            'Low Gas Fees, around $0.01 per Tx'
+        ],
         icon: Figure
-    }, {
+    },{
         title: 'Rust Smart Contracts',
-        text: 'Use a mature, safe language with plenty of libraries and IDE support to build contracts Secure architecture of CosmWasm is designed to avoid all attack vectors present in Ethereum Robust tooling for developing and testing smart contracts'
+        text: [
+            'Use a mature, safe language with plenty of libraries and IDE support to build contracts',
+            'Secure architecture of CosmWasm is designed to avoid all attack vectors present in Ethereum',
+            'Robust tooling for developing and testing smart contracts'
+        ],
+        icon: Figure
     }
 ]
 
@@ -115,7 +146,9 @@ function Features() {
                                         <div className={`features-block-inner ${top >= rangeFrom && top <= rangeTo ? 'active' : ''}`}>
                                             <h2 className="features-title">{item.title}</h2>
                                             <div className="features-text">
-                                                {item.text}
+                                                {item.text.map((e, i) => (
+                                                    <div key={i}>{e}</div>
+                                                ))}
                                             </div>
                                             {item.icon && (
                                                 <div className="features-icon">

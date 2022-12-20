@@ -10,58 +10,60 @@ function Cards () {
                             <a href="#" className="cards-box-link" />
                             <div className="cards-top">
                                 <div className="cards-title">
-                                    NO-CODE BUILDER
+                                    FRONTEND PLUGINS
                                 </div>
-                                <div className="h2">Speedway</div>
+                                <div className="h2">Motor SDK</div>
+                                <div className="cards-description">
+                                Streamline connectivity, authorization and cross-platform compatibility into a single workflow. Integrate with Sonr’s Motor plugins to automatically secure peer-to-peer networking from any device.
                             </div>
-                            <div className="cards-description">
-                                Comprehensive developer tools in a simple, intuitive dashboard
                             </div>
-                            <div className="cards-index">
-                                <div className="cards-list">
-                                    <div className="cards-list-item"></div>
-                                    <div className="cards-list-title">
-                                        No-code Automation
-                                    </div>
-                                </div>
-                                <div className="cards-list">
-                                    <div className="cards-list-item"></div>
-                                    <div className="cards-list-title">
-                                        Efficient workflows
-                                    </div>
-                                </div>
-                                <div className="cards-list">
-                                    <div className="cards-list-item"></div>
-                                    <div className="cards-list-title">
-                                        Progress tracking
-                                    </div>
-                                </div>
-                                <div className="cards-list">
-                                    <div className="cards-list-item">
-                                        Coming Soon:
-                                    </div>
-                                    <div className="cards-list-title">
-                                        Real-time collaboration
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div className="cards-button">
-                                <button className="btn btn-white">learn more</button>
-                                <a className="cards-link" href="#">read docs</a>
-                            </div>
+                                    <button className="btn btn-white">learn more</button>
+                                    <a className="cards-link" href="#">read docs</a>
+                                </div>
                         </div>
                         <div className="cards-box-container two" data-aos="fade">
                             <div className="cards-box c-two" >
                                 <a href="#" className="cards-box-link" />
                                 <div className="cards-top">
                                     <div className="cards-title">
-                                        FRONTEND PLUGINS
+                                        NO-CODE BUILDER
                                     </div>
-                                    <div className="h2">Motor SDK</div>
+                                    <div className="h2">Speedway</div>
                                 </div>
                                 <div className="cards-description">
-                                    Streamline connectivity, authorization and cross-platform compatibility into a single workflow. Integrate with Sonr’s Motor plugins to automatically secure peer-to-peer networking from any device.
+                                    Comprehensive developer tools in a simple, intuitive dashboard
                                 </div>
+                                <div className="cards-index">
+                                    <div className="cards-list">
+                                        <div className="cards-list-item"></div>
+                                        <div className="cards-list-title">
+                                            No-code Automation
+                                        </div>
+                                    </div>
+                                    <div className="cards-list">
+                                        <div className="cards-list-item"></div>
+                                        <div className="cards-list-title">
+                                            Efficient workflows
+                                        </div>
+                                    </div>
+                                    <div className="cards-list">
+                                        <div className="cards-list-item"></div>
+                                        <div className="cards-list-title">
+                                            Progress tracking
+                                        </div>
+                                    </div>
+                                    <div className="cards-list">
+                                        <div className="cards-list-item">
+                                            Coming Soon:
+                                        </div>
+                                        <div className="cards-list-title">
+                                            Real-time collaboration
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                         <div className="cards-box-container three" data-aos="fade">

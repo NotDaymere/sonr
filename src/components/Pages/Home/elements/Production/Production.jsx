@@ -42,18 +42,22 @@ const settings = {
 
 const dataProduction = [
     {
-        title: 'Built in IPFS/FileCoin',
-        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        title: 'sonr cli',
+        subtitle: 'Fully interactible CLI for Development',
         window: <Item1 />
     },{
-        title: 'Handshake Resolver',
-        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        title: 'speedway',
+        subtitle: 'No-Code Console for Sonr Applications',
         window: <Item2 />
     },{
-        title: 'Embedded Lite Node',
-        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        title: 'Motor flutter',
+        subtitle: 'Wallet and P2P Gateway SDK',
         window: <Item3 />
-    },
+    },{
+        title: 'nebula',
+        subtitle: 'UI Component Library for Crypto',
+        window: <Item3 />
+    }
 ]
 
 function Production() {

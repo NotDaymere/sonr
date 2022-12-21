@@ -1,14 +1,16 @@
-import "./Steps.scss";
+import "./Beam.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 //img
-import Mobile from "../../../../../assets/img/Steps/mobile.png";
-import Technology from "../../../../../assets/img/Steps/technology.png";
-import Keyboard from "../../../../../assets/img/Steps/keyboard.png";
+import Mobile from "../../../assets/img/Beam/mobile.png";
+import Technology from "../../../assets/img/Beam/technology.png";
+import Keyboard from "../../../assets/img/Beam/keyboard.png";
+import Sonr from '../../../assets/img/About/earth.mp4'
+import White from '../../../assets/img/White.svg'
 
-const dataSteps = [
+const dataBeams = [
     {
         title: 'A Central Hub for Messaging',
         img: Mobile,
@@ -26,7 +28,7 @@ const dataSteps = [
     }
 ]
 
-function Steps () {
+function Beam () {
     const settings = {
         arrows: false,
         settings:  'unslick',
@@ -50,35 +52,40 @@ function Steps () {
     };
 
     return (
-        <div className="steps">
+        <div className="beam">
             <div className="wr">
-                <div className="steps-content">
+                <div className="beam-content">
+                    <div className="beam-content-sonr">
+                        {Array(3).fill('sonr').map((e, i) => (
+                            <div className="beam-content-sonr-item" key={i}>{e}</div>
+                        ))}
+                    </div>
                     <div className="h1"
                         data-aos="fade-up"
                         data-aos-duration="1000"
                     >
                         The Chat App has <span> Leveled Up</span>
                     </div>
-                    <div className="steps-block">
+                    <div className="beam-block">
                         <Slider {...settings}>
-                            {dataSteps.map((item, index) => (
-                                <div className="steps-box"
+                            {dataBeams.map((item, index) => (
+                                <div className="beam-box"
                                     key={index}
                                     data-aos="fade-up"
                                     data-aos-duration="1200"
                                 >
-                                    <div className="steps-img">
+                                    <div className="beam-img">
                                         <img src={item.img} alt="#" />
                                     </div>
-                                    <div className="steps-case">
-                                        <div className="steps-number">
+                                    <div className="beam-case">
+                                        <div className="beam-number">
                                             0{index + 1}
                                         </div>
-                                        <div className="steps-text">
-                                            <div className="steps-title">
+                                        <div className="beam-text">
+                                            <div className="beam-title">
                                                 {item.title}
                                             </div>
-                                            <div className="steps-description">
+                                            <div className="beam-description">
                                                 {item.text}
                                             </div>
                                         </div>
@@ -89,8 +96,24 @@ function Steps () {
                     </div>
                 </div>
             </div>
+            <div className="beam-signUp">
+                <div className="beam-signUp-bg"/>
+                <div className="beam-signUp-box wr">
+                    <div className="beam-signUp-box-subtitle">We are always wait for you</div>
+                    <div className="beam-signUp-box-title">sign up</div>
+                    <form className="beam-signUp-box-form" action="">
+                        <div className="beam-signUp-box-form-inputs">
+                            <input className="beam-signUp-box-form-inputs-input" type="text" placeholder="Your name" />
+                            <input className="beam-signUp-box-form-inputs-input" type="text" placeholder="Your email" />
+                        </div>
+                        <button className="beam-signUp-box-form-btn">sign up<span></span></button>
+                    </form>
+                    <video className="beam-signUp-box-sonr" src={Sonr} autoPlay loop muted />
+                    <img className="beam-signUp-box-white" src={White} alt="" />
+                </div>
+            </div>
         </div>
     )
 }
 
-export default Steps;
+export default Beam;

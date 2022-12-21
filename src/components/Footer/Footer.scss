@@ -1,0 +1,63 @@
+@import "../../assets/scss/vars.scss";
+
+.Footer {
+    position: relative;
+    margin-top: -100px;
+    padding: 100px 0;
+    background-color: #fff;
+    z-index: 80;
+
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.Footer_inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+
+    @media only screen and (max-width: $mobile) {
+        justify-content: center;
+    }
+}
+
+.Footer_logo {
+    width: 87px;
+
+    @media only screen and (max-width: $mobile) {
+        width: 120px;
+    }
+}
+
+.Footer_social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.Footer_social_item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    height: 67px;
+    padding: 0 30px;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+    border: 1px solid hsla(0, 0%, 0%, 0.6);
+
+    &:hover {
+        background-color: hsla(0, 0%, 0%, 0.1);
+    }
+}
+
+.Footer_social_title {
+    color: #000;
+    font-size: 15px;
+    font-family: $fontPlusJD;
+    
+}

@@ -147,7 +147,7 @@ function Features() {
                                             <h2 className="features-title">{item.title}</h2>
                                             <div className="features-text">
                                                 {item.text.map((e, i) => (
-                                                    <div key={i}>{e}</div>
+                                                    <div className="features-text-item" key={i}>{e}</div>
                                                 ))}
                                             </div>
                                             {item.icon && (

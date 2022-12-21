@@ -1,14 +1,23 @@
 import "./Hero.scss";
 
+import { useState } from "react";
+
 //img
 import Earth from "../../../../../assets/img/Hero/earth.svg";
 import Arrow from "../../../../../assets/img/Hero/arrow.svg";
+import Cross from "../../../../../assets/img/Hero/cross.png";
 import White from "../../../../../assets/img/White.svg";
 
 function Hero() {
+    const [videoStatus, setVideoStatus] = useState(false)
+
     return (
         <div className="hero">
             <div className="wr">
+                <div className={`hero-videoBox ${!videoStatus && 'hidden'}`}>
+                    <img className="hero-videoBox-icon" src={Cross} onClick={() => setVideoStatus(false)} alt="" />
+                    <iframe className="hero-videoBox-video" width="560" height="315" src="https://www.youtube.com/embed/bex88Ku9Crk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <div className="hero-content">
                     <div className="hero-heading">
                         {new Array(3).fill('sonr').map((text, index) => (
@@ -45,9 +54,9 @@ function Hero() {
                     </div>
 
                     <div className="hero-block">
-                        <div className="hero-block-left" data-aos="fade-right">
+                        <div className="hero-block-left" onClick={() => setVideoStatus(true)} data-aos="fade-right">
                             <div className="hero-block-text">
-                                view showreel
+                                play video
                             </div>
                             <a className="hero-block-img" href="#">
                                 <img src={Arrow} alt="#" />

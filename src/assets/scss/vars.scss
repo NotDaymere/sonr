@@ -16,9 +16,9 @@ $gray: #73717C;
 
 $font: "BasisGrotesque", Arial, sans-serif;
 $fontBasicGP: "BasisGrotesquePro", Arial, sans-serif;
-$fontBranch: "Branch", Arial, sans-serif;
+// $fontBranch: "Branch", Arial, sans-serif;
+$fontBranch: "BasisGrotesquePro", Arial, sans-serif;
 $fontOffBT: "OffBitTrial", Arial, sans-serif;
-$fontOffBT101: "OffBitTrial", Arial, sans-serif;
 $fontOffBT101: "OffBitTrial101", Arial, sans-serif;
 $OffBitTrialSquare: "OffBitTrialSquare", Arial, sans-serif;
 $fontPlusJD: "PlusJakartaDisplay", Arial, sans-serif;
@@ -31,6 +31,11 @@ $ChakraPetch: "ChakraPetch", Arial, sans-serif;
 
 @function get-vw-td($target) {
   $vw-context: (1024 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-m($target) {
+  $vw-context: (768 * 0.01) * 1px;
   @return ($target / $vw-context) * 1vw;
 }
 

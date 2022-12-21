@@ -9,6 +9,7 @@ import AOS from "aos";
 
 //Components
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 //Pages
 import Home from "./components/Pages/Home/Home" 
@@ -18,7 +19,7 @@ import Blog from "./components/Pages/Blog/Blog";
 import Article from "./components/Pages/Article/Article";
 import Job from "./components/Pages/Job/Job";
 import Jobs from "./components/Pages/Jobs/Jobs";
-import Preloader from "./components/Preloader/Preloader";
+import Beam from "./components/Pages/Beam/Beam";
 
 function App() {
     console.log('deploy on vercel');
@@ -42,8 +43,9 @@ function App() {
                     <Route exact path='/article' element={<Article />} />
                     <Route exact path='/job' element={<Job />} />
                     <Route exact path='/jobs' element={<Jobs />} />
-                    <Route exact path='/preloader' element={<Preloader />} />
+                    <Route exact path='/beam' element={<Beam />} />
                 </Routes>
+                <Footer />
             </Router>
         </div>
     )

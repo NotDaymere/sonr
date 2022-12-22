@@ -86,6 +86,10 @@
 }
 
 @media (max-width: 560px) {
+    .Preloader_title {
+        transform: translateY(0px);
+    }
+
     .Preloader_percent {
         font-size: 96px;
         bottom: get-vw-md(130px);

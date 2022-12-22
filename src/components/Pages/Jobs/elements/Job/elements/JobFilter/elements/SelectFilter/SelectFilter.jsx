@@ -1,5 +1,7 @@
 import style from './SelectFilter.module.scss'
 
+import { useEffect } from 'react'
+
 import { useSelector, useDispatch } from 'react-redux' 
 import { changeStyleView } from '../../../../../../../../../store/jobsSlice'
 
@@ -13,6 +15,17 @@ function SelectFilter ({id}) {
     const styleView = useSelector(state => state.jobs.styleView)
 
     const changeStyle = () => dispatch(changeStyleView({id}))
+
+    const WindowResize = () => {
+        const width = window.innerWidth
+        width < 768 && dispatch(changeStyleView({id: 1}))
+    }
+
+    useEffect(() => {
+        WindowResize()
+        window.addEventListener("resize", WindowResize);
+        return () => window.removeEventListener("resize", WindowResize);
+    }, [])
 
     return (
         <div className={`${style.SelectFilter} ${styleView === id && style.active}`} onClick={changeStyle} >

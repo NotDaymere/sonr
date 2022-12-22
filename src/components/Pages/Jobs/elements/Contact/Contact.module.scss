@@ -34,3 +34,43 @@
     font-family: $fontBranch;
     text-transform: uppercase;
 }
+
+@media (max-width: $mobile) {
+    .Contact {
+        padding: get-vw-m(50px) 0;
+    }
+    
+    .Contact_container {
+        max-width: unset;
+    }
+    
+    .Contact_subtitle {
+        margin-top: get-vw-m(60px);
+
+        font-size: get-vw-m(20px);
+    }
+    
+    .Contact_title {
+        margin-top: get-vw-m(25px);
+
+        font-size: get-vw-m(65px);
+    }
+}
+
+@media (max-width: $mobile-s) {
+    .Contact {
+        padding: get-vw-md(50px) 0;
+    }
+    
+    .Contact_subtitle {
+        margin-top: get-vw-md(60px);
+
+        font-size: get-vw-md(15px);
+    }
+    
+    .Contact_title {
+        margin-top: get-vw-md(10px);
+
+        font-size: get-vw-md(30px);
+    }
+}

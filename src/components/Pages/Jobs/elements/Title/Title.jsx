@@ -78,6 +78,7 @@ function Title () {
                 </div>
             </div>
             <div className={style.Title_bg_text} />
+            <div className={style.Title_bg} />
         </div>
     )
 }

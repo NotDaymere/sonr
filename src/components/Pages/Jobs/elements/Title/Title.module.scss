@@ -8,13 +8,13 @@
 .Title_bg_text {
     position: absolute;
     background: url("../../../../../assets/img/Jobs/textBottom.svg") center center repeat-x;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     height: 32px;
     left: 0;
     bottom: -16px;
     mix-blend-mode: difference;
-    z-index: 100;
+    z-index: 50;
     animation: backgroundPosition 300s infinite linear;
 }
 
@@ -75,14 +75,14 @@
             & div {
                 display: flex;
                 justify-content: space-between;
-                align-items: end;
+                align-itemd: end;
+                font-family: $fontOffBT;
 
                 & .Title_slash {
                     margin-bottom: -15px;
 
                     color: #000;
                     font-size: 50px;
-                    font-family: $fontOffBT;
                 }
             }
         }
@@ -105,7 +105,7 @@
     color: #000;
     font-size: 15px;
     font-weight: 500;
-    line-height: 17px;
+    line-height: 115%;
     text-transform: none;
     text-align: left;
 }
@@ -164,6 +164,10 @@
     }
 }
 
+.Title_subscribe_btn_icon {
+    width: 30px;
+}
+
 .Title_subscribe_bg {
     position: absolute;
     left: -50px;
@@ -183,4 +187,272 @@
     background: linear-gradient(90deg, #F8DBB8 0%, #CCBBE4 46.15%, #9187FF 100%);
     opacity: 0.2;
     filter: blur(269.84px);
+
+    z-index: -10;
+}
+
+@media (max-width: $desktop-l) {
+    .Title {
+        padding-bottom: get-vw(100px);
+    }
+    
+    .Title_bg_text {
+        height: get-vw(32px);
+        bottom: get-vw(-16px);
+    }
+    
+    .Title_box {
+        max-width: get-vw(900px);
+        margin-top: get-vw(50px);
+    }
+    
+    .Title_subtitle {
+        column-gap: get-vw(105px);
+    }
+    
+    .Title_subtitle_item {
+        font-size: get-vw(20px);
+    }
+    
+    .Title_title {
+        margin-top: get-vw(20px);
+
+        font-size: get-vw(100px);
+    
+        & > div {
+            &:nth-child(2) {
+                & div {
+                    & .Title_slash {
+                        margin-bottom: get-vw(-15px);
+
+                        font-size: get-vw(50px);
+                    }
+                }
+            }
+        }
+    }
+    
+    .Title_des {
+        bottom: get-vw(20px);
+    
+        max-width: get-vw(300px);
+
+        font-size: get-vw(15px);
+    }
+    
+    .Title_subscribe_inner {
+        max-width: get-vw(250px);
+    }
+    
+    .Title_subscribe_title {
+        font-size: get-vw(20px);
+    }
+    
+    .Title_subscribe_btn_box {
+        transform: translateY(get-vw(20px));
+    }
+    
+    .Title_subscribe_btn {
+        gap: get-vw(10px);
+        padding: get-vw(21px) get-vw(41px);
+
+        font-size: get-vw(20px);
+
+        border-radius: get-vw(82px);
+    }
+
+    .Title_subscribe_btn_icon {
+        width: get-vw(30px);
+    }
+    
+    .Title_subscribe_bg {
+        left: get-vw(-50px);
+        top: get-vw(-50px);
+
+        width: get-vw(380px);
+    }
+    
+    .Title_bg {
+        width: get-vw(891px);
+        height: get-vw(891px);
+        left: get-vw(-102px);
+        top: get-vw(10px);
+    }
+}
+
+@media (max-width: $mobile) {
+    .Title {
+        padding-bottom: get-vw-m(100px);
+    }
+    
+    .Title_bg_text {
+        height: get-vw-m(32px);
+        bottom: get-vw-m(-16px);
+    }
+    
+    .Title_box {
+        max-width: unset;
+        margin-top: get-vw-m(50px);
+    }
+    
+    .Title_subtitle {
+        justify-content: space-between;
+        column-gap: unset;
+    }
+    
+    .Title_subtitle_item {
+        font-size: get-vw-m(24px);
+    }
+    
+    .Title_title {
+        margin-top: get-vw-m(20px);
+
+        font-size: get-vw-m(80px);
+    
+        & > div {
+            &:nth-child(2) {
+                & div {
+                    & .Title_slash {
+                        margin-bottom: get-vw-m(-15px);
+
+                        font-size: get-vw-m(50px);
+                    }
+                }
+            }
+        }
+    }
+    
+    .Title_des {
+        bottom: unset;
+        position: relative;
+    
+        max-width: get-vw-m(300px);
+
+        font-size: get-vw-m(20px);
+    }
+    
+    .Title_subscribe_inner {
+        max-width: get-vw-m(250px);
+    }
+    
+    .Title_subscribe_title {
+        font-size: get-vw-m(20px);
+    }
+    
+    .Title_subscribe_btn_box {
+        transform: translateY(get-vw-m(20px));
+    }
+    
+    .Title_subscribe_btn {
+        gap: get-vw-m(10px);
+        padding: get-vw-m(21px) get-vw-m(41px);
+
+        font-size: get-vw-m(20px);
+
+        border-radius: get-vw-m(82px);
+    }
+
+    .Title_subscribe_btn_icon {
+        width: get-vw-m(30px);
+    }
+    
+    .Title_subscribe_bg {
+        left: get-vw-m(-50px);
+        top: get-vw-m(-50px);
+
+        width: get-vw-m(380px);
+    }
+    
+    .Title_bg {
+        width: get-vw-m(891px);
+        height: get-vw-m(891px);
+        left: get-vw-m(-102px);
+        top: get-vw-m(10px);
+    }
+}
+
+@media (max-width: $mobile-s) {
+    .Title {
+        padding-bottom: get-vw-md(100px);
+    }
+    
+    .Title_bg_text {
+        height: get-vw-md(22px);
+        bottom: get-vw-md(-13px);
+    }
+    
+    .Title_box {
+        margin-top: get-vw-md(100px);
+    }
+    
+    .Title_subtitle_item {
+        font-size: get-vw-md(14px);
+    }
+    
+    .Title_title {
+        margin-top: get-vw-md(36px);
+
+        font-size: get-vw-md(35px);
+    
+        & > div {
+            &:nth-child(2) {
+                & div {
+                    & .Title_slash {
+                        margin-bottom:  unset;
+
+                        font-size: get-vw-md(20px);
+                    }
+                }
+            }
+        }
+    }
+    
+    .Title_des {
+        max-width: unset;
+        margin-top: get-vw-md(23px);
+
+        font-size: get-vw-md(15px);
+        text-align: center;
+    }
+    
+    .Title_subscribe_inner {
+        max-width: unset;
+        margin-top: get-vw-md(30px);
+    }
+    
+    .Title_subscribe_title {
+        font-size: get-vw-md(16px);
+    }
+    
+    .Title_subscribe_btn_box {
+        transform: translateY(get-vw-md(20px));
+    }
+    
+    .Title_subscribe_btn {
+        gap: get-vw-md(10px);
+        padding: get-vw-md(10px) get-vw-md(21px);
+
+        font-size: get-vw-md(16px);
+
+        border-radius: get-vw-md(82px);
+    }
+
+    .Title_subscribe_btn_icon {
+        width: get-vw-md(30px);
+    }
+    
+    .Title_subscribe_bg {
+        left: get-vw-md(-50px);
+        top: get-vw-md(-50px);
+
+        width: get-vw-md(380px);
+    }
+    
+    .Title_bg {
+        width: get-vw-md(891px);
+        height: get-vw-md(891px);
+        left: get-vw-md(-102px);
+        top: get-vw-md(10px);
+        opacity: 0.5;
+    }
 }

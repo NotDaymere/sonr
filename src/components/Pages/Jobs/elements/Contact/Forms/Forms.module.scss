@@ -24,6 +24,7 @@
     display: flex;
     margin-top: 15px;
     column-gap: 15px;
+    overflow: scroll;
 }
 
 .Forms_need_select_item {
@@ -254,4 +255,196 @@
 
     background-color: #F6F6F6;
     border-radius: 100%;
+}
+
+@media (max-width: $mobile) {
+    .Forms {
+        margin-top: get-vw-m(80px);
+    }
+    
+    .Forms_need_title {
+        font-size: get-vw-m(20px);
+    }
+    
+    .Forms_need_select {
+        margin-top: get-vw-m(15px);
+        column-gap: get-vw-m(15px);
+    }
+    
+    .Forms_need_select_item {
+        padding: get-vw-m(21px) get-vw-m(41px);
+
+        font-size: get-vw-m(20px);
+
+        border-radius: get-vw-m(82px);
+    }
+    
+    .Forms_inputs {
+        margin-top: get-vw-m(50px);
+        gap: get-vw-m(42px);
+    }
+    
+    .Forms_inputs_box {
+        flex-wrap: wrap;
+        gap: get-vw-m(42px);
+    }
+    
+    .Forms_inputs_box {
+        &::after {
+            font-size: get-vw-m(15px);
+        }
+    }
+    
+    .Forms_inputs_input {
+        width: 100%;
+        padding-bottom: get-vw-m(7px);
+
+        font-size: get-vw-m(20px);
+    }
+    
+    .Forms_fileInput {
+        margin-top: get-vw-m(45px);
+    }
+    
+    .Forms_fileInput_files {
+        gap: get-vw-m(20px);
+    }
+    
+    .Forms_fileInput_files_item {
+        gap: get-vw-m(10px);
+
+        font-size: get-vw-m(20px);
+    }
+    
+    .Forms_fileInput_files_item_icon {
+        height: get-vw-m(15px);
+        width: get-vw-m(15px);
+    
+        &::before, &::after {
+            width: get-vw-m(16px);
+            height: get-vw-m(2px);
+        }
+    }
+    
+    .Forms_policy {
+        margin-top: get-vw-m(55px);
+
+        font-size: get-vw-m(15px);
+    }
+    
+    .Forms_btn_box {
+        margin-top: get-vw-m(96px);
+    }
+    
+    .Forms_btn {
+        gap: get-vw-m(45px);
+        padding: get-vw-m(30px) get-vw-m(36px) get-vw-m(26px);
+
+        border-radius: get-vw-m(82px);
+    }
+    
+    .Forms_btn_text {
+        font-size: get-vw-m(20px);
+    }
+    
+    .Forms_btn_icon {
+        width: get-vw-m(10px);
+        height: get-vw-m(10px);
+    }
+}
+
+@media (max-width: $mobile-s) {
+    .Forms {
+        margin-top: get-vw-md(37px);
+    }
+    
+    .Forms_need_title {
+        font-size: get-vw-md(18px);
+    }
+    
+    .Forms_need_select {
+        margin-top: get-vw-md(11px);
+        column-gap: get-vw-md(14px);
+    }
+    
+    .Forms_need_select_item {
+        padding: get-vw-md(21px) get-vw-md(41px);
+
+        font-size: get-vw-md(18px);
+
+        border-radius: get-vw-md(82px);
+    }
+    
+    .Forms_inputs {
+        margin-top: get-vw-md(55px);
+        gap: get-vw-md(42px);
+    }
+    
+    .Forms_inputs_box {
+        gap: get-vw-md(42px);
+    }
+    
+    .Forms_inputs_box {
+        &::after {
+            font-size: get-vw-md(10px);
+        }
+    }
+    
+    .Forms_inputs_input {
+        padding-bottom: unset;
+
+        font-size: get-vw-md(15px);
+    }
+    
+    .Forms_fileInput {
+        flex-wrap: wrap;
+        margin-top: get-vw-md(58px);
+    }
+    
+    .Forms_fileInput_files {
+        order: 3;
+        margin-top: 20px;
+        gap: get-vw-md(10px);
+    }
+    
+    .Forms_fileInput_files_item {
+        gap: get-vw-md(10px);
+
+        font-size: get-vw-md(15px);
+    }
+    
+    .Forms_fileInput_files_item_icon {
+        height: get-vw-md(15px);
+        width: get-vw-md(15px);
+    
+        &::before, &::after {
+            width: get-vw-md(16px);
+            height: get-vw-md(2px);
+        }
+    }
+    
+    .Forms_policy {
+        margin-top: get-vw-md(42px);
+
+        font-size: get-vw-md(14px);
+    }
+    
+    .Forms_btn_box {
+        margin-top: get-vw-md(69px);
+    }
+    
+    .Forms_btn {
+        gap: get-vw-md(45px);
+        padding: get-vw-md(24px) get-vw-md(57px);
+
+        border-radius: get-vw-md(82px);
+    }
+    
+    .Forms_btn_text {
+        font-size: get-vw-md(18px);
+    }
+    
+    .Forms_btn_icon {
+        display: none;
+    }
 }

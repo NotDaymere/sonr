@@ -6,9 +6,6 @@ import style from './ListItem.module.scss'
 import Arrow from '../../../../../../../../../../assets/img/Jobs/arrowUpMini.svg'
 
 function ListItem ({title, schedule, location, visit, age, link}) {
-
-    console.log(location)
-
     return (
         <div className={style.ListItem}>
             <div className={style.ListItem_category}>

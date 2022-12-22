@@ -35,5 +35,15 @@
     .Link_clip {
         width: 100%;
         justify-content: center;
+
+        padding: get-vw-md(21px) get-vw-md(41px);
+
+        font-size: get-vw-md(15px);
+
+        border-radius: get-vw-md(80px);
+    
+        & img {
+            margin-right: get-vw-md(10px);
+        }
     }
 }

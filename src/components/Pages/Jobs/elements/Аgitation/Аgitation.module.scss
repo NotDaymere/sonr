@@ -1,6 +1,7 @@
 @import "../../../../../assets/scss/vars";
 
 .Agitation {
+    position: relative;
     padding: 160px 0;
     
     background-color: #131313;
@@ -16,8 +17,7 @@
     text-transform: uppercase;
 
     & span {
-        font-family: $fontOffBT101;
-        font-weight: 700;
+        font-family: $fontOffBT;
     }
 }
 
@@ -35,7 +35,7 @@
     color: rgba(255, 255, 255, 0.6);
     font-size: 15px;
     font-weight: 700;
-    line-height: 130%;
+    line-height: 140%;
     font-family: $fontPlusJD;
 
     & div + div {
@@ -66,7 +66,7 @@
 
     color: #fff;
     font-size: 45px;
-    line-height: 65px;
+    line-height: 145%;
     font-family: $fontBranch;
 
     & span {
@@ -115,5 +115,162 @@
         & img {
             transform: rotate(0deg);
         }
+    }
+}
+
+.Agitation_bg {
+    position: absolute;
+    top: 0;
+    left: -182px;
+
+    width: 1006px;
+    height: auto;
+
+    z-index: 0;
+}
+
+@media (max-width: $desktop-l) {
+    .Agitation {
+        padding: get-vw(160px) 0;
+    }
+    
+    .Agitation_title {
+        max-width: get-vw(900px);
+
+        font-size: get-vw(65px);
+    }
+    
+    .Agitation_des_box {
+        margin-top: get-vw(70px);
+    }
+    
+    .Agitation_des {
+        max-width: get-vw(440px);
+
+        font-size: get-vw(15px);
+    
+        & div + div {
+            margin-top: get-vw(30px);
+        }
+    
+        &::before {
+            left: get-vw(-80px);
+
+            font-size: get-vw(50px);
+        }
+    }
+    
+    .Agitation_text {
+        max-width: get-vw(850px);
+        margin-top: get-vw(100px);
+
+        font-size: get-vw(45px);
+    }
+    
+    .Agitation_btn_box {
+        margin-top: get-vw(-50px);
+        column-gap: get-vw(35px);
+    }
+    
+    .Agitation_btn_title {
+        font-size: get-vw(20px);
+    }
+    
+    .Agitation_btn {
+        width: get-vw(115px);
+        height: get-vw(115px);
+    }
+
+    .Agitation_bg {
+        left: get-vw(-182px);
+        width: get-vw(1006px);
+    }
+}
+
+@media (max-width: $mobile) {
+    .Agitation {
+        padding: get-vw-m(160px) 0;
+    }
+    
+    .Agitation_title {
+        max-width: unset;
+
+        font-size: get-vw-m(65px);
+    }
+    
+    .Agitation_des_box {
+        margin-top: get-vw-m(150px);
+    }
+    
+    .Agitation_des {
+        max-width: unset;
+
+        font-size: get-vw-m(18px);
+    
+        & div + div {
+            margin-top: get-vw-m(30px);
+        }
+    
+        &::before {
+            top: get-vw-m(-80px);
+            left: get-vw-m(0px);
+
+            font-size: get-vw-m(50px);
+        }
+    }
+    
+    .Agitation_text {
+        max-width: unset;
+        margin-top: get-vw-m(50px);
+
+        font-size: get-vw-m(35px);
+    }
+    
+    .Agitation_btn_box {
+        display: none;
+    }
+
+    .Agitation_bg {
+        left: get-vw-m(-182px);
+        width: get-vw-m(1006px);
+    }
+}
+
+@media (max-width: $mobile-s) {
+    .Agitation {
+        padding: get-vw-md(100px) 0;
+    }
+    
+    .Agitation_title {
+        font-size: get-vw-md(35px);
+    }
+    
+    .Agitation_des_box {
+        margin-top: get-vw-md(140px);
+    }
+    
+    .Agitation_des {
+        font-size: get-vw-md(12px);
+    
+        & div + div {
+            margin-top: get-vw-md(30px);
+        }
+    
+        &::before {
+            top: get-vw-md(-80px);
+
+            font-size: get-vw-md(50px);
+        }
+    }
+    
+    .Agitation_text {
+        margin-top: get-vw-md(60px);
+
+        font-size: get-vw-md(24px);
+    }
+
+    .Agitation_bg {
+        left: get-vw-md(-82px);
+        width: get-vw-md(1000px);
     }
 }

@@ -2,5 +2,17 @@
 
 .JobFilter {
     display: flex;
+    justify-content: space-between;
     column-gap: 15px;
+}
+
+.JobFilter_select {
+    display: flex;
+    column-gap: 15px;
+}
+
+@media (max-width: $mobile) {
+    .JobFilter_select {
+        display: none;
+    }
 }

@@ -84,7 +84,7 @@ function Posts () {
                 </button>
             </div>
             
-            <Filter data={dataCat} />
+            <Filter data={dataCat} close />
 
             <div className="Posts_posts">
                 {dataPost.map((item,) => (

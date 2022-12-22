@@ -1,6 +1,7 @@
 import style from './JobFilter.module.scss'
 
 //Elements
+import DropFilter from './elements/DropFilter/DropFilter';
 import SelectFilter from './elements/SelectFilter/SelectFilter';
 
 //Source
@@ -10,9 +11,12 @@ function JobFilter () {
 
     return (
         <div className={style.JobFilter}>
-            {[1, 2].map((e, i) => (
-                <SelectFilter id={i} />
-            ))}
+            <DropFilter />
+            <div className={style.JobFilter_select}>
+                {[1, 2].map((e, i) => (
+                    <SelectFilter id={i} />
+                ))}
+            </div>
         </div>
     )
 }

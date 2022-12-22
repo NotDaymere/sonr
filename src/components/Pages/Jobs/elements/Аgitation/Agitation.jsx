@@ -4,13 +4,14 @@ import style from './Аgitation.module.scss'
 
 //Source
 import Arrow from '../../../../../assets/img/Jobs/arrowUp.svg'
+import Bg from '../../../../../assets/img/Jobs/agitationBg.svg'
 
 function Agitation () {
 
     return (
         <div className={style.Agitation}>
             <div className={`${style.Agitation_container} wr`}>
-                <div className={style.Agitation_title}>Software has lost its magic. <span>We want</span> your help to bring it back.</div>
+                <div className={style.Agitation_title}><span>Software</span> has lost its magic. We want <span>your help</span> to bring it back.</div>
                 <div className={style.Agitation_des_box}>
                     <div className={style.Agitation_des}>
                         <div>Remember when software still felt magical? Good software used to be an experience. It used to radically change how we lived and worked. It made us feel like we lived in the future.Today, software is everywhere. But truly great software has become incredibly rare. Computers are faster, but apps work slower. Craftsmanship has been replaced with growth hacks. Visionary product ideas turned into incremental changes.The magic of software got lost along the way. At Linear, we are on a quest to bring it back.</div>
@@ -24,6 +25,7 @@ function Agitation () {
                     <div className={style.Agitation_btn_title}>See  positions</div>
                     <button className={style.Agitation_btn}><img src={Arrow} alt="" /></button>
                 </div>
+                <img className={style.Agitation_bg} src={Bg} alt="" />
             </div>
         </div>
     )

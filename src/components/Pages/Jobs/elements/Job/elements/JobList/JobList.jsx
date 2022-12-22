@@ -104,6 +104,8 @@ function JobList () {
         .to(refArrow.current[2], {opacity : 0, duration : dur, ease:"expo.inOut" })
     }, []);
 
+    
+
     return (
         <div className={style.JobList}>
             {

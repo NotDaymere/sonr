@@ -8,7 +8,6 @@ import JobList from './elements/JobList/JobList';
 
 
 function Job () {
-
     return (
         <div className={style.Job}>
             <div className={`${style.Job_container} wr`}>

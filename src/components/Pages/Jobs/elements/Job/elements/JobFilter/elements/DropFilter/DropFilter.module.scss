@@ -1,2 +1,93 @@
-@import "../../../../../assets/scss/vars";
+@import "../../../../../../../../../assets/scss/vars";
 
+.DropFilter {
+    display: flex;
+    column-gap: 15px;
+    overflow-x: auto;
+}
+
+//DropFilterItem
+
+.DropFilterItem {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 7px;
+    height: 72px;
+    padding: 0 38px;
+
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 72px;
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 82px;
+
+    transition: .2s ease-in-out;
+    transition-property: color background-color;
+
+    cursor: pointer;
+
+    &.active {
+        color: #323232;
+        background-color: #EDEDED;
+        
+        .DropFilterItem_icon {
+            transform: rotate(180deg);
+
+            & path {
+                stroke: #323232
+            }
+            
+        }
+
+        .DropFilterItem_filters {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+}
+
+.DropFilterItem_filters {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    padding: 19px 18px 15px 29px;
+
+    background: #EDEDED;
+    border-radius: 25px;
+
+    z-index: 20;
+
+    transform: translateY(10px);
+    opacity: 0;
+
+    transition: .3s ease-in-out;
+    transition-property: opacity transition;
+
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.DropFilterItem_icon {
+    transition: .2s ease-in-out;
+    transition-property: transform stroke;
+}
+
+.DropFilterItem_filters_item {
+    color: #131313;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 152.3%;
+    white-space: nowrap;
+    
+    opacity: .4;
+
+    transition: .2s ease-in-out;
+    transition-property: opacity;
+
+    &:hover {
+        opacity: 1;
+    }
+}

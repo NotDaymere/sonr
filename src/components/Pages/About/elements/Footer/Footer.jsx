@@ -5,7 +5,7 @@ import { useRef, useState } from 'react';
 //Elements
 import TimeLineItem from '../TimeLine/elements/TimeLineItem/TimeLineItem';
 
-import Sonr from '../../../../../assets/img/About/earth.gif';
+import Sonr from '../../../../../assets/img/earth.gif';
 
 //Animate
 import { gsap } from "gsap";

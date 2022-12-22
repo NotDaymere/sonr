@@ -1,13 +1,14 @@
 import style from './Title.module.scss'
 import "aos/dist/aos.css";
 
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 
 //Source
 import Sonr from '../../../../../assets/img/About/earth.mp4';
 import ArrowUp from '../../../../../assets/img/About/arrowUp.svg';
 import CometWhite from '../../../../../assets/img/About/cometWhite.svg';
 import CometBlack from '../../../../../assets/img/About/cometBlack.svg';
+import Cross from "../../../../../assets/img/Hero/cross.png";
 
 //Animate
 import { gsap } from "gsap";
@@ -21,6 +22,7 @@ function Title () {
         AOS.refresh();
     }, []);
 
+    const [videoStatus, setVideoStatus] = useState(false)
 
     const refSonr = useRef(null);
     const refCometWhite = useRef(null);
@@ -58,11 +60,13 @@ function Title () {
         });
     }, []);
 
-    
-
     return (
         <div className={style.Title}>
             <div className={`${style.Title_container} wr`}>
+                <div className={`hero-videoBox ${!videoStatus && 'hidden'}`}>
+                    <img className="hero-videoBox-icon" src={Cross} onClick={() => setVideoStatus(false)} alt="" />
+                    <iframe className="hero-videoBox-video" width="560" height="315" src="https://www.youtube.com/embed/bex88Ku9Crk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <div className={`${style.Title_bg}`} >
                     <video className={`${style.Title_bg_sonr}`} ref={refSonr} src={Sonr} type="video/mp4" muted playsInline autoPlay='autoplay' loop  />
                 </div>
@@ -72,8 +76,8 @@ function Title () {
                 <div className={style.Title_btn_container} ref={refBtn}>
                 <div className={style.Title_btn_box} >
                     
-                    <div className={style.Title_btn_text}>view showreel</div>
-                    <button className={style.Title_btn}>
+                    <div className={style.Title_btn_text}>Play video</div>
+                    <button className={style.Title_btn} onClick={() => setVideoStatus(true)}>
                         <img src={ArrowUp} alt="" />
                     </button>
                 </div>

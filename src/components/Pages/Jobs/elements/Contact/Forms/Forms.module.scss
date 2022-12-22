@@ -359,7 +359,7 @@
     }
     
     .Forms_need_title {
-        font-size: get-vw-md(18px);
+        font-size: get-vw-md(16px);
     }
     
     .Forms_need_select {
@@ -368,15 +368,15 @@
     }
     
     .Forms_need_select_item {
-        padding: get-vw-md(21px) get-vw-md(41px);
+        padding: get-vw-md(10px) get-vw-md(20px);
 
-        font-size: get-vw-md(18px);
+        font-size: get-vw-md(16px);
 
         border-radius: get-vw-md(82px);
     }
     
     .Forms_inputs {
-        margin-top: get-vw-md(55px);
+        margin-top: get-vw-md(45px);
         gap: get-vw-md(42px);
     }
     
@@ -426,22 +426,22 @@
     .Forms_policy {
         margin-top: get-vw-md(42px);
 
-        font-size: get-vw-md(14px);
+        font-size: get-vw-md(12px);
     }
     
     .Forms_btn_box {
-        margin-top: get-vw-md(69px);
+        margin-top: get-vw-md(30px);
     }
     
     .Forms_btn {
         gap: get-vw-md(45px);
-        padding: get-vw-md(24px) get-vw-md(57px);
+        padding: get-vw-md(15px) get-vw-md(40px);
 
         border-radius: get-vw-md(82px);
     }
     
     .Forms_btn_text {
-        font-size: get-vw-md(18px);
+        font-size: get-vw-md(16px);
     }
     
     .Forms_btn_icon {

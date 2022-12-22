@@ -73,8 +73,10 @@ function Header (props) {
     }, [location]);
 
     const mouseMoveEvent = (e) => {
-        refPoint.current.style.left = e.clientX + 'px'
-        refPoint.current.style.top = e.clientY + 'px'
+        if(isOpenMenu) {
+            refPoint.current.style.left = e.clientX + 'px'
+            refPoint.current.style.top = e.clientY + 'px'
+        }
     }
 
     const mouseMenuEnter = (e) => {

@@ -4,7 +4,7 @@ import "./Features.scss";
 
 //img
 import Figure from "../../../../../assets/img/Features/figure.svg";
-import Sphere from "../../../../../assets/img/earth.gif";
+import Sphere from "../../../../../assets/img/earthSmall.gif";
 import Arrow from "../../../../../assets/img/Features/arrow.svg";
 
 const data = [

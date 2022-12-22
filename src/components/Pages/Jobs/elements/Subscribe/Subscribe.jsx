@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react';
 
 //Source
 import Mail from '../../../../../assets/img/Jobs/mail.svg'
-import Sonr from '../../../../../assets/img/About/earth.gif'
+import Sonr from '../../../../../assets/img/earth.gif'
 
 function Subscribe () {
     return (

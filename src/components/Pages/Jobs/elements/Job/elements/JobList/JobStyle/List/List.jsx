@@ -11,6 +11,7 @@ function List ({jobs}) {
                 <div className={style.List_title_category}>category</div>
                 <div className={style.List_title_location}>location</div>
                 <div className={style.List_title_visit}>Visit website</div>
+                <div className={style.List_title_age}>Age</div>
                 <div className={style.List_title_link}></div>
             </div>
             {jobs.map(e => (
@@ -19,6 +20,7 @@ function List ({jobs}) {
                     schedule={e.schedule}
                     location={e.location}
                     visit={e.visit}
+                    age={e.age}
                     link={e.link}
                 />
             ))}

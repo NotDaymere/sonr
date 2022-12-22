@@ -4,9 +4,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 80px;
 
     @media only screen and (max-width: $mobile) {
         flex-wrap: wrap;
+        margin-top: 30px;
     }
 }
 
@@ -109,6 +111,7 @@
 
 //FilterCat
 .FilterCat {
+    align-items: center;
     min-width: auto;
     padding: 25px 56px;
 

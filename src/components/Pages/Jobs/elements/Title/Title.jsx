@@ -2,7 +2,9 @@ import style from './Title.module.scss'
 
 import { useRef, useEffect } from 'react';
 
-//Elements
+//Media
+import Mail from '../../../../../assets/img/Jobs/mail.svg'
+import SubscribeBg from '../../../../../assets/img/Jobs/titleBg.svg'
 
 //Animate
 import { gsap } from "gsap";
@@ -56,9 +58,22 @@ function Title () {
                         <div><div ref={refText2} >Let's <span>Rebuild</span></div></div>
                         <div><div ref={refText3} ><div>the Internet</div><span className={style.Title_slash}>///</span></div></div>
                         <div><div ref={refText4} >together</div></div>
+                        <div className={style.Title_des}>
+                            <div ref={refText5} >We're a team of Artists, and Engineers working closely to empower users to have digital inalienable rights.</div>
+                        </div>
                     </div>
-                    <div className={style.Title_des}>
-                        <div ref={refText5} >We're a team of Artists, and Engineers working closely to empower users to have digital inalienable rights.</div>
+                    
+                </div>
+                <div className={style.Title_subscribe}>
+                    <div className={style.Title_subscribe_inner}>
+                        <img className={style.Title_subscribe_bg} src={SubscribeBg} alt="" />
+                        <div className={style.Title_subscribe_title}>Subscribe to be notified by email whenever we post a new job opening.</div>
+                        <div className={style.Title_subscribe_btn_box}>
+                            <button className={style.Title_subscribe_btn}>
+                                <img className={style.Title_subscribe_btn_icon} src={Mail} alt="" />
+                                Subscribe
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

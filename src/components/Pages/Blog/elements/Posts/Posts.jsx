@@ -76,6 +76,14 @@ function Posts () {
 
     return (
         <div className="Posts wr">
+            <div className="title_content_left_search_form">
+                <div className="title_content_left_search_form_input_border" />
+                <input className='title_content_left_search_form_input' type="text" name="" id="" placeholder='Search articles..' />
+                <button className='title_content_left_search_form_btn'>
+                    <img src={Arrow} alt="" />
+                </button>
+            </div>
+            
             <Filter data={dataCat} />
 
             <div className="Posts_posts">

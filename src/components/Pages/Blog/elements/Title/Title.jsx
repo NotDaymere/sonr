@@ -34,13 +34,6 @@ function Title () {
                         <div className="title_content_left_sonr_item">SONR</div>
                     </div>
                     <div className="title_content_left_title">blog</div>
-                    <div className="title_content_left_search_form">
-                        <div className="title_content_left_search_form_input_border" />
-                        <input className='title_content_left_search_form_input' type="text" name="" id="" placeholder='Search articles..' />
-                        <button className='title_content_left_search_form_btn'>
-                            <img src={Arrow} alt="" />
-                        </button>
-                    </div>
                 </div>
                 <div className="title_content_right">
                     <div className="title_content_right_title">most popular</div>

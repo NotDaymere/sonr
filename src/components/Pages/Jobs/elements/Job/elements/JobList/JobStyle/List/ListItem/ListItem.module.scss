@@ -43,7 +43,7 @@
 }
 
 .ListItem_location {
-    width: 25%;
+    width: 20%;
 
     display: flex;
     flex-wrap: wrap;
@@ -65,6 +65,21 @@
 
 .ListItem_visit {
     width: 15%;
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 115%;
+    font-family: $fontBasicGP;
+
+    opacity: .7;
+}
+
+.ListItem_age {
+    width: 5%;
 
     display: flex;
     align-items: center;

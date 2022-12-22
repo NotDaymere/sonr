@@ -5,7 +5,7 @@ import style from './ListItem.module.scss'
 //Source
 import Arrow from '../../../../../../../../../../assets/img/Jobs/arrowUpMini.svg'
 
-function ListItem ({title, schedule, location, visit, link}) {
+function ListItem ({title, schedule, location, visit, age, link}) {
 
     console.log(location)
 
@@ -25,6 +25,7 @@ function ListItem ({title, schedule, location, visit, link}) {
                 ))}
             </div>
             <div className={style.ListItem_visit}>{visit}</div>
+            <div className={style.ListItem_age}>{age}</div>
             <div className={style.ListItem_link}>
                 <a href={link}>
                     View job

@@ -25,6 +25,7 @@ const dataJobs = [
             'Brooklyn, NY'
         ],
         visit: "5M",
+        age: 18,
         link: '#'
     },{
         title: 'Developer Advocate (Flutter)',
@@ -35,6 +36,7 @@ const dataJobs = [
             'Remote friendly'
         ],
         visit: "27d",
+        age: 22,
         link: '#'
     },{
         title: 'Application Ecosystem Development Manager',
@@ -46,6 +48,7 @@ const dataJobs = [
             'Remote friendly'
         ],
         visit: "22d",
+        age: 25,
         link: '#'
     },{
         title: 'Senior Engineer - Applied Cryptography',
@@ -57,6 +60,7 @@ const dataJobs = [
             'Brooklyn, NY'
         ],
         visit: "1M",
+        age: 22,
         link: '#'
     },{
         title: 'Senior System Design Architect',
@@ -67,6 +71,7 @@ const dataJobs = [
             'Remote friendly'
         ],
         visit: "26d",
+        age: 18,
         link: '#'
     },{
         title: 'Executive Assistant to CEO',
@@ -78,6 +83,7 @@ const dataJobs = [
             'Austin, TX'
         ],
         visit: "24d",
+        age: 25,
         link: '#'
     }
 ]

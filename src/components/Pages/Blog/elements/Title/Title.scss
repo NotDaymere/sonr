@@ -100,7 +100,7 @@
 }
 
 .title_content_left_title {
-    margin-top: -20px;
+    margin-top: 80px;
     padding-left: 90px;
     
     color: $white;
@@ -120,7 +120,7 @@
 .title_content_left_search_form {
     position: relative;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .title_content_left_search_form_input_border {
@@ -140,7 +140,7 @@
     width: 100%;
     padding: 25px 56px;
 
-    color: $whiteLight_1;
+    color: #2C2C2C;
     font-size: 20px;
     font-weight: 500;
 
@@ -176,7 +176,7 @@
     height: 115px;
     padding: 0;
 
-    background-color: $white;
+    background-color: #000;
 
     border: 0;
     border-radius: 100%;
@@ -190,7 +190,8 @@
     }
 
     &:hover {
-        opacity: .6;
+        background-color: #000;
+        opacity: .8;
 
         & img {
             transform: rotate(180deg);

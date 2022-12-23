@@ -55,13 +55,13 @@ function Build () {
         let initdone = false;
 
         // wait for video metadata to load, then set time 
-        refVideo.current.addEventListener("loadedmetadata", function(){
+        refVideo.current.addEventListener("loadeddata", function(){
             refVideo.current.currentTime = timecode;
         });
 
         // iPhone/iPad need to play first, then set the time
         // events: https://www.w3.org/TR/html5/embedded-content-0.html#mediaevents
-        refVideo.current.addEventListener("canplaythrough", function(){
+        refVideo.current.addEventListener("loadeddata", function(){
             if(!initdone)
             {
                 refVideo.current.currentTime = timecode;

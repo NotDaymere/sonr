@@ -51,27 +51,13 @@ function Build () {
 
     ]
     useEffect(() => {
-        let timecode = 0.34;
-        let initdone = false;
-
-        // wait for video metadata to load, then set time 
-        refVideo.current.addEventListener("loadeddata", function(){
-            refVideo.current.currentTime = timecode;
-        });
-
-        // iPhone/iPad need to play first, then set the time
-        // events: https://www.w3.org/TR/html5/embedded-content-0.html#mediaevents
-        refVideo.current.addEventListener("loadeddata", function(){
-            if(!initdone)
-            {
-                refVideo.current.currentTime = timecode;
-                initdone = true;
-            }
+        refVideo.current.addEventListener("loadedmetadata", function(){
+            handleMetadata()
         });
     }, []);
 
     const handleMetadata = () => {
-        
+        refVideo.current.currentTime = 0.34
     }
 
     const screenWidth = window.innerWidth;
@@ -140,7 +126,7 @@ function Build () {
 
                         <img className={style.Build_menu_icon} ref={refEye} src={Eye} alt="" />
                     </div>
-                    <video className={style.Build_content_video} ref={refVideo} src={Stack} type="video/mp4" playsInline playsinline muted></video>
+                    <video className={style.Build_content_video} ref={refVideo} src={Stack} preload="metadata" type="video/mp4" playsInline playsinline muted></video>
                     <div className={style.Build_content_title}>{dataMenu[menuItemActive]}</div>
                     <div className={style.Build_content_des}>
                         {dataDes[menuItemActive].map((item, index) => (

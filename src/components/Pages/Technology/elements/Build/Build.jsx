@@ -120,7 +120,7 @@ function Build () {
 
                         <img className={style.Build_menu_icon} ref={refEye} src={Eye} alt="" />
                     </div>
-                    <video className={style.Build_content_video} ref={refVideo} src={Stack} currentTime={0.34} playsinline muted></video>
+                    <video className={style.Build_content_video} ref={refVideo} src={Stack} playsInline muted></video>
                     <div className={style.Build_content_title}>{dataMenu[menuItemActive]}</div>
                     <div className={style.Build_content_des}>
                         {dataDes[menuItemActive].map((item, index) => (

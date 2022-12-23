@@ -51,15 +51,23 @@ function Build () {
 
     ]
     useEffect(() => {
-        const timeCode = 0.34
-        let initDone = false
+        let timecode = 0.34;
+        let initdone = false;
 
-        refVideo.current.addEventListener('canplaythrough', () => {
-            if(!initDone) {
-                refVideo.current.currentTime = timeCode
-                initDone=true
-            } 
-        })
+        // wait for video metadata to load, then set time 
+        refVideo.current.addEventListener("loadedmetadata", function(){
+            refVideo.current.currentTime = timecode;
+        });
+
+        // iPhone/iPad need to play first, then set the time
+        // events: https://www.w3.org/TR/html5/embedded-content-0.html#mediaevents
+        refVideo.current.addEventListener("canplaythrough", function(){
+            if(!initdone)
+            {
+                refVideo.current.currentTime = timecode;
+                initdone = true;
+            }
+        });
     }, []);
 
     const handleMetadata = () => {

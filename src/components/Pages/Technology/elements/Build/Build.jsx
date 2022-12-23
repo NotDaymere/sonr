@@ -58,13 +58,12 @@ function Build () {
 
     const handleMetadata = () => {
         refVideo.current.currentTime = 0.34
+        console.log('load metadata')
     }
 
     const screenWidth = window.innerWidth;
 
     useEffect(() => {
-        console.log(refMenuItem.current[menuItemActive]);
-
         if (screenWidth <= 768) {
             const left = refMenuItem.current[menuItemActive].offsetLeft + ((refMenuItem.current[menuItemActive].offsetWidth - refEye.current.clientWidth) / 2) + 'px';
             refEye.current.style.left = left;

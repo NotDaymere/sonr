@@ -1,6 +1,6 @@
 import style from './Title.module.scss'
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 import Sonr from '../../../../../assets/img/earth.gif'
 
@@ -11,6 +11,8 @@ import Cards from './elements/Cards/Cards';
 import { gsap } from "gsap";
 
 function Title () {
+
+    const [imgSrs, setImgSrc] = useState(false)
 
     const refSonr = useRef(null);
     const refText1 = useRef(null);
@@ -45,6 +47,14 @@ function Title () {
             { y: 0, opacity : 1, duration : .5, ease:"expo.inOut" }
         )
     }, [])
+
+    useEffect(() => {
+        const img = new Image();
+        img.src = Sonr;
+        img.onload = () => {
+            setImgSrc(Sonr);
+        };
+    }, [Sonr]);
     
 
     return (
@@ -64,7 +74,7 @@ function Title () {
                     </div>
                 </div>
                 <div className={style.Title_Cards_container} ref={refText6} ><Cards /></div> 
-                <img className={style.Title_sonr} ref={refSonr} src={Sonr} alt="" />
+                <img className={style.Title_sonr} loading="lazy" ref={refSonr} src={imgSrs} alt="" />
             </div>
         </div>
     )

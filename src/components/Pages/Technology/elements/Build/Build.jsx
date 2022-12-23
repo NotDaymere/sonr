@@ -50,8 +50,9 @@ function Build () {
         ],
 
     ]
+
     useEffect(() => {
-        refVideo.current.addEventListener("loadedmetadata", function(){
+        refVideo.current.addEventListener("loadedmetadata", () => {
             handleMetadata()
         });
     }, []);

@@ -71,6 +71,7 @@ function Hero() {
                     all data in<br/>one place
                 </div>
                 <img className="hero-white" src={White} alt="#"/>
+                <div className="Title_bg_text" />
             </div>
         </div>
     )

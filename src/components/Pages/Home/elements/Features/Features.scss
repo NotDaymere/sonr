@@ -12,26 +12,26 @@
   @media only screen and (max-width: $mobile) {
     padding: 70px 0 64px;
   }
-  &:after {
-    @include content;
-    background: url("../../../../../assets/img/Features/textBottom.svg") center center repeat-x;
-    background-size: contain;
-    width: 100%;
-    height: 32px;
-    left: 0;
-    top: -16px;
-    mix-blend-mode: difference;
-    animation: backgroundPosition 300s infinite linear;
-    @media only screen and (max-width: $desktop-l) {
-      height: get-vw(32px);
-      top: get-vw(-16px);
-    }
-    @media only screen and (max-width: $mobile) {
-      height: 22px;
-      top: -11px;
-      background-size: cover;
-    }
-  }
+  // &:after {
+  //   @include content;
+  //   background: url("../../../../../assets/img/Features/textBottom.svg") center center repeat-x;
+  //   background-size: contain;
+  //   width: 100%;
+  //   height: 32px;
+  //   left: 0;
+  //   top: -16px;
+  //   mix-blend-mode: difference;
+  //   animation: backgroundPosition 300s infinite linear;
+  //   @media only screen and (max-width: $desktop-l) {
+  //     height: get-vw(32px);
+  //     top: get-vw(-16px);
+  //   }
+  //   @media only screen and (max-width: $mobile) {
+  //     height: 22px;
+  //     top: -11px;
+  //     background-size: cover;
+  //   }
+  // }
 
   &-container {
     @media only screen and (max-width: $mobile) {

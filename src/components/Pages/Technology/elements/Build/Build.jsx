@@ -91,10 +91,11 @@ function Build () {
             {y : 0, opacity : 1, duration : 1, ease : 'expo.inOut'}
         )
 
+        // console.log(refVideo.current.duration);
+        // console.log(menuItemActive);
+        // console.log(time);
+
         const time = refVideo.current.duration / 6 * (Number(e.target.dataset.index) + 1)
-        console.log(refVideo.current.duration);
-        console.log(menuItemActive);
-        console.log(time );
         setTimeout(() => {
             refVideo.current.currentTime = time
         }, 1000)
@@ -119,7 +120,7 @@ function Build () {
 
                         <img className={style.Build_menu_icon} ref={refEye} src={Eye} alt="" />
                     </div>
-                    <video className={style.Build_content_video} ref={refVideo} src={Stack} Time={0.34}></video>
+                    <video className={style.Build_content_video} ref={refVideo} src={Stack} currentTime={0.34} playsinline></video>
                     <div className={style.Build_content_title}>{dataMenu[menuItemActive]}</div>
                     <div className={style.Build_content_des}>
                         {dataDes[menuItemActive].map((item, index) => (

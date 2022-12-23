@@ -2,7 +2,7 @@ import style from './Title.module.scss'
 
 import { useRef, useEffect } from 'react';
 
-import Sonr from '../../../../../assets/img/About/earth.gif'
+import Sonr from '../../../../../assets/img/earth.gif'
 
 //Elements
 import Cards from './elements/Cards/Cards';

@@ -51,8 +51,13 @@ function Build () {
 
     ]
     useEffect(() => {
-        refVideo.current.currentTime = 0.34
+        
     }, []);
+
+    const handleMetadata = () => {
+        const timeCode = 0.34
+        refVideo.current.currentTime = timeCode
+    }
 
     const screenWidth = window.innerWidth;
 
@@ -120,7 +125,7 @@ function Build () {
 
                         <img className={style.Build_menu_icon} ref={refEye} src={Eye} alt="" />
                     </div>
-                    <video className={style.Build_content_video} ref={refVideo} src={Stack} type="video/mp4" playsInline playsinline muted></video>
+                    <video className={style.Build_content_video} ref={refVideo} onLoadedMetadata={handleMetadata} onCanPlayThrough={handleMetadata} src={Stack} type="video/mp4" playsInline playsinline muted></video>
                     <div className={style.Build_content_title}>{dataMenu[menuItemActive]}</div>
                     <div className={style.Build_content_des}>
                         {dataDes[menuItemActive].map((item, index) => (

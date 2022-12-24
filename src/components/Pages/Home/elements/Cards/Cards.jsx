@@ -1,8 +1,12 @@
 import "./Cards.scss";
 
+//Media
+import Bg from '../../../../../assets/img/Cards/line.svg'
+
 function Cards () {
     return (
         <div className="cards">
+            
             <div className="wr">
                 <div className="cards-content">
                     <div className="cards-block" data-aos="fade">
@@ -87,6 +91,7 @@ function Cards () {
                     </div>
                 </div>
             </div>
+            <img className="cards-bg" src={Bg} alt="" />
         </div>
     )
 }

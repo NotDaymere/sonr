@@ -11,15 +11,12 @@
   @media only screen and (max-width: $mobile) {
     padding: 16px 0 50px;
   }
-  &:after {
+  &-bg {
+    position: absolute;
     z-index: -1;
-    @include content;
-    background: url("../../../../../assets/img/Cards/line.svg") center center no-repeat;
-    background-size: contain;
     width: 100%;
-    height: 1000px;
-    top: 2%;
-    left: 0;
+    height: auto;
+    transform: translateY(-100%);
     animation: line 2s;
     @media only screen and (max-width: $desktop-l) {
       height: get-vw(1000px);

@@ -55,7 +55,7 @@ function TimeLine () {
         <div className={style.TimeLine}>
             <div className={style.TimeLine_bg} />
             <div className={`${style.TimeLine_container} wr`}>
-                <div className={style.TimeLine_title}><span>How</span> on earth did <span>we get here</span>?</div>
+                <div className={style.TimeLine_title}><span className={style.font}>How</span> on earth did <span className={style.color}>we get</span> <span className={style.font}>here</span>?</div>
                 <div className={style.TimeLine_items}>
                     {dataTimeLineItems.map ((item, index) => (
                         <TimeLineItem 

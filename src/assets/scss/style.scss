@@ -69,7 +69,7 @@ body {
 }
 
 .b-color-blue {
-    color: #7265FF;
+    color: $violet;
 }
 
 .b-text-underline {
@@ -80,7 +80,7 @@ body {
 	    width: 100%;
 		bottom: 17px;
 		height: 3px;
-		background: #7265FF;
+		background: $violet;
 		@media only screen and (max-width: $mobile) {
 			left: 0;
 			bottom: get-vw-md(5px);

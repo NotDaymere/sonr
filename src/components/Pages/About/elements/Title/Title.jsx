@@ -71,7 +71,7 @@ function Title () {
                     <video className={`${style.Title_bg_sonr}`} ref={refSonr} src={Sonr} type="video/mp4" muted playsInline autoPlay='autoplay' loop  />
                 </div>
 
-                <div className={style.Title_title} ref={refTitle}>Your digital <span>liberty</span> is <span>worth</span> fighting for</div>
+                <div className={style.Title_title} ref={refTitle}>Your digital <span className={style.font}>liberty</span> is <span className={style.color}>worth</span> fighting for</div>
                 <div className={style.Title_des} ref={refDes}>We’re on a mission to rebuild the internet around true digital ownership. It starts with verifiable on-chain identity, and ends with you having full control and straightforward management of your data.</div>
                 <div className={style.Title_btn_container} ref={refBtn}>
                 <div className={style.Title_btn_box} >

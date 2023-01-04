@@ -55,9 +55,13 @@
 
     mix-blend-mode: difference;
 
-    & span {
+    & .font {
         font-family: $fontOffBT;
     }
+
+    & .color {
+      color: $violet;
+  }
 }
 
 .Title_des {
